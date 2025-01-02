@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RealEstate.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:RealEstate.Tests.Controllers.AuthControllerTests">
+            <summary>
+            Test suite for authentication controller functionality
+            </summary>
+            <remarks>
+            Contains unit tests for user authentication operations including login, registration,
+            and token validation processes
+            </remarks>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.AuthControllerTests.MessageResponse">
+            <summary>
+            Response model for general message responses
+            </summary>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.AuthControllerTests.LoginResponse">
+            <summary>
+            Response model for login operations
+            </summary>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.AuthControllerTests.UserResponse">
+            <summary>
+            Response model representing user data
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.#ctor">
+            <summary>
+            Initializes a new instance of the AuthControllerTests class
+            </summary>
+            <remarks>
+            Sets up all necessary mocks and dependencies for testing authentication functionality
+            including database, configuration, and controller instances
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk">
+            <summary>
+            Tests that Register creates new user successfully
+            </summary>
+            <remarks>
+            Verifies that a valid user registration request results in a successful user creation
+            and returns an Ok response with a success message
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest">
+            <summary>
+            Tests that Register returns Conflict for duplicate email
+            </summary>
+            <remarks>
+            Verifies that a registration request with an existing email address results in a
+            Conflict response with an error message indicating that the email is already in use
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest">
+            <summary>
+            Tests that Register validates required fields
+            </summary>
+            <remarks>
+            Verifies that a registration request with missing or invalid fields results in a
+            BadRequest response with an error message indicating the validation failure
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken">
+            <summary>
+            Tests that Login authenticates user successfully
+            </summary>
+            <remarks>
+            Verifies that a valid login request results in a successful user authentication
+            and returns an Ok response with a JWT token and user data
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest">
+            <summary>
+            Tests that Login returns Unauthorized for invalid credentials
+            </summary>
+            <remarks>
+            Verifies that a login request with invalid or missing credentials results in a
+            BadRequest response with an error message indicating the authentication failure
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest">
+            <summary>
+            Tests that Login returns Unauthorized for wrong password
+            </summary>
+            <remarks>
+            Verifies that a login request with an incorrect password results in a
+            BadRequest response with an error message indicating the authentication failure
+            </remarks>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.FavoriteControllerTests">
+            <summary>
+            Test suite for favorite property management functionality
+            </summary>
+            <remarks>
+            Contains comprehensive unit tests for favorite-related operations including
+            adding, removing, and retrieving favorite properties for users
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.#ctor">
+            <summary>
+            Initializes a new instance of the FavoriteControllerTests class
+            </summary>
+            <remarks>
+            Sets up the test environment with mock logger, collections, and user authentication
+            to facilitate favorite property management testing
+            </remarks>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.FavoriteControllerTests.TestRealEstateDbContext">
+            <summary>
+            Test implementation of RealEstateDbContext for testing
+            </summary>
+            <remarks>
+            Provides a test-specific implementation of the RealEstateDbContext class
+            to facilitate unit testing of favorite property management functionality
+            </remarks>
+        </member>
+        <member name="P:RealEstate.Tests.Controllers.FavoriteControllerTests.TestRealEstateDbContext.Properties">
+            <summary>
+            Gets the collection of favorite properties
+            </summary>
+        </member>
+        <member name="P:RealEstate.Tests.Controllers.FavoriteControllerTests.TestRealEstateDbContext.Favorites">
+            <summary>
+            Gets the collection of favorite properties
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.GetFavorites_ReturnsOkResult_WithProperties">
+            <summary>
+            Tests that GetFavorites returns user's favorite properties
+            </summary>
+            <remarks>
+            Verifies that the GetFavorites method returns a list of favorite properties
+            associated with the currently authenticated user
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.AddToFavorites_WithValidRequest_ReturnsOkResult">
+            <summary>
+            Tests that AddToFavorites adds property to favorites
+            </summary>
+            <remarks>
+            Verifies that the AddToFavorites method successfully adds a property to the user's favorites
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.AddToFavorites_WithNullRequest_ReturnsBadRequest">
+            <summary>
+            Tests that AddToFavorites returns BadRequest for null request
+            </summary>
+            <remarks>
+            Verifies that the AddToFavorites method returns a BadRequest response when a null request is provided
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.RemoveFromFavorites_ExistingFavorite_ReturnsNoContent">
+            <summary>
+            Tests that RemoveFromFavorites removes property from favorites
+            </summary>
+            <remarks>
+            Verifies that the RemoveFromFavorites method successfully removes a property from the user's favorites
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.CheckIsFavorite_ExistingFavorite_ReturnsTrue">
+            <summary>
+            Tests that CheckIsFavorite checks if property is in favorites
+            </summary>
+            <remarks>
+            Verifies that the CheckIsFavorite method correctly determines whether a property is in the user's favorites
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.FavoriteControllerTests.CheckIsFavorite_NonExistingFavorite_ReturnsFalse">
+            <summary>
+            Tests that CheckIsFavorite returns False for non-existing favorite
+            </summary>
+            <remarks>
+            Verifies that the CheckIsFavorite method correctly returns False when a property is not in the user's favorites
+            </remarks>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.PropertiesControllerTests">
+            <summary>
+            Test suite for property management functionality
+            </summary>
+            <remarks>
+            Contains comprehensive unit tests for property-related operations including
+            creating, reading, updating, and deleting property listings
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.#ctor">
+            <summary>
+            Initializes a new instance of the PropertiesControllerTests class
+            </summary>
+            <remarks>
+            Sets up the test environment with mock database, collections, and user authentication
+            to facilitate property management testing
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_ValidProperty_ReturnsCreatedAtAction">
+            <summary>
+            Tests that CreateProperty creates property successfully
+            </summary>
+            <remarks>
+            Verifies that a valid property is created and returned with the correct user ID
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_UnauthorizedUser_ReturnsUnauthorized">
+            <summary>
+            Tests that CreateProperty returns Unauthorized for unauthorized users
+            </summary>
+            <remarks>
+            Verifies that an unauthorized user cannot create a property
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_ExistingProperty_ReturnsProperty">
+            <summary>
+            Tests that GetProperty returns specific property
+            </summary>
+            <remarks>
+            Verifies that a valid property is returned with the correct ID
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_NonExistingProperty_ReturnsNotFound">
+            <summary>
+            Tests that GetProperty returns NotFound for non-existing properties
+            </summary>
+            <remarks>
+            Verifies that a non-existent property returns a NotFound result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_ExistingOwnedProperty_ReturnsNoContent">
+            <summary>
+            Tests that DeleteProperty removes property successfully
+            </summary>
+            <remarks>
+            Verifies that a valid property is deleted and returns a NoContent result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_NonExistingProperty_ReturnsNotFound">
+            <summary>
+            Tests that DeleteProperty returns NotFound for non-existing properties
+            </summary>
+            <remarks>
+            Verifies that a non-existent property returns a NotFound result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid">
+            <summary>
+            Tests that DeleteProperty returns Forbid for properties owned by other users
+            </summary>
+            <remarks>
+            Verifies that a property owned by another user returns a Forbid result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.GetAllProperties_WithFilters_ReturnsFilteredProperties">
+            <summary>
+            Tests that GetAllProperties returns all properties with filters
+            </summary>
+            <remarks>
+            Verifies that properties are returned with the correct filters applied
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_InvalidModel_ReturnsBadRequest">
+            <summary>
+            Tests that CreateProperty returns BadRequest for invalid models
+            </summary>
+            <remarks>
+            Verifies that an invalid property model returns a BadRequest result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.GetUserProperties_ReturnsUserProperties">
+            <summary>
+            Tests that GetUserProperties returns properties for specific user
+            </summary>
+            <remarks>
+            Verifies that properties are returned for the correct user
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_ExistingProperty_ReturnsNoContent">
+            <summary>
+            Tests that UpdateProperty updates property successfully
+            </summary>
+            <remarks>
+            Verifies that a valid property is updated and returns a NoContent result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_NonExistingProperty_ReturnsNotFound">
+            <summary>
+            Tests that UpdateProperty returns NotFound for non-existing properties
+            </summary>
+            <remarks>
+            Verifies that a non-existent property returns a NotFound result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_UnauthorizedUser_ReturnsUnauthorized">
+            <summary>
+            Tests that UpdateProperty returns Unauthorized for unauthorized users
+            </summary>
+            <remarks>
+            Verifies that an unauthorized user cannot update a property
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_UnauthorizedUser_ReturnsUnauthorized">
+            <summary>
+            Tests that UploadImages returns Unauthorized for unauthorized users
+            </summary>
+            <remarks>
+            Verifies that an unauthorized user cannot upload images
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NonExistingProperty_ReturnsNotFound">
+            <summary>
+            Tests that UploadImages returns NotFound for non-existing properties
+            </summary>
+            <remarks>
+            Verifies that a non-existent property returns a NotFound result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NoImages_ReturnsBadRequest">
+            <summary>
+            Tests that UploadImages returns BadRequest for no images
+            </summary>
+            <remarks>
+            Verifies that no images uploaded returns a BadRequest result
+            </remarks>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_ValidImages_ReturnsOkWithUpdatedProperty">
+            <summary>
+            Tests that UploadImages returns Ok with updated property for valid images
+            </summary>
+            <remarks>
+            Verifies that valid images are uploaded and the property is updated
+            </remarks>
+        </member>
+        <member name="T:RealEstate.Tests.Controllers.PropertyControllerTests">
+            <summary>
+            Test suite for PropertyController
+            Contains unit tests for property-related operations
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.#ctor">
+            <summary>
+            Initializes a new instance of PropertyControllerTests
+            Sets up mocks and controller instance for testing
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Get_ReturnsOkResult_WithListOfProperties">
+            <summary>
+            Tests that GetAsync returns all properties successfully
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.GetById_ReturnsOkResult_WhenPropertyExists">
+            <summary>
+            Tests that GetAsync with ID returns specific property
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.GetById_ReturnsNotFound_WhenPropertyDoesNotExist">
+            <summary>
+            Tests that GetAsync with ID returns NotFound when property does not exist
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Post_ReturnsCreatedAtAction_WhenPropertyIsValid">
+            <summary>
+            Tests that PostAsync creates property successfully
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Update_ReturnsNoContent_WhenPropertyExists">
+            <summary>
+            Tests that UpdateAsync updates property successfully
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Update_ReturnsNotFound_WhenPropertyDoesNotExist">
+            <summary>
+            Tests that UpdateAsync returns NotFound when property does not exist
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Delete_ReturnsNoContent_WhenPropertyExists">
+            <summary>
+            Tests that DeleteAsync removes property successfully
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Delete_ReturnsNotFound_WhenPropertyDoesNotExist">
+            <summary>
+            Tests that DeleteAsync returns NotFound when property does not exist
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.Search_ReturnsOkResult_WithMatchingProperties">
+            <summary>
+            Tests that SearchAsync returns properties by location
+            </summary>
+        </member>
+        <member name="M:RealEstate.Tests.Controllers.PropertyControllerTests.GetByPriceRange_ReturnsOkResult_WithPropertiesInRange">
+            <summary>
+            Tests that GetByPriceRangeAsync returns properties within price range
+            </summary>
+        </member>
+    </members>
+</doc>

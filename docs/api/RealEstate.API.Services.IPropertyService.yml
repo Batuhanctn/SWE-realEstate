@@ -1,0 +1,810 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Services.IPropertyService
+  commentId: T:RealEstate.API.Services.IPropertyService
+  id: IPropertyService
+  parent: RealEstate.API.Services
+  children:
+  - RealEstate.API.Services.IPropertyService.CreateAsync(RealEstate.API.Models.Property)
+  - RealEstate.API.Services.IPropertyService.GetAsync
+  - RealEstate.API.Services.IPropertyService.GetAsync(System.String)
+  - RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)
+  - RealEstate.API.Services.IPropertyService.GetByTypeAsync(System.String)
+  - RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})
+  - RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(System.String)
+  - RealEstate.API.Services.IPropertyService.RemoveAsync(System.String)
+  - RealEstate.API.Services.IPropertyService.SearchAsync(System.String)
+  - RealEstate.API.Services.IPropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)
+  langs:
+  - csharp
+  - vb
+  name: IPropertyService
+  nameWithType: IPropertyService
+  fullName: RealEstate.API.Services.IPropertyService
+  type: Interface
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: IPropertyService
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 7
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Service interface for managing properties
+  example: []
+  syntax:
+    content: public interface IPropertyService
+    content.vb: Public Interface IPropertyService
+- uid: RealEstate.API.Services.IPropertyService.GetAsync
+  commentId: M:RealEstate.API.Services.IPropertyService.GetAsync
+  id: GetAsync
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetAsync()
+  nameWithType: IPropertyService.GetAsync()
+  fullName: RealEstate.API.Services.IPropertyService.GetAsync()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 12
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets all properties
+  example: []
+  syntax:
+    content: Task<List<Property>> GetAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function GetAsync() As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.GetAsync*
+- uid: RealEstate.API.Services.IPropertyService.GetAsync(System.String)
+  commentId: M:RealEstate.API.Services.IPropertyService.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(string)
+  nameWithType: IPropertyService.GetAsync(string)
+  fullName: RealEstate.API.Services.IPropertyService.GetAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 17
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets a property by ID
+  example: []
+  syntax:
+    content: Task<Property?> GetAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{RealEstate.API.Models.Property}
+    content.vb: Function GetAsync(id As String) As Task(Of [Property])
+  overload: RealEstate.API.Services.IPropertyService.GetAsync*
+  nameWithType.vb: IPropertyService.GetAsync(String)
+  fullName.vb: RealEstate.API.Services.IPropertyService.GetAsync(String)
+  name.vb: GetAsync(String)
+- uid: RealEstate.API.Services.IPropertyService.CreateAsync(RealEstate.API.Models.Property)
+  commentId: M:RealEstate.API.Services.IPropertyService.CreateAsync(RealEstate.API.Models.Property)
+  id: CreateAsync(RealEstate.API.Models.Property)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(Property)
+  nameWithType: IPropertyService.CreateAsync(Property)
+  fullName: RealEstate.API.Services.IPropertyService.CreateAsync(RealEstate.API.Models.Property)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: CreateAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 22
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Creates a new property
+  example: []
+  syntax:
+    content: Task CreateAsync(Property property)
+    parameters:
+    - id: property
+      type: RealEstate.API.Models.Property
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function CreateAsync([property] As [Property]) As Task
+  overload: RealEstate.API.Services.IPropertyService.CreateAsync*
+- uid: RealEstate.API.Services.IPropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)
+  commentId: M:RealEstate.API.Services.IPropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)
+  id: UpdateAsync(System.String,RealEstate.API.Models.Property)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(string, Property)
+  nameWithType: IPropertyService.UpdateAsync(string, Property)
+  fullName: RealEstate.API.Services.IPropertyService.UpdateAsync(string, RealEstate.API.Models.Property)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: UpdateAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 27
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Updates an existing property
+  example: []
+  syntax:
+    content: Task UpdateAsync(string id, Property property)
+    parameters:
+    - id: id
+      type: System.String
+    - id: property
+      type: RealEstate.API.Models.Property
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function UpdateAsync(id As String, [property] As [Property]) As Task
+  overload: RealEstate.API.Services.IPropertyService.UpdateAsync*
+  nameWithType.vb: IPropertyService.UpdateAsync(String, Property)
+  fullName.vb: RealEstate.API.Services.IPropertyService.UpdateAsync(String, RealEstate.API.Models.Property)
+  name.vb: UpdateAsync(String, Property)
+- uid: RealEstate.API.Services.IPropertyService.RemoveAsync(System.String)
+  commentId: M:RealEstate.API.Services.IPropertyService.RemoveAsync(System.String)
+  id: RemoveAsync(System.String)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: RemoveAsync(string)
+  nameWithType: IPropertyService.RemoveAsync(string)
+  fullName: RealEstate.API.Services.IPropertyService.RemoveAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: RemoveAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 32
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Removes a property
+  example: []
+  syntax:
+    content: Task RemoveAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RemoveAsync(id As String) As Task
+  overload: RealEstate.API.Services.IPropertyService.RemoveAsync*
+  nameWithType.vb: IPropertyService.RemoveAsync(String)
+  fullName.vb: RealEstate.API.Services.IPropertyService.RemoveAsync(String)
+  name.vb: RemoveAsync(String)
+- uid: RealEstate.API.Services.IPropertyService.GetByTypeAsync(System.String)
+  commentId: M:RealEstate.API.Services.IPropertyService.GetByTypeAsync(System.String)
+  id: GetByTypeAsync(System.String)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetByTypeAsync(string)
+  nameWithType: IPropertyService.GetByTypeAsync(string)
+  fullName: RealEstate.API.Services.IPropertyService.GetByTypeAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetByTypeAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 37
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets properties by type
+  example: []
+  syntax:
+    content: Task<List<Property>> GetByTypeAsync(string type)
+    parameters:
+    - id: type
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function GetByTypeAsync(type As String) As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.GetByTypeAsync*
+  nameWithType.vb: IPropertyService.GetByTypeAsync(String)
+  fullName.vb: RealEstate.API.Services.IPropertyService.GetByTypeAsync(String)
+  name.vb: GetByTypeAsync(String)
+- uid: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)
+  commentId: M:RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)
+  id: GetByPriceRangeAsync(System.Decimal,System.Decimal)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetByPriceRangeAsync(decimal, decimal)
+  nameWithType: IPropertyService.GetByPriceRangeAsync(decimal, decimal)
+  fullName: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(decimal, decimal)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetByPriceRangeAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 42
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets properties by price range
+  example: []
+  syntax:
+    content: Task<List<Property>> GetByPriceRangeAsync(decimal minPrice, decimal maxPrice)
+    parameters:
+    - id: minPrice
+      type: System.Decimal
+    - id: maxPrice
+      type: System.Decimal
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function GetByPriceRangeAsync(minPrice As Decimal, maxPrice As Decimal) As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync*
+  nameWithType.vb: IPropertyService.GetByPriceRangeAsync(Decimal, Decimal)
+  fullName.vb: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(Decimal, Decimal)
+  name.vb: GetByPriceRangeAsync(Decimal, Decimal)
+- uid: RealEstate.API.Services.IPropertyService.SearchAsync(System.String)
+  commentId: M:RealEstate.API.Services.IPropertyService.SearchAsync(System.String)
+  id: SearchAsync(System.String)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: SearchAsync(string)
+  nameWithType: IPropertyService.SearchAsync(string)
+  fullName: RealEstate.API.Services.IPropertyService.SearchAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: SearchAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 47
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Searches properties by location
+  example: []
+  syntax:
+    content: Task<List<Property>> SearchAsync(string location)
+    parameters:
+    - id: location
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function SearchAsync(location As String) As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.SearchAsync*
+  nameWithType.vb: IPropertyService.SearchAsync(String)
+  fullName.vb: RealEstate.API.Services.IPropertyService.SearchAsync(String)
+  name.vb: SearchAsync(String)
+- uid: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(System.String)
+  commentId: M:RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(System.String)
+  id: GetPropertiesByUserIdAsync(System.String)
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetPropertiesByUserIdAsync(string)
+  nameWithType: IPropertyService.GetPropertiesByUserIdAsync(string)
+  fullName: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetPropertiesByUserIdAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 52
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets properties by user ID
+  example: []
+  syntax:
+    content: Task<List<Property>> GetPropertiesByUserIdAsync(string userId)
+    parameters:
+    - id: userId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function GetPropertiesByUserIdAsync(userId As String) As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync*
+  nameWithType.vb: IPropertyService.GetPropertiesByUserIdAsync(String)
+  fullName.vb: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(String)
+  name.vb: GetPropertiesByUserIdAsync(String)
+- uid: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})
+  commentId: M:RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})
+  id: GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})
+  parent: RealEstate.API.Services.IPropertyService
+  langs:
+  - csharp
+  - vb
+  name: GetFilteredPropertiesAsync(string?, string?, decimal?, decimal?, int?, int?, double?, double?)
+  nameWithType: IPropertyService.GetFilteredPropertiesAsync(string?, string?, decimal?, decimal?, int?, int?, double?, double?)
+  fullName: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(string?, string?, decimal?, decimal?, int?, int?, double?, double?)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.API/Services/IPropertyService.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: GetFilteredPropertiesAsync
+    path: ../RealEstate.API/Services/IPropertyService.cs
+    startLine: 57
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Services
+  summary: Gets filtered properties based on various criteria
+  example: []
+  syntax:
+    content: Task<List<Property>> GetFilteredPropertiesAsync(string? city = null, string? propertyType = null, decimal? minPrice = null, decimal? maxPrice = null, int? bedrooms = null, int? bathrooms = null, double? minSquareMeters = null, double? maxSquareMeters = null)
+    parameters:
+    - id: city
+      type: System.String
+    - id: propertyType
+      type: System.String
+    - id: minPrice
+      type: System.Nullable{System.Decimal}
+    - id: maxPrice
+      type: System.Nullable{System.Decimal}
+    - id: bedrooms
+      type: System.Nullable{System.Int32}
+    - id: bathrooms
+      type: System.Nullable{System.Int32}
+    - id: minSquareMeters
+      type: System.Nullable{System.Double}
+    - id: maxSquareMeters
+      type: System.Nullable{System.Double}
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+    content.vb: Function GetFilteredPropertiesAsync(city As String = Nothing, propertyType As String = Nothing, minPrice As Decimal? = Nothing, maxPrice As Decimal? = Nothing, bedrooms As Integer? = Nothing, bathrooms As Integer? = Nothing, minSquareMeters As Double? = Nothing, maxSquareMeters As Double? = Nothing) As Task(Of List(Of [Property]))
+  overload: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync*
+  nameWithType.vb: IPropertyService.GetFilteredPropertiesAsync(String, String, Decimal?, Decimal?, Integer?, Integer?, Double?, Double?)
+  fullName.vb: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(String, String, Decimal?, Decimal?, Integer?, Integer?, Double?, Double?)
+  name.vb: GetFilteredPropertiesAsync(String, String, Decimal?, Decimal?, Integer?, Integer?, Double?, Double?)
+references:
+- uid: RealEstate.API.Services
+  commentId: N:RealEstate.API.Services
+  href: RealEstate.html
+  name: RealEstate.API.Services
+  nameWithType: RealEstate.API.Services
+  fullName: RealEstate.API.Services
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Services
+    name: Services
+    href: RealEstate.API.Services.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Services
+    name: Services
+    href: RealEstate.API.Services.html
+- uid: RealEstate.API.Services.IPropertyService.GetAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.GetAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_GetAsync
+  name: GetAsync
+  nameWithType: IPropertyService.GetAsync
+  fullName: RealEstate.API.Services.IPropertyService.GetAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{RealEstate.API.Models.Property}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Property>>
+  nameWithType: Task<List<Property>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<RealEstate.API.Models.Property>>
+  nameWithType.vb: Task(Of List(Of Property))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of RealEstate.API.Models.Property))
+  name.vb: Task(Of List(Of Property))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{RealEstate.API.Models.Property}
+  commentId: T:System.Threading.Tasks.Task{RealEstate.API.Models.Property}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Property>
+  nameWithType: Task<Property>
+  fullName: System.Threading.Tasks.Task<RealEstate.API.Models.Property>
+  nameWithType.vb: Task(Of Property)
+  fullName.vb: System.Threading.Tasks.Task(Of RealEstate.API.Models.Property)
+  name.vb: Task(Of Property)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RealEstate.API.Services.IPropertyService.CreateAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.CreateAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_CreateAsync_RealEstate_API_Models_Property_
+  name: CreateAsync
+  nameWithType: IPropertyService.CreateAsync
+  fullName: RealEstate.API.Services.IPropertyService.CreateAsync
+- uid: RealEstate.API.Models.Property
+  commentId: T:RealEstate.API.Models.Property
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.Property.html
+  name: Property
+  nameWithType: Property
+  fullName: RealEstate.API.Models.Property
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: RealEstate.API.Models
+  commentId: N:RealEstate.API.Models
+  href: RealEstate.html
+  name: RealEstate.API.Models
+  nameWithType: RealEstate.API.Models
+  fullName: RealEstate.API.Models
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+- uid: RealEstate.API.Services.IPropertyService.UpdateAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.UpdateAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_UpdateAsync_System_String_RealEstate_API_Models_Property_
+  name: UpdateAsync
+  nameWithType: IPropertyService.UpdateAsync
+  fullName: RealEstate.API.Services.IPropertyService.UpdateAsync
+- uid: RealEstate.API.Services.IPropertyService.RemoveAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.RemoveAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_RemoveAsync_System_String_
+  name: RemoveAsync
+  nameWithType: IPropertyService.RemoveAsync
+  fullName: RealEstate.API.Services.IPropertyService.RemoveAsync
+- uid: RealEstate.API.Services.IPropertyService.GetByTypeAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.GetByTypeAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_GetByTypeAsync_System_String_
+  name: GetByTypeAsync
+  nameWithType: IPropertyService.GetByTypeAsync
+  fullName: RealEstate.API.Services.IPropertyService.GetByTypeAsync
+- uid: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_GetByPriceRangeAsync_System_Decimal_System_Decimal_
+  name: GetByPriceRangeAsync
+  nameWithType: IPropertyService.GetByPriceRangeAsync
+  fullName: RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: RealEstate.API.Services.IPropertyService.SearchAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.SearchAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_SearchAsync_System_String_
+  name: SearchAsync
+  nameWithType: IPropertyService.SearchAsync
+  fullName: RealEstate.API.Services.IPropertyService.SearchAsync
+- uid: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_GetPropertiesByUserIdAsync_System_String_
+  name: GetPropertiesByUserIdAsync
+  nameWithType: IPropertyService.GetPropertiesByUserIdAsync
+  fullName: RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync
+- uid: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync*
+  commentId: Overload:RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync
+  href: RealEstate.API.Services.IPropertyService.html#RealEstate_API_Services_IPropertyService_GetFilteredPropertiesAsync_System_String_System_String_System_Nullable_System_Decimal__System_Nullable_System_Decimal__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Double__
+  name: GetFilteredPropertiesAsync
+  nameWithType: IPropertyService.GetFilteredPropertiesAsync
+  fullName: RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync
+- uid: System.Nullable{System.Decimal}
+  commentId: T:System.Nullable{System.Decimal}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal?
+  nameWithType: decimal?
+  fullName: decimal?
+  nameWithType.vb: Decimal?
+  fullName.vb: Decimal?
+  name.vb: Decimal?
+  spec.csharp:
+  - uid: System.Decimal
+    name: decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: '?'
+  spec.vb:
+  - uid: System.Decimal
+    name: Decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: '?'
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

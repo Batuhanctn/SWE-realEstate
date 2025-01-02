@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Property Management Tests </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Property Management Tests ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="property-management-tests">Property Management Tests</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The property management tests verify CRUD operations and search functionality for real estate properties.</p>
+<h2 id="test-classes">Test Classes</h2>
+<h3 id="propertycontrollertests">PropertyControllerTests</h3>
+<p>Located in <code>Controllers/PropertyControllerTests.cs</code>, this class tests:</p>
+<h4 id="property-retrieval">Property Retrieval</h4>
+<ul>
+<li><code>Get_ReturnsOkResult_WithListOfProperties</code>: Tests fetching all properties</li>
+<li><code>GetById_ReturnsOkResult_WhenPropertyExists</code>: Verifies single property retrieval</li>
+<li><code>GetById_ReturnsNotFound_WhenPropertyDoesNotExist</code>: Tests missing property handling</li>
+</ul>
+<h4 id="property-creation">Property Creation</h4>
+<ul>
+<li><code>Post_ReturnsCreatedAtAction_WhenPropertyIsValid</code>: Tests property creation</li>
+<li><code>Post_ReturnsBadRequest_WhenModelStateIsInvalid</code>: Validates input requirements</li>
+</ul>
+<h4 id="property-updates">Property Updates</h4>
+<ul>
+<li><code>Put_ReturnsNoContent_WhenPropertyExists</code>: Tests successful updates</li>
+<li><code>Put_ReturnsNotFound_WhenPropertyDoesNotExist</code>: Verifies missing property handling</li>
+</ul>
+<h4 id="property-deletion">Property Deletion</h4>
+<ul>
+<li><code>Delete_ReturnsNoContent_WhenPropertyExists</code>: Tests successful deletion</li>
+<li><code>Delete_ReturnsNotFound_WhenPropertyDoesNotExist</code>: Verifies missing property handling</li>
+</ul>
+<h4 id="search-and-filtering">Search and Filtering</h4>
+<ul>
+<li><code>Search_ReturnsOkResult_WithMatchingProperties</code>: Tests property search</li>
+<li><code>GetByPriceRange_ReturnsOkResult_WithPropertiesInRange</code>: Tests price filtering</li>
+</ul>
+<h2 id="test-setup">Test Setup</h2>
+<p>The tests use:</p>
+<ul>
+<li>Mock property service</li>
+<li>Mock logger</li>
+<li>Test data fixtures</li>
+</ul>
+<h2 id="common-patterns">Common Patterns</h2>
+<ol>
+<li>Arrange: Prepare test data and configure mocks</li>
+<li>Act: Execute controller action</li>
+<li>Assert: Verify response and state changes</li>
+</ol>
+<h2 id="example">Example</h2>
+<pre><code class="lang-csharp">[Fact]
+public async Task Post_ReturnsCreatedAtAction_WhenPropertyIsValid()
+{
+    // Arrange
+    var property = new Property
+    {
+        Title = &quot;Test Property&quot;,
+        Price = 100000,
+        Location = &quot;Test City&quot;
+    };
+
+    // Act
+    var result = await _controller.Post(property);
+
+    // Assert
+    var createdAtActionResult = Assert.IsType&lt;CreatedAtActionResult&gt;(result);
+    Assert.Equal(&quot;Get&quot;, createdAtActionResult.ActionName);
+}
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/articles/property-tests.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

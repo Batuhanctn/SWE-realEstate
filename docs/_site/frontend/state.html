@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>State Management </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="State Management ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="state-management">State Management</h1>
+
+<h2 id="context-providers">Context Providers</h2>
+<h3 id="authcontext">AuthContext</h3>
+<pre><code class="lang-typescript">interface AuthContext {
+    user: User | null;
+    login: (email: string, password: string) =&gt; Promise&lt;void&gt;;
+    logout: () =&gt; void;
+    isAuthenticated: boolean;
+}
+</code></pre>
+<h3 id="propertycontext">PropertyContext</h3>
+<pre><code class="lang-typescript">interface PropertyContext {
+    properties: Property[];
+    loading: boolean;
+    error: Error | null;
+    fetchProperties: (filters?: PropertyFilters) =&gt; Promise&lt;void&gt;;
+    createProperty: (property: PropertyCreate) =&gt; Promise&lt;void&gt;;
+    updateProperty: (id: string, property: PropertyUpdate) =&gt; Promise&lt;void&gt;;
+    deleteProperty: (id: string) =&gt; Promise&lt;void&gt;;
+}
+</code></pre>
+<h3 id="favoritecontext">FavoriteContext</h3>
+<pre><code class="lang-typescript">interface FavoriteContext {
+    favorites: Property[];
+    loading: boolean;
+    error: Error | null;
+    addFavorite: (propertyId: string) =&gt; Promise&lt;void&gt;;
+    removeFavorite: (propertyId: string) =&gt; Promise&lt;void&gt;;
+    isFavorite: (propertyId: string) =&gt; boolean;
+}
+</code></pre>
+<h2 id="custom-hooks">Custom Hooks</h2>
+<h3 id="useauth">useAuth</h3>
+<pre><code class="lang-typescript">const useAuth = () =&gt; {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth must be used within an AuthProvider');
+    }
+    return context;
+};
+</code></pre>
+<h3 id="useproperty">useProperty</h3>
+<pre><code class="lang-typescript">const useProperty = () =&gt; {
+    const context = useContext(PropertyContext);
+    if (!context) {
+        throw new Error('useProperty must be used within a PropertyProvider');
+    }
+    return context;
+};
+</code></pre>
+<h3 id="usefavorite">useFavorite</h3>
+<pre><code class="lang-typescript">const useFavorite = () =&gt; {
+    const context = useContext(FavoriteContext);
+    if (!context) {
+        throw new Error('useFavorite must be used within a FavoriteProvider');
+    }
+    return context;
+};
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/docs/frontend/state.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

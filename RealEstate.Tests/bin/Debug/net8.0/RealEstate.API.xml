@@ -1,0 +1,593 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RealEstate.API</name>
+    </assembly>
+    <members>
+        <member name="T:RealEstate.API.Controllers.AuthController">
+            <summary>
+            Controller for handling authentication-related operations
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Controllers.AuthController.Register(RealEstate.API.Models.UserDto)">
+            <summary>
+            Registers a new user
+            </summary>
+            <param name="request">User registration details</param>
+            <returns>Returns authentication result with token if successful</returns>
+            <response code="200">Returns the authentication result with token</response>
+            <response code="400">If the registration fails due to validation or existing email</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.AuthController.Login(RealEstate.API.Models.LoginDto)">
+            <summary>
+            Authenticates a user and returns a JWT token
+            </summary>
+            <param name="request">User login credentials</param>
+            <returns>Returns authentication result with token if successful</returns>
+            <response code="200">Returns the authentication result with token</response>
+            <response code="401">If the login credentials are invalid</response>
+        </member>
+        <member name="T:RealEstate.API.Controllers.FavoriteController">
+            <summary>
+            Controller for managing user's favorite properties
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Controllers.FavoriteController.GetFavorites">
+            <summary>
+            Gets all favorite properties for the authenticated user
+            </summary>
+            <returns>List of favorite properties</returns>
+            <response code="200">Returns the list of favorite properties</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.FavoriteController.AddToFavorites(RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest)">
+            <summary>
+            Adds a property to user's favorites
+            </summary>
+            <param name="request">Request object containing the property ID to add to favorites</param>
+            <returns>Success message if property is added to favorites</returns>
+            <response code="200">Property added to favorites successfully</response>
+            <response code="400">If the property is already in favorites</response>
+            <response code="404">If the property is not found</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.FavoriteController.RemoveFromFavorites(System.String)">
+            <summary>
+            Removes a property from user's favorites
+            </summary>
+            <param name="propertyId">ID of the property to remove from favorites</param>
+            <returns>Success message if property is removed from favorites</returns>
+            <response code="200">Property removed from favorites successfully</response>
+            <response code="404">If the property is not found in favorites</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.FavoriteController.CheckIsFavorite(System.String)">
+            <summary>
+            Checks if a property is in user's favorites
+            </summary>
+            <param name="propertyId">ID of the property to check</param>
+            <returns>True if property is in favorites, false otherwise</returns>
+            <response code="200">Returns whether the property is in favorites</response>
+            <response code="404">If the property is not found</response>
+        </member>
+        <member name="T:RealEstate.API.Controllers.PropertiesController">
+            <summary>
+            Controller for managing property listings
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.GetAllProperties(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            Gets all properties with optional filtering
+            </summary>
+            <param name="city">City filter</param>
+            <param name="propertyType">Property type filter</param>
+            <param name="minPrice">Minimum price filter</param>
+            <param name="maxPrice">Maximum price filter</param>
+            <returns>List of all properties</returns>
+            <response code="200">Returns the list of properties</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.GetProperty(System.String)">
+            <summary>
+            Gets a specific property by ID
+            </summary>
+            <param name="id">Property ID</param>
+            <returns>Property details</returns>
+            <response code="200">Returns the property details</response>
+            <response code="404">If the property is not found</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.GetUserProperties">
+            <summary>
+            Gets all properties belonging to the authenticated user
+            </summary>
+            <returns>List of user's properties</returns>
+            <response code="200">Returns the list of user's properties</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.CreateProperty(RealEstate.API.Models.Property)">
+            <summary>
+            Creates a new property listing
+            </summary>
+            <param name="property">Property details</param>
+            <returns>Created property details</returns>
+            <response code="201">Returns the created property</response>
+            <response code="400">If the property data is invalid</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.UpdateProperty(System.String,RealEstate.API.Models.Property)">
+            <summary>
+            Updates an existing property
+            </summary>
+            <param name="id">Property ID</param>
+            <param name="updatedProperty">Updated property details</param>
+            <returns>Updated property details</returns>
+            <response code="200">Returns the updated property</response>
+            <response code="404">If the property is not found</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.DeleteProperty(System.String)">
+            <summary>
+            Deletes a property
+            </summary>
+            <param name="id">Property ID</param>
+            <returns>No content if successful</returns>
+            <response code="204">Property deleted successfully</response>
+            <response code="404">If the property is not found</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertiesController.UploadImages(System.String,Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            Uploads images for a property
+            </summary>
+            <param name="id">Property ID</param>
+            <param name="images">Images to upload</param>
+            <returns>Updated property details</returns>
+            <response code="200">Returns the updated property</response>
+            <response code="400">If the images are invalid</response>
+        </member>
+        <member name="T:RealEstate.API.Controllers.PropertyController">
+            <summary>
+            Controller for managing real estate properties
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.#ctor(RealEstate.API.Services.IPropertyService,Microsoft.Extensions.Logging.ILogger{RealEstate.API.Controllers.PropertyController})">
+            <summary>
+            Initializes a new instance of the PropertyController
+            </summary>
+            <param name="propertyService">The property service for managing properties</param>
+            <param name="logger">The logger for the controller</param>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Get(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Gets all properties with optional filtering
+            </summary>
+            <returns>List of properties matching the criteria</returns>
+            <response code="200">Returns the list of properties</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Get(System.String)">
+            <summary>
+            Gets a specific property by ID
+            </summary>
+            <param name="id">The ID of the property</param>
+            <returns>The requested property</returns>
+            <response code="200">Returns the requested property</response>
+            <response code="404">If the property is not found</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Post(RealEstate.API.Models.Property)">
+            <summary>
+            Creates a new property listing
+            </summary>
+            <param name="property">The property to create</param>
+            <returns>The created property</returns>
+            <response code="201">Returns the newly created property</response>
+            <response code="400">If the property data is invalid</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Put(System.String,RealEstate.API.Models.Property)">
+            <summary>
+            Updates an existing property
+            </summary>
+            <param name="id">The ID of the property to update</param>
+            <param name="property">The updated property data</param>
+            <returns>No content</returns>
+            <response code="204">If the property was successfully updated</response>
+            <response code="404">If the property is not found</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Delete(System.String)">
+            <summary>
+            Deletes a specific property
+            </summary>
+            <param name="id">The ID of the property to delete</param>
+            <returns>No content</returns>
+            <response code="204">If the property was successfully deleted</response>
+            <response code="404">If the property is not found</response>
+            <response code="401">If the user is not authenticated</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.Search(System.String)">
+            <summary>
+            Searches for properties by location
+            </summary>
+            <param name="location">The location to search for properties</param>
+            <returns>List of properties matching the location</returns>
+            <response code="200">Returns the list of properties</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.GetByType(System.String)">
+            <summary>
+            Gets properties by type
+            </summary>
+            <param name="type">The type of properties to retrieve</param>
+            <returns>List of properties matching the type</returns>
+            <response code="200">Returns the list of properties</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.GetByPriceRange(System.Decimal,System.Decimal)">
+            <summary>
+            Gets properties by price range
+            </summary>
+            <param name="minPrice">Minimum price</param>
+            <param name="maxPrice">Maximum price</param>
+            <returns>List of properties within the price range</returns>
+            <response code="200">Returns the list of properties</response>
+        </member>
+        <member name="M:RealEstate.API.Controllers.PropertyController.GetByUserId(System.String)">
+            <summary>
+            Gets properties by user ID
+            </summary>
+            <param name="userId">The ID of the user</param>
+            <returns>List of properties owned by the user</returns>
+            <response code="200">Returns the list of properties</response>
+        </member>
+        <member name="T:RealEstate.API.Data.Migrations.AddFavorites">
+            <summary>
+            Migration to add Favorites functionality to the database
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Data.Migrations.AddFavorites.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Applies the migration to add Favorites table and relationships
+            </summary>
+            <param name="migrationBuilder">The migration builder</param>
+        </member>
+        <member name="M:RealEstate.API.Data.Migrations.AddFavorites.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Reverts the changes made by this migration
+            </summary>
+            <param name="migrationBuilder">The migration builder</param>
+        </member>
+        <member name="T:RealEstate.API.Data.RealEstateDbContext">
+            <summary>
+            Database context for the RealEstate application
+            Manages database connections and entity configurations
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Data.RealEstateDbContext.#ctor(RealEstate.API.Settings.MongoDbSettings)">
+            <summary>
+            Initializes a new instance of the RealEstateDbContext
+            </summary>
+            <param name="settings">The settings to be used by the context</param>
+        </member>
+        <member name="P:RealEstate.API.Data.RealEstateDbContext.Properties">
+            <summary>
+            Gets the Properties collection
+            Represents the Properties collection in the database
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Data.RealEstateDbContext.Favorites">
+            <summary>
+            Gets the Favorites collection
+            Represents the Favorites collection in the database
+            </summary>
+        </member>
+        <member name="T:RealEstate.API.Models.Favorite">
+            <summary>
+            Represents a favorite property relationship between a user and a property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Favorite.Id">
+            <summary>
+            Gets or sets the unique identifier for the favorite relationship
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Favorite.UserId">
+            <summary>
+            Gets or sets the ID of the user who favorited the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Favorite.PropertyId">
+            <summary>
+            Gets or sets the ID of the favorited property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Favorite.CreatedAt">
+            <summary>
+            Gets or sets the date when the property was favorited
+            </summary>
+        </member>
+        <member name="T:RealEstate.API.Models.Property">
+            <summary>
+            Represents a real estate property listing
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Id">
+            <summary>
+            Gets or sets the unique identifier for the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.UserId">
+            <summary>
+            Gets or sets the ID of the user who listed the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Title">
+            <summary>
+            Gets or sets the title of the property listing
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Description">
+            <summary>
+            Gets or sets the detailed description of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Price">
+            <summary>
+            Gets or sets the price of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Location">
+            <summary>
+            Gets or sets the location of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Type">
+            <summary>
+            Gets or sets the type of property (e.g., Apartment, House)
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.IsForRent">
+            <summary>
+            Gets or sets the status of the property (e.g., For Sale, For Rent)
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Bedrooms">
+            <summary>
+            Gets or sets the number of bedrooms in the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Bathrooms">
+            <summary>
+            Gets or sets the number of bathrooms in the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Size">
+            <summary>
+            Gets or sets the size of the property in square meters
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Features">
+            <summary>
+            Gets or sets the list of features/amenities of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.ImageUrl">
+            <summary>
+            Gets or sets the main image URL of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.ImageUrls">
+            <summary>
+            Gets or sets additional image URLs of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.CreatedAt">
+            <summary>
+            Gets or sets the date when the property was listed
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.UpdatedAt">
+            <summary>
+            Gets or sets the date when the property was last updated
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Address">
+            <summary>
+            Gets or sets the address of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.City">
+            <summary>
+            Gets or sets the city of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.State">
+            <summary>
+            Gets or sets the state of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.ZipCode">
+            <summary>
+            Gets or sets the zip code of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.SquareMeters">
+            <summary>
+            Gets or sets the square meters of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.PropertyType">
+            <summary>
+            Gets or sets the property type of the property
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.Property.Images">
+            <summary>
+            Gets or sets additional images of the property
+            </summary>
+        </member>
+        <member name="T:RealEstate.API.Models.User">
+            <summary>
+            Represents a user in the system
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.Id">
+            <summary>
+            Gets or sets the unique identifier for the user
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.Email">
+            <summary>
+            Gets or sets the user's email address
+            Used for authentication and communication
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.PasswordHash">
+            <summary>
+            Gets or sets the user's password hash
+            Stored as a secure hash, never as plain text
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.FirstName">
+            <summary>
+            Gets or sets the user's first name
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.LastName">
+            <summary>
+            Gets or sets the user's last name
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.PhoneNumber">
+            <summary>
+            Gets or sets the user's phone number
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.CreatedAt">
+            <summary>
+            Gets or sets the date when the user account was created
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.UpdatedAt">
+            <summary>
+            Gets or sets the date when the user account was last updated
+            </summary>
+        </member>
+        <member name="P:RealEstate.API.Models.User.Properties">
+            <summary>
+            Gets or sets the properties owned by the user
+            </summary>
+        </member>
+        <member name="T:RealEstate.API.Services.IPropertyService">
+            <summary>
+            Service interface for managing properties
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetAsync">
+            <summary>
+            Gets all properties
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetAsync(System.String)">
+            <summary>
+            Gets a property by ID
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.CreateAsync(RealEstate.API.Models.Property)">
+            <summary>
+            Creates a new property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)">
+            <summary>
+            Updates an existing property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.RemoveAsync(System.String)">
+            <summary>
+            Removes a property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetByTypeAsync(System.String)">
+            <summary>
+            Gets properties by type
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)">
+            <summary>
+            Gets properties by price range
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.SearchAsync(System.String)">
+            <summary>
+            Searches properties by location
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetPropertiesByUserIdAsync(System.String)">
+            <summary>
+            Gets properties by user ID
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.IPropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Gets filtered properties based on various criteria
+            </summary>
+        </member>
+        <member name="T:RealEstate.API.Services.PropertyService">
+            <summary>
+            Service class for handling property-related operations
+            Implements IPropertyService interface
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.#ctor(MongoDB.Driver.IMongoDatabase,Microsoft.Extensions.Logging.ILogger{RealEstate.API.Services.PropertyService})">
+            <summary>
+            Initializes a new instance of the PropertyService class
+            </summary>
+            <param name="database">The database context for accessing property data</param>
+            <param name="logger">The logger instance for logging operations</param>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetAsync">
+            <summary>
+            Gets all properties from the database
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetAsync(System.String)">
+            <summary>
+            Gets a property by ID
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.CreateAsync(RealEstate.API.Models.Property)">
+            <summary>
+            Creates a new property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)">
+            <summary>
+            Updates an existing property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.RemoveAsync(System.String)">
+            <summary>
+            Removes a property
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetByTypeAsync(System.String)">
+            <summary>
+            Gets properties by type
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)">
+            <summary>
+            Gets properties by price range
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.SearchAsync(System.String)">
+            <summary>
+            Searches properties by location
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetPropertiesByUserIdAsync(System.String)">
+            <summary>
+            Gets properties by user ID
+            </summary>
+        </member>
+        <member name="M:RealEstate.API.Services.PropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Gets filtered properties based on various criteria
+            </summary>
+        </member>
+    </members>
+</doc>

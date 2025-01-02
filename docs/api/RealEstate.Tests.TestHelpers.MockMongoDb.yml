@@ -1,0 +1,862 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb
+  commentId: T:RealEstate.Tests.TestHelpers.MockMongoDb
+  id: MockMongoDb
+  parent: RealEstate.Tests.TestHelpers
+  children:
+  - RealEstate.Tests.TestHelpers.MockMongoDb.#ctor
+  - RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite(RealEstate.API.Models.Favorite)
+  - RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty(RealEstate.API.Models.Property)
+  - RealEstate.Tests.TestHelpers.MockMongoDb.AddUser(RealEstate.API.Models.User)
+  - RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites
+  - RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties
+  - RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers
+  - RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+  - RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+  - RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+  langs:
+  - csharp
+  - vb
+  name: MockMongoDb
+  nameWithType: MockMongoDb
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb
+  type: Class
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: MockMongoDb
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 9
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public class MockMongoDb
+    content.vb: Public Class MockMongoDb
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+  commentId: P:RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+  id: PropertyCollection
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: PropertyCollection
+  nameWithType: MockMongoDb.PropertyCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+  type: Property
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: PropertyCollection
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 11
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public Mock<IMongoCollection<Property>> PropertyCollection { get; }
+    parameters: []
+    return:
+      type: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}}
+    content.vb: Public ReadOnly Property PropertyCollection As Mock(Of IMongoCollection(Of [Property]))
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+  commentId: P:RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+  id: UserCollection
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: UserCollection
+  nameWithType: MockMongoDb.UserCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+  type: Property
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: UserCollection
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 12
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public Mock<IMongoCollection<User>> UserCollection { get; }
+    parameters: []
+    return:
+      type: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.User}}
+    content.vb: Public ReadOnly Property UserCollection As Mock(Of IMongoCollection(Of User))
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+  commentId: P:RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+  id: FavoriteCollection
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: FavoriteCollection
+  nameWithType: MockMongoDb.FavoriteCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+  type: Property
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: FavoriteCollection
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 13
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public Mock<IMongoCollection<Favorite>> FavoriteCollection { get; }
+    parameters: []
+    return:
+      type: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}}
+    content.vb: Public ReadOnly Property FavoriteCollection As Mock(Of IMongoCollection(Of Favorite))
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.#ctor
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.#ctor
+  id: '#ctor'
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: MockMongoDb()
+  nameWithType: MockMongoDb.MockMongoDb()
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.MockMongoDb()
+  type: Constructor
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: .ctor
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 18
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public MockMongoDb()
+    content.vb: Public Sub New()
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.#ctor*
+  nameWithType.vb: MockMongoDb.New()
+  fullName.vb: RealEstate.Tests.TestHelpers.MockMongoDb.New()
+  name.vb: New()
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty(RealEstate.API.Models.Property)
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty(RealEstate.API.Models.Property)
+  id: AddProperty(RealEstate.API.Models.Property)
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: AddProperty(Property)
+  nameWithType: MockMongoDb.AddProperty(Property)
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty(RealEstate.API.Models.Property)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: AddProperty
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 226
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void AddProperty(Property property)
+    parameters:
+    - id: property
+      type: RealEstate.API.Models.Property
+    content.vb: Public Sub AddProperty([property] As [Property])
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddUser(RealEstate.API.Models.User)
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.AddUser(RealEstate.API.Models.User)
+  id: AddUser(RealEstate.API.Models.User)
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: AddUser(User)
+  nameWithType: MockMongoDb.AddUser(User)
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddUser(RealEstate.API.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: AddUser
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 235
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void AddUser(User user)
+    parameters:
+    - id: user
+      type: RealEstate.API.Models.User
+    content.vb: Public Sub AddUser(user As User)
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.AddUser*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite(RealEstate.API.Models.Favorite)
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite(RealEstate.API.Models.Favorite)
+  id: AddFavorite(RealEstate.API.Models.Favorite)
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: AddFavorite(Favorite)
+  nameWithType: MockMongoDb.AddFavorite(Favorite)
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite(RealEstate.API.Models.Favorite)
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: AddFavorite
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 244
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void AddFavorite(Favorite favorite)
+    parameters:
+    - id: favorite
+      type: RealEstate.API.Models.Favorite
+    content.vb: Public Sub AddFavorite(favorite As Favorite)
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties
+  id: ClearProperties
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: ClearProperties()
+  nameWithType: MockMongoDb.ClearProperties()
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ClearProperties
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 253
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void ClearProperties()
+    content.vb: Public Sub ClearProperties()
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers
+  id: ClearUsers
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: ClearUsers()
+  nameWithType: MockMongoDb.ClearUsers()
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ClearUsers
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 258
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void ClearUsers()
+    content.vb: Public Sub ClearUsers()
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers*
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites
+  commentId: M:RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites
+  id: ClearFavorites
+  parent: RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: ClearFavorites()
+  nameWithType: MockMongoDb.ClearFavorites()
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/TestHelpers/MockMongoDb.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ClearFavorites
+    path: ../RealEstate.Tests/TestHelpers/MockMongoDb.cs
+    startLine: 263
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.TestHelpers
+  syntax:
+    content: public void ClearFavorites()
+    content.vb: Public Sub ClearFavorites()
+  overload: RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites*
+references:
+- uid: RealEstate.Tests.TestHelpers
+  commentId: N:RealEstate.Tests.TestHelpers
+  href: RealEstate.html
+  name: RealEstate.Tests.TestHelpers
+  nameWithType: RealEstate.Tests.TestHelpers
+  fullName: RealEstate.Tests.TestHelpers
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.Tests
+    name: Tests
+    href: RealEstate.Tests.html
+  - name: .
+  - uid: RealEstate.Tests.TestHelpers
+    name: TestHelpers
+    href: RealEstate.Tests.TestHelpers.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.Tests
+    name: Tests
+    href: RealEstate.Tests.html
+  - name: .
+  - uid: RealEstate.Tests.TestHelpers
+    name: TestHelpers
+    href: RealEstate.Tests.TestHelpers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_PropertyCollection
+  name: PropertyCollection
+  nameWithType: MockMongoDb.PropertyCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.PropertyCollection
+- uid: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}}
+  commentId: T:Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}}
+  parent: Moq
+  definition: Moq.Mock`1
+  name: Mock<IMongoCollection<Property>>
+  nameWithType: Mock<IMongoCollection<Property>>
+  fullName: Moq.Mock<MongoDB.Driver.IMongoCollection<RealEstate.API.Models.Property>>
+  nameWithType.vb: Mock(Of IMongoCollection(Of Property))
+  fullName.vb: Moq.Mock(Of MongoDB.Driver.IMongoCollection(Of RealEstate.API.Models.Property))
+  name.vb: Mock(Of IMongoCollection(Of Property))
+  spec.csharp:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: <
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - uid: RealEstate.API.Models.Property
+    name: Property
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Property
+    name: Property
+  - name: )
+  - name: )
+- uid: Moq.Mock`1
+  commentId: T:Moq.Mock`1
+  isExternal: true
+  name: Mock<T>
+  nameWithType: Mock<T>
+  fullName: Moq.Mock<T>
+  nameWithType.vb: Mock(Of T)
+  fullName.vb: Moq.Mock(Of T)
+  name.vb: Mock(Of T)
+  spec.csharp:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Moq
+  commentId: N:Moq
+  isExternal: true
+  name: Moq
+  nameWithType: Moq
+  fullName: Moq
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_UserCollection
+  name: UserCollection
+  nameWithType: MockMongoDb.UserCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.UserCollection
+- uid: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.User}}
+  commentId: T:Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.User}}
+  parent: Moq
+  definition: Moq.Mock`1
+  name: Mock<IMongoCollection<User>>
+  nameWithType: Mock<IMongoCollection<User>>
+  fullName: Moq.Mock<MongoDB.Driver.IMongoCollection<RealEstate.API.Models.User>>
+  nameWithType.vb: Mock(Of IMongoCollection(Of User))
+  fullName.vb: Moq.Mock(Of MongoDB.Driver.IMongoCollection(Of RealEstate.API.Models.User))
+  name.vb: Mock(Of IMongoCollection(Of User))
+  spec.csharp:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: <
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - uid: RealEstate.API.Models.User
+    name: User
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.User
+    name: User
+  - name: )
+  - name: )
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_FavoriteCollection
+  name: FavoriteCollection
+  nameWithType: MockMongoDb.FavoriteCollection
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.FavoriteCollection
+- uid: Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}}
+  commentId: T:Moq.Mock{MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}}
+  parent: Moq
+  definition: Moq.Mock`1
+  name: Mock<IMongoCollection<Favorite>>
+  nameWithType: Mock<IMongoCollection<Favorite>>
+  fullName: Moq.Mock<MongoDB.Driver.IMongoCollection<RealEstate.API.Models.Favorite>>
+  nameWithType.vb: Mock(Of IMongoCollection(Of Favorite))
+  fullName.vb: Moq.Mock(Of MongoDB.Driver.IMongoCollection(Of RealEstate.API.Models.Favorite))
+  name.vb: Mock(Of IMongoCollection(Of Favorite))
+  spec.csharp:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: <
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - uid: RealEstate.API.Models.Favorite
+    name: Favorite
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: Moq.Mock`1
+    name: Mock
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Favorite
+    name: Favorite
+  - name: )
+  - name: )
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.#ctor*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.#ctor
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb__ctor
+  name: MockMongoDb
+  nameWithType: MockMongoDb.MockMongoDb
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.MockMongoDb
+  nameWithType.vb: MockMongoDb.New
+  fullName.vb: RealEstate.Tests.TestHelpers.MockMongoDb.New
+  name.vb: New
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_AddProperty_RealEstate_API_Models_Property_
+  name: AddProperty
+  nameWithType: MockMongoDb.AddProperty
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddProperty
+- uid: RealEstate.API.Models.Property
+  commentId: T:RealEstate.API.Models.Property
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.Property.html
+  name: Property
+  nameWithType: Property
+  fullName: RealEstate.API.Models.Property
+- uid: RealEstate.API.Models
+  commentId: N:RealEstate.API.Models
+  href: RealEstate.html
+  name: RealEstate.API.Models
+  nameWithType: RealEstate.API.Models
+  fullName: RealEstate.API.Models
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddUser*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.AddUser
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_AddUser_RealEstate_API_Models_User_
+  name: AddUser
+  nameWithType: MockMongoDb.AddUser
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddUser
+- uid: RealEstate.API.Models.User
+  commentId: T:RealEstate.API.Models.User
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RealEstate.API.Models.User
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_AddFavorite_RealEstate_API_Models_Favorite_
+  name: AddFavorite
+  nameWithType: MockMongoDb.AddFavorite
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.AddFavorite
+- uid: RealEstate.API.Models.Favorite
+  commentId: T:RealEstate.API.Models.Favorite
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.Favorite.html
+  name: Favorite
+  nameWithType: Favorite
+  fullName: RealEstate.API.Models.Favorite
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_ClearProperties
+  name: ClearProperties
+  nameWithType: MockMongoDb.ClearProperties
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearProperties
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_ClearUsers
+  name: ClearUsers
+  nameWithType: MockMongoDb.ClearUsers
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearUsers
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites*
+  commentId: Overload:RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html#RealEstate_Tests_TestHelpers_MockMongoDb_ClearFavorites
+  name: ClearFavorites
+  nameWithType: MockMongoDb.ClearFavorites
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb.ClearFavorites

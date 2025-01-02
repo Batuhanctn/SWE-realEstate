@@ -12,9 +12,12 @@ using static RealEstate.API.Controllers.FavoriteController;
 namespace RealEstate.Tests.Controllers
 {
     /// <summary>
-    /// Test suite for FavoriteController
-    /// Contains unit tests for favorite property operations
+    /// Test suite for favorite property management functionality
     /// </summary>
+    /// <remarks>
+    /// Contains comprehensive unit tests for favorite-related operations including
+    /// adding, removing, and retrieving favorite properties for users
+    /// </remarks>
     public class FavoriteControllerTests
     {
         private readonly Mock<ILogger<FavoriteController>> _mockLogger;
@@ -24,9 +27,12 @@ namespace RealEstate.Tests.Controllers
         private const string TEST_USER_ID = "test-user-id";
 
         /// <summary>
-        /// Initializes a new instance of FavoriteControllerTests
-        /// Sets up mocks and controller instance for testing
+        /// Initializes a new instance of the FavoriteControllerTests class
         /// </summary>
+        /// <remarks>
+        /// Sets up the test environment with mock logger, collections, and user authentication
+        /// to facilitate favorite property management testing
+        /// </remarks>
         public FavoriteControllerTests()
         {
             _mockLogger = new Mock<ILogger<FavoriteController>>();
@@ -51,7 +57,13 @@ namespace RealEstate.Tests.Controllers
             };
         }
 
-        // Test implementation of RealEstateDbContext for testing
+        /// <summary>
+        /// Test implementation of RealEstateDbContext for testing
+        /// </summary>
+        /// <remarks>
+        /// Provides a test-specific implementation of the RealEstateDbContext class
+        /// to facilitate unit testing of favorite property management functionality
+        /// </remarks>
         private class TestRealEstateDbContext : RealEstateDbContext
         {
             private readonly IMongoCollection<Favorite> _favorites;
@@ -65,13 +77,24 @@ namespace RealEstate.Tests.Controllers
                 _properties = properties;
             }
 
+            /// <summary>
+            /// Gets the collection of favorite properties
+            /// </summary>
             public override IMongoCollection<Property> Properties => _properties;
+
+            /// <summary>
+            /// Gets the collection of favorite properties
+            /// </summary>
             public override IMongoCollection<Favorite> Favorites => _favorites;
         }
 
         /// <summary>
         /// Tests that GetFavorites returns user's favorite properties
         /// </summary>
+        /// <remarks>
+        /// Verifies that the GetFavorites method returns a list of favorite properties
+        /// associated with the currently authenticated user
+        /// </remarks>
         [Fact]
         public async Task GetFavorites_ReturnsOkResult_WithProperties()
         {
@@ -126,6 +149,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that AddToFavorites adds property to favorites
         /// </summary>
+        /// <remarks>
+        /// Verifies that the AddToFavorites method successfully adds a property to the user's favorites
+        /// </remarks>
         [Fact]
         public async Task AddToFavorites_WithValidRequest_ReturnsOkResult()
         {
@@ -175,6 +201,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that AddToFavorites returns BadRequest for null request
         /// </summary>
+        /// <remarks>
+        /// Verifies that the AddToFavorites method returns a BadRequest response when a null request is provided
+        /// </remarks>
         [Fact]
         public async Task AddToFavorites_WithNullRequest_ReturnsBadRequest()
         {
@@ -188,6 +217,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that RemoveFromFavorites removes property from favorites
         /// </summary>
+        /// <remarks>
+        /// Verifies that the RemoveFromFavorites method successfully removes a property from the user's favorites
+        /// </remarks>
         [Fact]
         public async Task RemoveFromFavorites_ExistingFavorite_ReturnsNoContent()
         {
@@ -212,6 +244,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that CheckIsFavorite checks if property is in favorites
         /// </summary>
+        /// <remarks>
+        /// Verifies that the CheckIsFavorite method correctly determines whether a property is in the user's favorites
+        /// </remarks>
         [Fact]
         public async Task CheckIsFavorite_ExistingFavorite_ReturnsTrue()
         {
@@ -243,6 +278,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that CheckIsFavorite returns False for non-existing favorite
         /// </summary>
+        /// <remarks>
+        /// Verifies that the CheckIsFavorite method correctly returns False when a property is not in the user's favorites
+        /// </remarks>
         [Fact]
         public async Task CheckIsFavorite_NonExistingFavorite_ReturnsFalse()
         {

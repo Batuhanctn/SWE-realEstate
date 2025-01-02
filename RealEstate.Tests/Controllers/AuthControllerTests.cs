@@ -8,9 +8,12 @@ using System.Text.Json;
 namespace RealEstate.Tests.Controllers
 {
     /// <summary>
-    /// Test suite for AuthController
-    /// Contains unit tests for authentication operations
+    /// Test suite for authentication controller functionality
     /// </summary>
+    /// <remarks>
+    /// Contains unit tests for user authentication operations including login, registration,
+    /// and token validation processes
+    /// </remarks>
     public class AuthControllerTests
     {
         private readonly Mock<IMongoDatabase> _mockDatabase;
@@ -20,17 +23,26 @@ namespace RealEstate.Tests.Controllers
         private readonly Mock<IMongoCollection<User>> _mockCollection;
         private const string TEST_TOKEN_KEY = "my-super-secret-key-for-testing-purposes-only-with-minimum-length";
 
+        /// <summary>
+        /// Response model for general message responses
+        /// </summary>
         private class MessageResponse
         {
             public string message { get; set; } = string.Empty;
         }
 
+        /// <summary>
+        /// Response model for login operations
+        /// </summary>
         private class LoginResponse
         {
             public string token { get; set; } = string.Empty;
             public UserResponse user { get; set; } = new();
         }
 
+        /// <summary>
+        /// Response model representing user data
+        /// </summary>
         private class UserResponse
         {
             public string id { get; set; } = string.Empty;
@@ -41,9 +53,12 @@ namespace RealEstate.Tests.Controllers
         }
 
         /// <summary>
-        /// Initializes a new instance of AuthControllerTests
-        /// Sets up mocks and controller instance for testing
+        /// Initializes a new instance of the AuthControllerTests class
         /// </summary>
+        /// <remarks>
+        /// Sets up all necessary mocks and dependencies for testing authentication functionality
+        /// including database, configuration, and controller instances
+        /// </remarks>
         public AuthControllerTests()
         {
             // Setup mock database and collection
@@ -66,6 +81,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Register creates new user successfully
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid user registration request results in a successful user creation
+        /// and returns an Ok response with a success message
+        /// </remarks>
         [Fact]
         public async Task Register_ValidUser_ReturnsOk()
         {
@@ -108,6 +127,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Register returns Conflict for duplicate email
         /// </summary>
+        /// <remarks>
+        /// Verifies that a registration request with an existing email address results in a
+        /// Conflict response with an error message indicating that the email is already in use
+        /// </remarks>
         [Fact]
         public async Task Register_ExistingEmail_ReturnsBadRequest()
         {
@@ -155,6 +178,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Register validates required fields
         /// </summary>
+        /// <remarks>
+        /// Verifies that a registration request with missing or invalid fields results in a
+        /// BadRequest response with an error message indicating the validation failure
+        /// </remarks>
         [Fact]
         public async Task Register_InvalidModel_ReturnsBadRequest()
         {
@@ -173,6 +200,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Login authenticates user successfully
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid login request results in a successful user authentication
+        /// and returns an Ok response with a JWT token and user data
+        /// </remarks>
         [Fact]
         public async Task Login_ValidCredentials_ReturnsToken()
         {
@@ -249,6 +280,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Login returns Unauthorized for invalid credentials
         /// </summary>
+        /// <remarks>
+        /// Verifies that a login request with invalid or missing credentials results in a
+        /// BadRequest response with an error message indicating the authentication failure
+        /// </remarks>
         [Fact]
         public async Task Login_InvalidEmail_ReturnsBadRequest()
         {
@@ -288,6 +323,10 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that Login returns Unauthorized for wrong password
         /// </summary>
+        /// <remarks>
+        /// Verifies that a login request with an incorrect password results in a
+        /// BadRequest response with an error message indicating the authentication failure
+        /// </remarks>
         [Fact]
         public async Task Login_WrongPassword_ReturnsBadRequest()
         {

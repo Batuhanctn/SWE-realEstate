@@ -96,5 +96,37 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6776ad355a2c868f6d8fd66f\6e94dee6-b469-4415-933e-576bee727124.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6776b180687d9b4a20e1021a\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate.API</BasePath>
+      <RelativePath>uploads/properties/6776b180687d9b4a20e1021a/3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6776b180687d9b4a20e1021a\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6776b1aa687d9b4a20e1021b\47944dfc-ca85-49a1-b210-c178ab8380ad.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate.API</BasePath>
+      <RelativePath>uploads/properties/6776b1aa687d9b4a20e1021b/47944dfc-ca85-49a1-b210-c178ab8380ad.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\properties\6776b1aa687d9b4a20e1021b\47944dfc-ca85-49a1-b210-c178ab8380ad.png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

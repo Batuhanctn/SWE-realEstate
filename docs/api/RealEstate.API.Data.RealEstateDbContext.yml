@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Data.RealEstateDbContext
+  commentId: T:RealEstate.API.Data.RealEstateDbContext
+  id: RealEstateDbContext
+  parent: RealEstate.API.Data
+  children:
+  - RealEstate.API.Data.RealEstateDbContext.#ctor(RealEstate.API.Settings.MongoDbSettings)
+  - RealEstate.API.Data.RealEstateDbContext.Favorites
+  - RealEstate.API.Data.RealEstateDbContext.Properties
+  langs:
+  - csharp
+  - vb
+  name: RealEstateDbContext
+  nameWithType: RealEstateDbContext
+  fullName: RealEstate.API.Data.RealEstateDbContext
+  type: Class
+  source:
+    remote:
+      path: RealEstate.API/Data/RealEstateDbContext.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: RealEstateDbContext
+    path: ../RealEstate.API/Data/RealEstateDbContext.cs
+    startLine: 10
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Data
+  summary: >-
+    Database context for the RealEstate application
+
+    Manages database connections and entity configurations
+  example: []
+  syntax:
+    content: public class RealEstateDbContext
+    content.vb: Public Class RealEstateDbContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RealEstate.API.Data.RealEstateDbContext.#ctor(RealEstate.API.Settings.MongoDbSettings)
+  commentId: M:RealEstate.API.Data.RealEstateDbContext.#ctor(RealEstate.API.Settings.MongoDbSettings)
+  id: '#ctor(RealEstate.API.Settings.MongoDbSettings)'
+  parent: RealEstate.API.Data.RealEstateDbContext
+  langs:
+  - csharp
+  - vb
+  name: RealEstateDbContext(MongoDbSettings)
+  nameWithType: RealEstateDbContext.RealEstateDbContext(MongoDbSettings)
+  fullName: RealEstate.API.Data.RealEstateDbContext.RealEstateDbContext(RealEstate.API.Settings.MongoDbSettings)
+  type: Constructor
+  source:
+    remote:
+      path: RealEstate.API/Data/RealEstateDbContext.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: .ctor
+    path: ../RealEstate.API/Data/RealEstateDbContext.cs
+    startLine: 16
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Data
+  summary: Initializes a new instance of the RealEstateDbContext
+  example: []
+  syntax:
+    content: public RealEstateDbContext(MongoDbSettings settings)
+    parameters:
+    - id: settings
+      type: RealEstate.API.Settings.MongoDbSettings
+      description: The settings to be used by the context
+    content.vb: Public Sub New(settings As MongoDbSettings)
+  overload: RealEstate.API.Data.RealEstateDbContext.#ctor*
+  nameWithType.vb: RealEstateDbContext.New(MongoDbSettings)
+  fullName.vb: RealEstate.API.Data.RealEstateDbContext.New(RealEstate.API.Settings.MongoDbSettings)
+  name.vb: New(MongoDbSettings)
+- uid: RealEstate.API.Data.RealEstateDbContext.Properties
+  commentId: P:RealEstate.API.Data.RealEstateDbContext.Properties
+  id: Properties
+  parent: RealEstate.API.Data.RealEstateDbContext
+  langs:
+  - csharp
+  - vb
+  name: Properties
+  nameWithType: RealEstateDbContext.Properties
+  fullName: RealEstate.API.Data.RealEstateDbContext.Properties
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Data/RealEstateDbContext.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Properties
+    path: ../RealEstate.API/Data/RealEstateDbContext.cs
+    startLine: 31
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Data
+  summary: >-
+    Gets the Properties collection
+
+    Represents the Properties collection in the database
+  example: []
+  syntax:
+    content: public virtual IMongoCollection<Property> Properties { get; }
+    parameters: []
+    return:
+      type: MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}
+    content.vb: Public Overridable ReadOnly Property Properties As IMongoCollection(Of [Property])
+  overload: RealEstate.API.Data.RealEstateDbContext.Properties*
+- uid: RealEstate.API.Data.RealEstateDbContext.Favorites
+  commentId: P:RealEstate.API.Data.RealEstateDbContext.Favorites
+  id: Favorites
+  parent: RealEstate.API.Data.RealEstateDbContext
+  langs:
+  - csharp
+  - vb
+  name: Favorites
+  nameWithType: RealEstateDbContext.Favorites
+  fullName: RealEstate.API.Data.RealEstateDbContext.Favorites
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Data/RealEstateDbContext.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Favorites
+    path: ../RealEstate.API/Data/RealEstateDbContext.cs
+    startLine: 37
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Data
+  summary: >-
+    Gets the Favorites collection
+
+    Represents the Favorites collection in the database
+  example: []
+  syntax:
+    content: public virtual IMongoCollection<Favorite> Favorites { get; }
+    parameters: []
+    return:
+      type: MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}
+    content.vb: Public Overridable ReadOnly Property Favorites As IMongoCollection(Of Favorite)
+  overload: RealEstate.API.Data.RealEstateDbContext.Favorites*
+references:
+- uid: RealEstate.API.Data
+  commentId: N:RealEstate.API.Data
+  href: RealEstate.html
+  name: RealEstate.API.Data
+  nameWithType: RealEstate.API.Data
+  fullName: RealEstate.API.Data
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Data
+    name: Data
+    href: RealEstate.API.Data.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Data
+    name: Data
+    href: RealEstate.API.Data.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RealEstate.API.Data.RealEstateDbContext.#ctor*
+  commentId: Overload:RealEstate.API.Data.RealEstateDbContext.#ctor
+  href: RealEstate.API.Data.RealEstateDbContext.html#RealEstate_API_Data_RealEstateDbContext__ctor_RealEstate_API_Settings_MongoDbSettings_
+  name: RealEstateDbContext
+  nameWithType: RealEstateDbContext.RealEstateDbContext
+  fullName: RealEstate.API.Data.RealEstateDbContext.RealEstateDbContext
+  nameWithType.vb: RealEstateDbContext.New
+  fullName.vb: RealEstate.API.Data.RealEstateDbContext.New
+  name.vb: New
+- uid: RealEstate.API.Settings.MongoDbSettings
+  commentId: T:RealEstate.API.Settings.MongoDbSettings
+  parent: RealEstate.API.Settings
+  href: RealEstate.API.Settings.MongoDbSettings.html
+  name: MongoDbSettings
+  nameWithType: MongoDbSettings
+  fullName: RealEstate.API.Settings.MongoDbSettings
+- uid: RealEstate.API.Settings
+  commentId: N:RealEstate.API.Settings
+  href: RealEstate.html
+  name: RealEstate.API.Settings
+  nameWithType: RealEstate.API.Settings
+  fullName: RealEstate.API.Settings
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Settings
+    name: Settings
+    href: RealEstate.API.Settings.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Settings
+    name: Settings
+    href: RealEstate.API.Settings.html
+- uid: RealEstate.API.Data.RealEstateDbContext.Properties*
+  commentId: Overload:RealEstate.API.Data.RealEstateDbContext.Properties
+  href: RealEstate.API.Data.RealEstateDbContext.html#RealEstate_API_Data_RealEstateDbContext_Properties
+  name: Properties
+  nameWithType: RealEstateDbContext.Properties
+  fullName: RealEstate.API.Data.RealEstateDbContext.Properties
+- uid: MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}
+  commentId: T:MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Property}
+  parent: MongoDB.Driver
+  definition: MongoDB.Driver.IMongoCollection`1
+  href: RealEstate.API.Models.Property.html
+  name: IMongoCollection<Property>
+  nameWithType: IMongoCollection<Property>
+  fullName: MongoDB.Driver.IMongoCollection<RealEstate.API.Models.Property>
+  nameWithType.vb: IMongoCollection(Of Property)
+  fullName.vb: MongoDB.Driver.IMongoCollection(Of RealEstate.API.Models.Property)
+  name.vb: IMongoCollection(Of Property)
+  spec.csharp:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: '>'
+  spec.vb:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    href: RealEstate.API.Models.Property.html
+  - name: )
+- uid: MongoDB.Driver.IMongoCollection`1
+  commentId: T:MongoDB.Driver.IMongoCollection`1
+  isExternal: true
+  name: IMongoCollection<TDocument>
+  nameWithType: IMongoCollection<TDocument>
+  fullName: MongoDB.Driver.IMongoCollection<TDocument>
+  nameWithType.vb: IMongoCollection(Of TDocument)
+  fullName.vb: MongoDB.Driver.IMongoCollection(Of TDocument)
+  name.vb: IMongoCollection(Of TDocument)
+  spec.csharp:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - name: TDocument
+  - name: '>'
+  spec.vb:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDocument
+  - name: )
+- uid: MongoDB.Driver
+  commentId: N:MongoDB.Driver
+  isExternal: true
+  name: MongoDB.Driver
+  nameWithType: MongoDB.Driver
+  fullName: MongoDB.Driver
+  spec.csharp:
+  - uid: MongoDB
+    name: MongoDB
+    isExternal: true
+  - name: .
+  - uid: MongoDB.Driver
+    name: Driver
+    isExternal: true
+  spec.vb:
+  - uid: MongoDB
+    name: MongoDB
+    isExternal: true
+  - name: .
+  - uid: MongoDB.Driver
+    name: Driver
+    isExternal: true
+- uid: RealEstate.API.Data.RealEstateDbContext.Favorites*
+  commentId: Overload:RealEstate.API.Data.RealEstateDbContext.Favorites
+  href: RealEstate.API.Data.RealEstateDbContext.html#RealEstate_API_Data_RealEstateDbContext_Favorites
+  name: Favorites
+  nameWithType: RealEstateDbContext.Favorites
+  fullName: RealEstate.API.Data.RealEstateDbContext.Favorites
+- uid: MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}
+  commentId: T:MongoDB.Driver.IMongoCollection{RealEstate.API.Models.Favorite}
+  parent: MongoDB.Driver
+  definition: MongoDB.Driver.IMongoCollection`1
+  href: RealEstate.API.Models.Favorite.html
+  name: IMongoCollection<Favorite>
+  nameWithType: IMongoCollection<Favorite>
+  fullName: MongoDB.Driver.IMongoCollection<RealEstate.API.Models.Favorite>
+  nameWithType.vb: IMongoCollection(Of Favorite)
+  fullName.vb: MongoDB.Driver.IMongoCollection(Of RealEstate.API.Models.Favorite)
+  name.vb: IMongoCollection(Of Favorite)
+  spec.csharp:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: <
+  - uid: RealEstate.API.Models.Favorite
+    name: Favorite
+    href: RealEstate.API.Models.Favorite.html
+  - name: '>'
+  spec.vb:
+  - uid: MongoDB.Driver.IMongoCollection`1
+    name: IMongoCollection
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RealEstate.API.Models.Favorite
+    name: Favorite
+    href: RealEstate.API.Models.Favorite.html
+  - name: )

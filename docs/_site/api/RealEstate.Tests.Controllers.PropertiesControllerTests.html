@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class PropertiesControllerTests </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class PropertiesControllerTests ">
+    
+    <meta name="description" content="Test suite for property management functionality">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests">
+
+
+
+  <h1 id="RealEstate_Tests_Controllers_PropertiesControllerTests" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests" class="text-break">Class PropertiesControllerTests</h1>
+  <div class="markdown level0 summary"><p>Test suite for property management functionality</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">PropertiesControllerTests</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="RealEstate.html">RealEstate</a>.<a class="xref" href="RealEstate.Tests.html">Tests</a>.<a class="xref" href="RealEstate.Tests.Controllers.html">Controllers</a></h6>
+  <h6><strong>Assembly</strong>: RealEstate.Tests.dll</h6>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PropertiesControllerTests</code></pre>
+  </div>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Contains comprehensive unit tests for property-related operations including
+creating, reading, updating, and deleting property listings</p>
+</div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests__ctor.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L37">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests__ctor_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.#ctor*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests__ctor" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.#ctor">PropertiesControllerTests()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the PropertiesControllerTests class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertiesControllerTests()</code></pre>
+  </div>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Sets up the test environment with mock database, collections, and user authentication
+to facilitate property management testing</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_InvalidModel_ReturnsBadRequest.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_InvalidModel_ReturnsBadRequest%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L299">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_InvalidModel_ReturnsBadRequest_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_InvalidModel_ReturnsBadRequest*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_InvalidModel_ReturnsBadRequest" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_InvalidModel_ReturnsBadRequest">CreateProperty_InvalidModel_ReturnsBadRequest()</h4>
+  <div class="markdown level1 summary"><p>Tests that CreateProperty returns BadRequest for invalid models</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task CreateProperty_InvalidModel_ReturnsBadRequest()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_InvalidModel_ReturnsBadRequest_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that an invalid property model returns a BadRequest result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_UnauthorizedUser_ReturnsUnauthorized.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_UnauthorizedUser_ReturnsUnauthorized%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L117">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_UnauthorizedUser_ReturnsUnauthorized_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_UnauthorizedUser_ReturnsUnauthorized*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_UnauthorizedUser_ReturnsUnauthorized" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_UnauthorizedUser_ReturnsUnauthorized">CreateProperty_UnauthorizedUser_ReturnsUnauthorized()</h4>
+  <div class="markdown level1 summary"><p>Tests that CreateProperty returns Unauthorized for unauthorized users</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task CreateProperty_UnauthorizedUser_ReturnsUnauthorized()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_UnauthorizedUser_ReturnsUnauthorized_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that an unauthorized user cannot create a property</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_ValidProperty_ReturnsCreatedAtAction.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_ValidProperty_ReturnsCreatedAtAction%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L72">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_ValidProperty_ReturnsCreatedAtAction_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_ValidProperty_ReturnsCreatedAtAction*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_ValidProperty_ReturnsCreatedAtAction" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.CreateProperty_ValidProperty_ReturnsCreatedAtAction">CreateProperty_ValidProperty_ReturnsCreatedAtAction()</h4>
+  <div class="markdown level1 summary"><p>Tests that CreateProperty creates property successfully</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task CreateProperty_ValidProperty_ReturnsCreatedAtAction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_CreateProperty_ValidProperty_ReturnsCreatedAtAction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a valid property is created and returned with the correct user ID</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_ExistingOwnedProperty_ReturnsNoContent.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_ExistingOwnedProperty_ReturnsNoContent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L189">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_ExistingOwnedProperty_ReturnsNoContent_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_ExistingOwnedProperty_ReturnsNoContent*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_ExistingOwnedProperty_ReturnsNoContent" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_ExistingOwnedProperty_ReturnsNoContent">DeleteProperty_ExistingOwnedProperty_ReturnsNoContent()</h4>
+  <div class="markdown level1 summary"><p>Tests that DeleteProperty removes property successfully</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task DeleteProperty_ExistingOwnedProperty_ReturnsNoContent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_ExistingOwnedProperty_ReturnsNoContent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a valid property is deleted and returns a NoContent result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_NonExistingProperty_ReturnsNotFound.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_NonExistingProperty_ReturnsNotFound%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L214">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_NonExistingProperty_ReturnsNotFound_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_NonExistingProperty_ReturnsNotFound*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_NonExistingProperty_ReturnsNotFound" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_NonExistingProperty_ReturnsNotFound">DeleteProperty_NonExistingProperty_ReturnsNotFound()</h4>
+  <div class="markdown level1 summary"><p>Tests that DeleteProperty returns NotFound for non-existing properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task DeleteProperty_NonExistingProperty_ReturnsNotFound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_NonExistingProperty_ReturnsNotFound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a non-existent property returns a NotFound result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L230">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid">DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid()</h4>
+  <div class="markdown level1 summary"><p>Tests that DeleteProperty returns Forbid for properties owned by other users</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a property owned by another user returns a Forbid result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_GetAllProperties_WithFilters_ReturnsFilteredProperties.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.GetAllProperties_WithFilters_ReturnsFilteredProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L255">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetAllProperties_WithFilters_ReturnsFilteredProperties_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetAllProperties_WithFilters_ReturnsFilteredProperties*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetAllProperties_WithFilters_ReturnsFilteredProperties" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetAllProperties_WithFilters_ReturnsFilteredProperties">GetAllProperties_WithFilters_ReturnsFilteredProperties()</h4>
+  <div class="markdown level1 summary"><p>Tests that GetAllProperties returns all properties with filters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task GetAllProperties_WithFilters_ReturnsFilteredProperties()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetAllProperties_WithFilters_ReturnsFilteredProperties_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that properties are returned with the correct filters applied</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_ExistingProperty_ReturnsProperty.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_ExistingProperty_ReturnsProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L145">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_ExistingProperty_ReturnsProperty_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_ExistingProperty_ReturnsProperty*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_ExistingProperty_ReturnsProperty" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_ExistingProperty_ReturnsProperty">GetProperty_ExistingProperty_ReturnsProperty()</h4>
+  <div class="markdown level1 summary"><p>Tests that GetProperty returns specific property</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task GetProperty_ExistingProperty_ReturnsProperty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_ExistingProperty_ReturnsProperty_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a valid property is returned with the correct ID</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_NonExistingProperty_ReturnsNotFound.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_NonExistingProperty_ReturnsNotFound%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L173">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_NonExistingProperty_ReturnsNotFound_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_NonExistingProperty_ReturnsNotFound*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_NonExistingProperty_ReturnsNotFound" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetProperty_NonExistingProperty_ReturnsNotFound">GetProperty_NonExistingProperty_ReturnsNotFound()</h4>
+  <div class="markdown level1 summary"><p>Tests that GetProperty returns NotFound for non-existing properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task GetProperty_NonExistingProperty_ReturnsNotFound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetProperty_NonExistingProperty_ReturnsNotFound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a non-existent property returns a NotFound result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_GetUserProperties_ReturnsUserProperties.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.GetUserProperties_ReturnsUserProperties%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L333">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetUserProperties_ReturnsUserProperties_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetUserProperties_ReturnsUserProperties*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetUserProperties_ReturnsUserProperties" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.GetUserProperties_ReturnsUserProperties">GetUserProperties_ReturnsUserProperties()</h4>
+  <div class="markdown level1 summary"><p>Tests that GetUserProperties returns properties for specific user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task GetUserProperties_ReturnsUserProperties()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_GetUserProperties_ReturnsUserProperties_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that properties are returned for the correct user</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_ExistingProperty_ReturnsNoContent.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_ExistingProperty_ReturnsNoContent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L389">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_ExistingProperty_ReturnsNoContent_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_ExistingProperty_ReturnsNoContent*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_ExistingProperty_ReturnsNoContent" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_ExistingProperty_ReturnsNoContent">UpdateProperty_ExistingProperty_ReturnsNoContent()</h4>
+  <div class="markdown level1 summary"><p>Tests that UpdateProperty updates property successfully</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UpdateProperty_ExistingProperty_ReturnsNoContent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_ExistingProperty_ReturnsNoContent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a valid property is updated and returns a NoContent result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_NonExistingProperty_ReturnsNotFound.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_NonExistingProperty_ReturnsNotFound%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L437">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_NonExistingProperty_ReturnsNotFound_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_NonExistingProperty_ReturnsNotFound*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_NonExistingProperty_ReturnsNotFound" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_NonExistingProperty_ReturnsNotFound">UpdateProperty_NonExistingProperty_ReturnsNotFound()</h4>
+  <div class="markdown level1 summary"><p>Tests that UpdateProperty returns NotFound for non-existing properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UpdateProperty_NonExistingProperty_ReturnsNotFound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_NonExistingProperty_ReturnsNotFound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a non-existent property returns a NotFound result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_UnauthorizedUser_ReturnsUnauthorized.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_UnauthorizedUser_ReturnsUnauthorized%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L476">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_UnauthorizedUser_ReturnsUnauthorized_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_UnauthorizedUser_ReturnsUnauthorized*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_UnauthorizedUser_ReturnsUnauthorized" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UpdateProperty_UnauthorizedUser_ReturnsUnauthorized">UpdateProperty_UnauthorizedUser_ReturnsUnauthorized()</h4>
+  <div class="markdown level1 summary"><p>Tests that UpdateProperty returns Unauthorized for unauthorized users</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UpdateProperty_UnauthorizedUser_ReturnsUnauthorized()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UpdateProperty_UnauthorizedUser_ReturnsUnauthorized_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that an unauthorized user cannot update a property</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NoImages_ReturnsBadRequest.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NoImages_ReturnsBadRequest%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L569">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NoImages_ReturnsBadRequest_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NoImages_ReturnsBadRequest*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NoImages_ReturnsBadRequest" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NoImages_ReturnsBadRequest">UploadImages_NoImages_ReturnsBadRequest()</h4>
+  <div class="markdown level1 summary"><p>Tests that UploadImages returns BadRequest for no images</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UploadImages_NoImages_ReturnsBadRequest()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NoImages_ReturnsBadRequest_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that no images uploaded returns a BadRequest result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NonExistingProperty_ReturnsNotFound.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NonExistingProperty_ReturnsNotFound%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L531">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NonExistingProperty_ReturnsNotFound_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NonExistingProperty_ReturnsNotFound*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NonExistingProperty_ReturnsNotFound" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_NonExistingProperty_ReturnsNotFound">UploadImages_NonExistingProperty_ReturnsNotFound()</h4>
+  <div class="markdown level1 summary"><p>Tests that UploadImages returns NotFound for non-existing properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UploadImages_NonExistingProperty_ReturnsNotFound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_NonExistingProperty_ReturnsNotFound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that a non-existent property returns a NotFound result</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_UnauthorizedUser_ReturnsUnauthorized.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_UnauthorizedUser_ReturnsUnauthorized%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L504">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_UnauthorizedUser_ReturnsUnauthorized_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_UnauthorizedUser_ReturnsUnauthorized*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_UnauthorizedUser_ReturnsUnauthorized" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_UnauthorizedUser_ReturnsUnauthorized">UploadImages_UnauthorizedUser_ReturnsUnauthorized()</h4>
+  <div class="markdown level1 summary"><p>Tests that UploadImages returns Unauthorized for unauthorized users</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UploadImages_UnauthorizedUser_ReturnsUnauthorized()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_UnauthorizedUser_ReturnsUnauthorized_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that an unauthorized user cannot upload images</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_ValidImages_ReturnsOkWithUpdatedProperty.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_ValidImages_ReturnsOkWithUpdatedProperty%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L613">View Source</a>
+  </span>
+  <a id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_ValidImages_ReturnsOkWithUpdatedProperty_" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_ValidImages_ReturnsOkWithUpdatedProperty*"></a>
+  <h4 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_ValidImages_ReturnsOkWithUpdatedProperty" data-uid="RealEstate.Tests.Controllers.PropertiesControllerTests.UploadImages_ValidImages_ReturnsOkWithUpdatedProperty">UploadImages_ValidImages_ReturnsOkWithUpdatedProperty()</h4>
+  <div class="markdown level1 summary"><p>Tests that UploadImages returns Ok with updated property for valid images</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public Task UploadImages_ValidImages_ReturnsOkWithUpdatedProperty()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="RealEstate_Tests_Controllers_PropertiesControllerTests_UploadImages_ValidImages_ReturnsOkWithUpdatedProperty_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Verifies that valid images are uploaded and the property is updated</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/new/main/apiSpec/new?filename=RealEstate_Tests_Controllers_PropertiesControllerTests.md&amp;value=---%0Auid%3A%20RealEstate.Tests.Controllers.PropertiesControllerTests%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/Controllers/PropertiesControllerTests.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

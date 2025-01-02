@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Testing Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Testing Documentation ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="testing-documentation">Testing Documentation</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This document outlines the testing strategy and implementation for the Real Estate API project. The project uses xUnit for backend testing and Jest for frontend testing.</p>
+<h2 id="backend-testing">Backend Testing</h2>
+<h3 id="test-structure">Test Structure</h3>
+<pre><code>RealEstate.Tests/
+├── Controllers/
+│   ├── AuthControllerTests.cs
+│   ├── PropertyControllerTests.cs
+│   ├── PropertiesControllerTests.cs
+│   └── FavoriteControllerTests.cs
+├── Services/
+│   └── PropertyServiceTests.cs
+└── TestHelpers/
+    └── MockHelpers.cs
+</code></pre>
+<h3 id="controller-tests">Controller Tests</h3>
+<h4 id="authcontroller-tests">AuthController Tests</h4>
+<p>Tests authentication operations:</p>
+<ul>
+<li>User registration</li>
+<li>User login</li>
+<li>Input validation</li>
+<li>Error handling</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">[Fact]
+public async Task Register_ValidUser_ReturnsOk()
+{
+    // Arrange
+    var request = new RegisterRequest
+    {
+        Email = &quot;test@example.com&quot;,
+        Password = &quot;Password123!&quot;,
+        FirstName = &quot;John&quot;,
+        LastName = &quot;Doe&quot;
+    };
+
+    // Act
+    var result = await _controller.Register(request);
+
+    // Assert
+    var okResult = Assert.IsType&lt;OkObjectResult&gt;(result);
+    var response = Assert.IsType&lt;ApiResponse&gt;(okResult.Value);
+    Assert.Equal(&quot;User registered successfully&quot;, response.Message);
+}
+</code></pre>
+<h4 id="propertycontroller-tests">PropertyController Tests</h4>
+<p>Tests property management operations:</p>
+<ul>
+<li>Get all properties</li>
+<li>Get property by ID</li>
+<li>Create property</li>
+<li>Update property</li>
+<li>Delete property</li>
+<li>Search properties</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">[Fact]
+public async Task GetProperties_ReturnsAllProperties()
+{
+    // Arrange
+    var properties = GetTestProperties();
+    _mockPropertyService.Setup(s =&gt; s.GetAsync())
+        .ReturnsAsync(properties);
+
+    // Act
+    var result = await _controller.Get();
+
+    // Assert
+    var okResult = Assert.IsType&lt;OkObjectResult&gt;(result.Result);
+    var returnValue = Assert.IsType&lt;List&lt;Property&gt;&gt;(okResult.Value);
+    Assert.Equal(properties.Count, returnValue.Count);
+}
+</code></pre>
+<h3 id="service-tests">Service Tests</h3>
+<h4 id="propertyservice-tests">PropertyService Tests</h4>
+<p>Tests business logic:</p>
+<ul>
+<li>Database operations</li>
+<li>Data validation</li>
+<li>Error handling</li>
+<li>Business rules</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">[Fact]
+public async Task CreateProperty_ValidProperty_SavesToDatabase()
+{
+    // Arrange
+    var property = new Property
+    {
+        Title = &quot;Test Property&quot;,
+        Price = 100000
+    };
+
+    // Act
+    await _service.CreateAsync(property);
+
+    // Assert
+    _mockCollection.Verify(c =&gt; c.InsertOneAsync(
+        It.IsAny&lt;Property&gt;(),
+        It.IsAny&lt;InsertOneOptions&gt;(),
+        It.IsAny&lt;CancellationToken&gt;()
+    ), Times.Once);
+}
+</code></pre>
+<h2 id="frontend-testing">Frontend Testing</h2>
+<h3 id="test-structure-1">Test Structure</h3>
+<pre><code>real-estate-client/
+├── src/
+│   └── __tests__/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       └── hooks/
+</code></pre>
+<h3 id="component-tests">Component Tests</h3>
+<p>Tests React components:</p>
+<ul>
+<li>Rendering</li>
+<li>User interactions</li>
+<li>State changes</li>
+<li>Props validation</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-typescript">describe('PropertyCard', () =&gt; {
+  it('renders property information correctly', () =&gt; {
+    const property = {
+      id: '1',
+      title: 'Test Property',
+      price: 100000,
+      location: 'Test Location'
+    };
+
+    render(&lt;PropertyCard property={property} /&gt;);
+    
+    expect(screen.getByText('Test Property')).toBeInTheDocument();
+    expect(screen.getByText('$100,000')).toBeInTheDocument();
+    expect(screen.getByText('Test Location')).toBeInTheDocument();
+  });
+});
+</code></pre>
+<h3 id="service-tests-1">Service Tests</h3>
+<p>Tests API services:</p>
+<ul>
+<li>API calls</li>
+<li>Data transformation</li>
+<li>Error handling</li>
+<li>Response parsing</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-typescript">describe('PropertyService', () =&gt; {
+  it('fetches properties successfully', async () =&gt; {
+    const mockProperties = [
+      { id: '1', title: 'Property 1' },
+      { id: '2', title: 'Property 2' }
+    ];
+
+    axios.get.mockResolvedValueOnce({ data: mockProperties });
+
+    const result = await PropertyService.getProperties();
+    
+    expect(result).toEqual(mockProperties);
+    expect(axios.get).toHaveBeenCalledWith('/api/properties');
+  });
+});
+</code></pre>
+<h2 id="test-coverage">Test Coverage</h2>
+<ul>
+<li>Backend: &gt; 80% code coverage</li>
+<li>Frontend: &gt; 70% code coverage</li>
+</ul>
+<h3 id="coverage-reports">Coverage Reports</h3>
+<p>Generated using:</p>
+<ul>
+<li>Backend: coverlet</li>
+<li>Frontend: Jest coverage</li>
+</ul>
+<h2 id="running-tests">Running Tests</h2>
+<h3 id="backend-tests">Backend Tests</h3>
+<pre><code class="lang-bash"># Run all tests
+dotnet test
+
+# Run specific test project
+dotnet test RealEstate.Tests
+
+# Run with coverage
+dotnet test /p:CollectCoverage=true
+</code></pre>
+<h3 id="frontend-tests">Frontend Tests</h3>
+<pre><code class="lang-bash"># Run all tests
+npm test
+
+# Run with coverage
+npm test -- --coverage
+
+# Run specific test file
+npm test -- PropertyCard.test.tsx
+</code></pre>
+<h2 id="continuous-integration">Continuous Integration</h2>
+<p>Tests are run automatically:</p>
+<ul>
+<li>On pull requests</li>
+<li>On merge to main branch</li>
+<li>Nightly builds</li>
+</ul>
+<h3 id="ci-pipeline">CI Pipeline</h3>
+<ol>
+<li>Build project</li>
+<li>Run backend tests</li>
+<li>Run frontend tests</li>
+<li>Generate coverage reports</li>
+<li>Deploy if all tests pass</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/docs/testing.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

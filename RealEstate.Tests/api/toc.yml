@@ -1,0 +1,26 @@
+### YamlMime:TableOfContent
+items:
+- uid: RealEstate.Tests.Controllers
+  name: RealEstate.Tests.Controllers
+  type: Namespace
+  items:
+  - uid: RealEstate.Tests.Controllers.AuthControllerTests
+    name: AuthControllerTests
+    type: Class
+  - uid: RealEstate.Tests.Controllers.FavoriteControllerTests
+    name: FavoriteControllerTests
+    type: Class
+  - uid: RealEstate.Tests.Controllers.PropertiesControllerTests
+    name: PropertiesControllerTests
+    type: Class
+  - uid: RealEstate.Tests.Controllers.PropertyControllerTests
+    name: PropertyControllerTests
+    type: Class
+- uid: RealEstate.Tests.TestHelpers
+  name: RealEstate.Tests.TestHelpers
+  type: Namespace
+  items:
+  - uid: RealEstate.Tests.TestHelpers.MockMongoDb
+    name: MockMongoDb
+    type: Class
+memberLayout: SamePage

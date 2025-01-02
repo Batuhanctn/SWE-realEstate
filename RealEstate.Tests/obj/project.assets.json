@@ -8849,11 +8849,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\RealEstate.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\RealEstate.Tests.csproj",
       "projectName": "RealEstate.Tests",
-      "projectPath": "c:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\RealEstate.Tests.csproj",
+      "projectPath": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\RealEstate.Tests.csproj",
       "packagesPath": "C:\\Users\\Win10\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8871,8 +8871,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\RealEstate.API.csproj": {
-              "projectPath": "c:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\RealEstate.API.csproj"
+            "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\RealEstate.API.csproj": {
+              "projectPath": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\RealEstate.API.csproj"
             }
           }
         }

@@ -13,9 +13,12 @@ using Xunit;
 namespace RealEstate.Tests.Controllers
 {
     /// <summary>
-    /// Test suite for PropertiesController
-    /// Contains unit tests for property listing operations
+    /// Test suite for property management functionality
     /// </summary>
+    /// <remarks>
+    /// Contains comprehensive unit tests for property-related operations including
+    /// creating, reading, updating, and deleting property listings
+    /// </remarks>
     public class PropertiesControllerTests
     {
         private readonly MockMongoDb _mockDb;
@@ -25,9 +28,12 @@ namespace RealEstate.Tests.Controllers
         private readonly Mock<IMongoCollection<Property>> _mockCollection;
 
         /// <summary>
-        /// Initializes a new instance of PropertiesControllerTests
-        /// Sets up mocks and controller instance for testing
+        /// Initializes a new instance of the PropertiesControllerTests class
         /// </summary>
+        /// <remarks>
+        /// Sets up the test environment with mock database, collections, and user authentication
+        /// to facilitate property management testing
+        /// </remarks>
         public PropertiesControllerTests()
         {
             _mockDb = new MockMongoDb();
@@ -60,6 +66,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that CreateProperty creates property successfully
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid property is created and returned with the correct user ID
+        /// </remarks>
         [Fact]
         public async Task CreateProperty_ValidProperty_ReturnsCreatedAtAction()
         {
@@ -102,6 +111,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that CreateProperty returns Unauthorized for unauthorized users
         /// </summary>
+        /// <remarks>
+        /// Verifies that an unauthorized user cannot create a property
+        /// </remarks>
         [Fact]
         public async Task CreateProperty_UnauthorizedUser_ReturnsUnauthorized()
         {
@@ -127,6 +139,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that GetProperty returns specific property
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid property is returned with the correct ID
+        /// </remarks>
         [Fact]
         public async Task GetProperty_ExistingProperty_ReturnsProperty()
         {
@@ -152,6 +167,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that GetProperty returns NotFound for non-existing properties
         /// </summary>
+        /// <remarks>
+        /// Verifies that a non-existent property returns a NotFound result
+        /// </remarks>
         [Fact]
         public async Task GetProperty_NonExistingProperty_ReturnsNotFound()
         {
@@ -165,6 +183,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that DeleteProperty removes property successfully
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid property is deleted and returns a NoContent result
+        /// </remarks>
         [Fact]
         public async Task DeleteProperty_ExistingOwnedProperty_ReturnsNoContent()
         {
@@ -187,6 +208,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that DeleteProperty returns NotFound for non-existing properties
         /// </summary>
+        /// <remarks>
+        /// Verifies that a non-existent property returns a NotFound result
+        /// </remarks>
         [Fact]
         public async Task DeleteProperty_NonExistingProperty_ReturnsNotFound()
         {
@@ -200,6 +224,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that DeleteProperty returns Forbid for properties owned by other users
         /// </summary>
+        /// <remarks>
+        /// Verifies that a property owned by another user returns a Forbid result
+        /// </remarks>
         [Fact]
         public async Task DeleteProperty_PropertyOwnedByOtherUser_ReturnsForbid()
         {
@@ -222,6 +249,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that GetAllProperties returns all properties with filters
         /// </summary>
+        /// <remarks>
+        /// Verifies that properties are returned with the correct filters applied
+        /// </remarks>
         [Fact]
         public async Task GetAllProperties_WithFilters_ReturnsFilteredProperties()
         {
@@ -263,6 +293,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that CreateProperty returns BadRequest for invalid models
         /// </summary>
+        /// <remarks>
+        /// Verifies that an invalid property model returns a BadRequest result
+        /// </remarks>
         [Fact]
         public async Task CreateProperty_InvalidModel_ReturnsBadRequest()
         {
@@ -294,6 +327,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that GetUserProperties returns properties for specific user
         /// </summary>
+        /// <remarks>
+        /// Verifies that properties are returned for the correct user
+        /// </remarks>
         [Fact]
         public async Task GetUserProperties_ReturnsUserProperties()
         {
@@ -347,6 +383,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UpdateProperty updates property successfully
         /// </summary>
+        /// <remarks>
+        /// Verifies that a valid property is updated and returns a NoContent result
+        /// </remarks>
         [Fact]
         public async Task UpdateProperty_ExistingProperty_ReturnsNoContent()
         {
@@ -392,6 +431,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UpdateProperty returns NotFound for non-existing properties
         /// </summary>
+        /// <remarks>
+        /// Verifies that a non-existent property returns a NotFound result
+        /// </remarks>
         [Fact]
         public async Task UpdateProperty_NonExistingProperty_ReturnsNotFound()
         {
@@ -428,6 +470,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UpdateProperty returns Unauthorized for unauthorized users
         /// </summary>
+        /// <remarks>
+        /// Verifies that an unauthorized user cannot update a property
+        /// </remarks>
         [Fact]
         public async Task UpdateProperty_UnauthorizedUser_ReturnsUnauthorized()
         {
@@ -453,6 +498,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UploadImages returns Unauthorized for unauthorized users
         /// </summary>
+        /// <remarks>
+        /// Verifies that an unauthorized user cannot upload images
+        /// </remarks>
         [Fact]
         public async Task UploadImages_UnauthorizedUser_ReturnsUnauthorized()
         {
@@ -477,6 +525,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UploadImages returns NotFound for non-existing properties
         /// </summary>
+        /// <remarks>
+        /// Verifies that a non-existent property returns a NotFound result
+        /// </remarks>
         [Fact]
         public async Task UploadImages_NonExistingProperty_ReturnsNotFound()
         {
@@ -512,6 +563,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UploadImages returns BadRequest for no images
         /// </summary>
+        /// <remarks>
+        /// Verifies that no images uploaded returns a BadRequest result
+        /// </remarks>
         [Fact]
         public async Task UploadImages_NoImages_ReturnsBadRequest()
         {
@@ -553,6 +607,9 @@ namespace RealEstate.Tests.Controllers
         /// <summary>
         /// Tests that UploadImages returns Ok with updated property for valid images
         /// </summary>
+        /// <remarks>
+        /// Verifies that valid images are uploaded and the property is updated
+        /// </remarks>
         [Fact]
         public async Task UploadImages_ValidImages_ReturnsOkWithUpdatedProperty()
         {

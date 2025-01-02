@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Architecture Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Architecture Documentation ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="architecture-documentation">Architecture Documentation</h1>
+
+<h2 id="project-structure">Project Structure</h2>
+<h3 id="backend-net-core-api">Backend (.NET Core API)</h3>
+<pre><code>RealEstate.API/
+├── Controllers/           # API endpoints
+├── Models/               # Data models
+├── Services/             # Business logic
+├── Data/                 # Database context and migrations
+├── Middleware/           # Custom middleware
+├── Extensions/           # Extension methods
+└── Properties/           # Project properties
+
+RealEstate.Tests/
+├── Controllers/          # Controller tests
+├── Services/             # Service tests
+└── TestHelpers/          # Test utilities
+</code></pre>
+<h3 id="frontend-reacttypescript">Frontend (React/TypeScript)</h3>
+<pre><code>real-estate-client/
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/           # Page components
+│   ├── services/        # API services
+│   ├── hooks/           # Custom React hooks
+│   ├── context/         # React context
+│   ├── types/           # TypeScript types
+│   └── utils/           # Utility functions
+└── public/              # Static assets
+</code></pre>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="backend">Backend</h3>
+<ul>
+<li><strong>.NET 7.0</strong>: Core framework</li>
+<li><strong>ASP.NET Core</strong>: Web API framework</li>
+<li><strong>MongoDB.Driver</strong>: MongoDB database driver</li>
+<li><strong>JWT</strong>: Authentication</li>
+<li><strong>xUnit</strong>: Testing framework</li>
+<li><strong>Moq</strong>: Mocking framework</li>
+</ul>
+<h3 id="frontend">Frontend</h3>
+<ul>
+<li><strong>React 18</strong>: UI library</li>
+<li><strong>TypeScript</strong>: Programming language</li>
+<li><strong>React Router</strong>: Routing</li>
+<li><strong>Axios</strong>: HTTP client</li>
+<li><strong>Material-UI</strong>: UI components</li>
+<li><strong>React Query</strong>: Data fetching</li>
+<li><strong>Jest</strong>: Testing framework</li>
+</ul>
+<h3 id="database">Database</h3>
+<ul>
+<li><strong>MongoDB 6.0</strong>: Primary database
+<ul>
+<li>Collections:
+<ul>
+<li>Users</li>
+<li>Properties</li>
+<li>Favorites</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<h3 id="backend-architecture">Backend Architecture</h3>
+<p>The backend follows a layered architecture:</p>
+<ol>
+<li><p><strong>Controllers Layer</strong></p>
+<ul>
+<li>Handles HTTP requests</li>
+<li>Input validation</li>
+<li>Route handling</li>
+<li>Authentication/Authorization</li>
+</ul>
+</li>
+<li><p><strong>Service Layer</strong></p>
+<ul>
+<li>Business logic</li>
+<li>Data processing</li>
+<li>External service integration</li>
+</ul>
+</li>
+<li><p><strong>Data Layer</strong></p>
+<ul>
+<li>Database operations</li>
+<li>Data models</li>
+<li>MongoDB context</li>
+</ul>
+</li>
+</ol>
+<h3 id="frontend-architecture">Frontend Architecture</h3>
+<p>The frontend follows a component-based architecture:</p>
+<ol>
+<li><p><strong>Components</strong></p>
+<ul>
+<li>Reusable UI components</li>
+<li>Page components</li>
+<li>Layout components</li>
+</ul>
+</li>
+<li><p><strong>Services</strong></p>
+<ul>
+<li>API integration</li>
+<li>Data fetching</li>
+<li>State management</li>
+</ul>
+</li>
+<li><p><strong>Context</strong></p>
+<ul>
+<li>Global state</li>
+<li>Authentication state</li>
+<li>Theme management</li>
+</ul>
+</li>
+</ol>
+<h2 id="security">Security</h2>
+<h3 id="authentication">Authentication</h3>
+<ul>
+<li>JWT-based authentication</li>
+<li>Token expiration</li>
+<li>Refresh token mechanism</li>
+</ul>
+<h3 id="authorization">Authorization</h3>
+<ul>
+<li>Role-based access control</li>
+<li>Route protection</li>
+<li>API endpoint protection</li>
+</ul>
+<h3 id="data-security">Data Security</h3>
+<ul>
+<li>Password hashing</li>
+<li>HTTPS</li>
+<li>Input validation</li>
+<li>MongoDB security best practices</li>
+</ul>
+<h2 id="performance">Performance</h2>
+<h3 id="backend-optimizations">Backend Optimizations</h3>
+<ul>
+<li>Async/await operations</li>
+<li>MongoDB indexing</li>
+<li>Response caching</li>
+<li>Compression</li>
+</ul>
+<h3 id="frontend-optimizations">Frontend Optimizations</h3>
+<ul>
+<li>Code splitting</li>
+<li>Lazy loading</li>
+<li>Image optimization</li>
+<li>Caching strategies</li>
+</ul>
+<h2 id="monitoring-and-logging">Monitoring and Logging</h2>
+<h3 id="backend-logging">Backend Logging</h3>
+<ul>
+<li>Application logs</li>
+<li>Error tracking</li>
+<li>Performance metrics</li>
+<li>Request/Response logging</li>
+</ul>
+<h3 id="frontend-monitoring">Frontend Monitoring</h3>
+<ul>
+<li>Error boundaries</li>
+<li>Performance monitoring</li>
+<li>User analytics</li>
+<li>Console logging</li>
+</ul>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<h3 id="backend-testing">Backend Testing</h3>
+<ul>
+<li>Unit tests</li>
+<li>Integration tests</li>
+<li>Controller tests</li>
+<li>Service tests</li>
+</ul>
+<h3 id="frontend-testing">Frontend Testing</h3>
+<ul>
+<li>Component tests</li>
+<li>Integration tests</li>
+<li>E2E tests</li>
+<li>Hook tests</li>
+</ul>
+<h2 id="deployment">Deployment</h2>
+<h3 id="backend-deployment">Backend Deployment</h3>
+<ul>
+<li>Docker containerization</li>
+<li>Azure App Service</li>
+<li>CI/CD pipeline</li>
+<li>Environment configuration</li>
+</ul>
+<h3 id="frontend-deployment">Frontend Deployment</h3>
+<ul>
+<li>Static hosting</li>
+<li>CDN integration</li>
+<li>Build optimization</li>
+<li>Environment variables</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/docs/architecture.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

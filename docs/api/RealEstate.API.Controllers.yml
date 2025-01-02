@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Controllers
+  commentId: N:RealEstate.API.Controllers
+  id: RealEstate.API.Controllers
+  children:
+  - RealEstate.API.Controllers.AuthController
+  - RealEstate.API.Controllers.FavoriteController
+  - RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+  - RealEstate.API.Controllers.PropertiesController
+  - RealEstate.API.Controllers.PropertyController
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Controllers
+  nameWithType: RealEstate.API.Controllers
+  fullName: RealEstate.API.Controllers
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Controllers.AuthController
+  commentId: T:RealEstate.API.Controllers.AuthController
+  href: RealEstate.API.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: RealEstate.API.Controllers.AuthController
+- uid: RealEstate.API.Controllers.FavoriteController
+  commentId: T:RealEstate.API.Controllers.FavoriteController
+  href: RealEstate.API.Controllers.FavoriteController.html
+  name: FavoriteController
+  nameWithType: FavoriteController
+  fullName: RealEstate.API.Controllers.FavoriteController
+- uid: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+  commentId: T:RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+  parent: RealEstate.API.Controllers
+  href: RealEstate.API.Controllers.FavoriteController.html
+  name: FavoriteController.AddFavoriteRequest
+  nameWithType: FavoriteController.AddFavoriteRequest
+  fullName: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+  spec.csharp:
+  - uid: RealEstate.API.Controllers.FavoriteController
+    name: FavoriteController
+    href: RealEstate.API.Controllers.FavoriteController.html
+  - name: .
+  - uid: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+    name: AddFavoriteRequest
+    href: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest.html
+  spec.vb:
+  - uid: RealEstate.API.Controllers.FavoriteController
+    name: FavoriteController
+    href: RealEstate.API.Controllers.FavoriteController.html
+  - name: .
+  - uid: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+    name: AddFavoriteRequest
+    href: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest.html
+- uid: RealEstate.API.Controllers.PropertiesController
+  commentId: T:RealEstate.API.Controllers.PropertiesController
+  href: RealEstate.API.Controllers.PropertiesController.html
+  name: PropertiesController
+  nameWithType: PropertiesController
+  fullName: RealEstate.API.Controllers.PropertiesController
+- uid: RealEstate.API.Controllers.PropertyController
+  commentId: T:RealEstate.API.Controllers.PropertyController
+  href: RealEstate.API.Controllers.PropertyController.html
+  name: PropertyController
+  nameWithType: PropertyController
+  fullName: RealEstate.API.Controllers.PropertyController
+- uid: RealEstate.API.Controllers
+  commentId: N:RealEstate.API.Controllers
+  href: RealEstate.html
+  name: RealEstate.API.Controllers
+  nameWithType: RealEstate.API.Controllers
+  fullName: RealEstate.API.Controllers
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Controllers
+    name: Controllers
+    href: RealEstate.API.Controllers.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Controllers
+    name: Controllers
+    href: RealEstate.API.Controllers.html

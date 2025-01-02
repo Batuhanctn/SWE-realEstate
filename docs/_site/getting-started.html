@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting Started </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting Started ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="backend-net-core-api">Backend (.NET Core API)</h3>
+<ul>
+<li>.NET 7.0 SDK or later</li>
+<li>MongoDB 6.0 or later</li>
+<li>Visual Studio 2022 or Visual Studio Code</li>
+</ul>
+<h3 id="frontend-reacttypescript">Frontend (React/TypeScript)</h3>
+<ul>
+<li>Node.js 18.x or later</li>
+<li>npm 9.x or later</li>
+<li>Visual Studio Code (recommended)</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="backend-setup">Backend Setup</h3>
+<ol>
+<li>Clone the repository:</li>
+</ol>
+<pre><code class="lang-bash">git clone https://github.com/yourusername/real-estate-api.git
+</code></pre>
+<ol start="2">
+<li>Navigate to the API project:</li>
+</ol>
+<pre><code class="lang-bash">cd RealEstate.API
+</code></pre>
+<ol start="3">
+<li>Install dependencies:</li>
+</ol>
+<pre><code class="lang-bash">dotnet restore
+</code></pre>
+<ol start="4">
+<li>Update the database connection string in <code>appsettings.json</code>:</li>
+</ol>
+<pre><code class="lang-json">{
+  &quot;MongoDb&quot;: {
+    &quot;ConnectionString&quot;: &quot;your_mongodb_connection_string&quot;,
+    &quot;DatabaseName&quot;: &quot;RealEstate&quot;
+  }
+}
+</code></pre>
+<ol start="5">
+<li>Run the application:</li>
+</ol>
+<pre><code class="lang-bash">dotnet run
+</code></pre>
+<p>The API will be available at <code>https://localhost:7000</code></p>
+<h3 id="frontend-setup">Frontend Setup</h3>
+<ol>
+<li>Navigate to the client project:</li>
+</ol>
+<pre><code class="lang-bash">cd real-estate-client
+</code></pre>
+<ol start="2">
+<li>Install dependencies:</li>
+</ol>
+<pre><code class="lang-bash">npm install
+</code></pre>
+<ol start="3">
+<li>Update the API URL in <code>.env</code>:</li>
+</ol>
+<pre><code class="lang-env">REACT_APP_API_URL=https://localhost:7000
+</code></pre>
+<ol start="4">
+<li>Start the development server:</li>
+</ol>
+<pre><code class="lang-bash">npm start
+</code></pre>
+<p>The frontend will be available at <code>http://localhost:3000</code></p>
+<h2 id="configuration">Configuration</h2>
+<h3 id="backend-configuration">Backend Configuration</h3>
+<p>The backend can be configured through <code>appsettings.json</code>:</p>
+<pre><code class="lang-json">{
+  &quot;Jwt&quot;: {
+    &quot;Key&quot;: &quot;your_secret_key&quot;,
+    &quot;Issuer&quot;: &quot;your_issuer&quot;,
+    &quot;Audience&quot;: &quot;your_audience&quot;
+  },
+  &quot;MongoDb&quot;: {
+    &quot;ConnectionString&quot;: &quot;your_mongodb_connection_string&quot;,
+    &quot;DatabaseName&quot;: &quot;RealEstate&quot;
+  },
+  &quot;Logging&quot;: {
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Information&quot;,
+      &quot;Microsoft.AspNetCore&quot;: &quot;Warning&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="frontend-configuration">Frontend Configuration</h3>
+<p>The frontend can be configured through environment variables:</p>
+<pre><code class="lang-env">REACT_APP_API_URL=https://localhost:7000
+REACT_APP_GOOGLE_MAPS_KEY=your_google_maps_api_key
+REACT_APP_IMAGE_UPLOAD_MAX_SIZE=5242880
+</code></pre>
+<h2 id="development-tools">Development Tools</h2>
+<h3 id="recommended-vs-code-extensions">Recommended VS Code Extensions</h3>
+<ul>
+<li>C# Dev Kit</li>
+<li>MongoDB for VS Code</li>
+<li>ESLint</li>
+<li>Prettier</li>
+<li>React Developer Tools</li>
+</ul>
+<h3 id="debugging">Debugging</h3>
+<ol>
+<li><p>Backend:</p>
+<ul>
+<li>Use Visual Studio's built-in debugger</li>
+<li>Or use VS Code with C# extension</li>
+</ul>
+</li>
+<li><p>Frontend:</p>
+<ul>
+<li>Use Chrome DevTools</li>
+<li>React Developer Tools browser extension</li>
+<li>VS Code debugger with Chrome/Edge debugging</li>
+</ul>
+</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/docs/getting-started.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

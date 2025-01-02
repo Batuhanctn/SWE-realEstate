@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.Tests.Controllers
+  commentId: N:RealEstate.Tests.Controllers
+  id: RealEstate.Tests.Controllers
+  children:
+  - RealEstate.Tests.Controllers.AuthControllerTests
+  - RealEstate.Tests.Controllers.FavoriteControllerTests
+  - RealEstate.Tests.Controllers.PropertiesControllerTests
+  - RealEstate.Tests.Controllers.PropertyControllerTests
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.Tests.Controllers
+  nameWithType: RealEstate.Tests.Controllers
+  fullName: RealEstate.Tests.Controllers
+  type: Namespace
+  assemblies:
+  - RealEstate.Tests
+references:
+- uid: RealEstate.Tests.Controllers.AuthControllerTests
+  commentId: T:RealEstate.Tests.Controllers.AuthControllerTests
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html
+  name: AuthControllerTests
+  nameWithType: AuthControllerTests
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests
+- uid: RealEstate.Tests.Controllers.FavoriteControllerTests
+  commentId: T:RealEstate.Tests.Controllers.FavoriteControllerTests
+  href: RealEstate.Tests.Controllers.FavoriteControllerTests.html
+  name: FavoriteControllerTests
+  nameWithType: FavoriteControllerTests
+  fullName: RealEstate.Tests.Controllers.FavoriteControllerTests
+- uid: RealEstate.Tests.Controllers.PropertiesControllerTests
+  commentId: T:RealEstate.Tests.Controllers.PropertiesControllerTests
+  href: RealEstate.Tests.Controllers.PropertiesControllerTests.html
+  name: PropertiesControllerTests
+  nameWithType: PropertiesControllerTests
+  fullName: RealEstate.Tests.Controllers.PropertiesControllerTests
+- uid: RealEstate.Tests.Controllers.PropertyControllerTests
+  commentId: T:RealEstate.Tests.Controllers.PropertyControllerTests
+  href: RealEstate.Tests.Controllers.PropertyControllerTests.html
+  name: PropertyControllerTests
+  nameWithType: PropertyControllerTests
+  fullName: RealEstate.Tests.Controllers.PropertyControllerTests

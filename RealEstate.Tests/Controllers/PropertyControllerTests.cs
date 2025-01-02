@@ -154,7 +154,7 @@ public class PropertyControllerTests
             .Returns(Task.CompletedTask);
 
         // Act
-        var result = await _controller.Update(propertyId, updatedProperty);
+        var result = await _controller.Put(propertyId, updatedProperty);
 
         // Assert
         Assert.IsType<NoContentResult>(result);
@@ -177,7 +177,7 @@ public class PropertyControllerTests
             .ReturnsAsync((Property)null);
 
         // Act
-        var result = await _controller.Update(propertyId, updatedProperty);
+        var result = await _controller.Put(propertyId, updatedProperty);
 
         // Assert
         Assert.IsType<NotFoundResult>(result);

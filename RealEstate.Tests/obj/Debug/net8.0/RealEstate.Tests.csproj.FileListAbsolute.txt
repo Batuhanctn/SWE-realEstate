@@ -175,3 +175,12 @@ c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\obj\Debug\net8.0\refint\
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\obj\Debug\net8.0\RealEstate.Tests.pdb
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\obj\Debug\net8.0\RealEstate.Tests.genruntimeconfig.cache
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\obj\Debug\net8.0\ref\RealEstate.Tests.dll
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\obj\Debug\net8.0\RealEstate.Tests.sourcelink.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\docfx.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\_site\api\toc.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\_site\articles\toc.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\_site\manifest.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\_site\search-stopwords.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\_site\toc.json
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\RealEstate.Tests.xml
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.Tests\bin\Debug\net8.0\RealEstate.API.xml

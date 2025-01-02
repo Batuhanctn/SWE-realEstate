@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\uploads\\properties\\6776ad355a2c868f6d8fd66f\\6e94dee6-b469-4415-933e-576bee727124.png"
     },
     {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776b180687d9b4a20e1021a\\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6776b180687d9b4a20e1021a\\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776b1aa687d9b4a20e1021b\\47944dfc-ca85-49a1-b210-c178ab8380ad.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6776b1aa687d9b4a20e1021b\\47944dfc-ca85-49a1-b210-c178ab8380ad.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RealEstate.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

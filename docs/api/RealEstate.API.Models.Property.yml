@@ -1,0 +1,2128 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Models.Property
+  commentId: T:RealEstate.API.Models.Property
+  id: Property
+  parent: RealEstate.API.Models
+  children:
+  - RealEstate.API.Models.Property.Address
+  - RealEstate.API.Models.Property.Bathrooms
+  - RealEstate.API.Models.Property.Bedrooms
+  - RealEstate.API.Models.Property.City
+  - RealEstate.API.Models.Property.CreatedAt
+  - RealEstate.API.Models.Property.Description
+  - RealEstate.API.Models.Property.Features
+  - RealEstate.API.Models.Property.Id
+  - RealEstate.API.Models.Property.ImageUrl
+  - RealEstate.API.Models.Property.ImageUrls
+  - RealEstate.API.Models.Property.Images
+  - RealEstate.API.Models.Property.IsForRent
+  - RealEstate.API.Models.Property.Location
+  - RealEstate.API.Models.Property.Price
+  - RealEstate.API.Models.Property.PropertyType
+  - RealEstate.API.Models.Property.Size
+  - RealEstate.API.Models.Property.SquareMeters
+  - RealEstate.API.Models.Property.State
+  - RealEstate.API.Models.Property.Title
+  - RealEstate.API.Models.Property.Type
+  - RealEstate.API.Models.Property.UpdatedAt
+  - RealEstate.API.Models.Property.UserId
+  - RealEstate.API.Models.Property.ZipCode
+  langs:
+  - csharp
+  - vb
+  name: Property
+  nameWithType: Property
+  fullName: RealEstate.API.Models.Property
+  type: Class
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Property
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 11
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Represents a real estate property listing
+  example: []
+  syntax:
+    content: public class Property
+    content.vb: Public Class [Property]
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RealEstate.API.Models.Property.Id
+  commentId: P:RealEstate.API.Models.Property.Id
+  id: Id
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Property.Id
+  fullName: RealEstate.API.Models.Property.Id
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Id
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 16
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the unique identifier for the property
+  example: []
+  syntax:
+    content: >-
+      [BsonId]
+
+      [BsonRepresentation(BsonType.ObjectId)]
+
+      public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonId>
+
+      <BsonRepresentation(BsonType.ObjectId)>
+
+      Public Property Id As String
+  overload: RealEstate.API.Models.Property.Id*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute.#ctor
+    arguments: []
+  - type: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute.#ctor(MongoDB.Bson.BsonType)
+    arguments:
+    - type: MongoDB.Bson.BsonType
+      value: 7
+- uid: RealEstate.API.Models.Property.UserId
+  commentId: P:RealEstate.API.Models.Property.UserId
+  id: UserId
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: Property.UserId
+  fullName: RealEstate.API.Models.Property.UserId
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: UserId
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 23
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the ID of the user who listed the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("userId")]
+
+      [JsonPropertyName("userId")]
+
+      [Required]
+
+      public string UserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("userId")>
+
+      <JsonPropertyName("userId")>
+
+      <Required>
+
+      Public Property UserId As String
+  overload: RealEstate.API.Models.Property.UserId*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userId
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userId
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.Title
+  commentId: P:RealEstate.API.Models.Property.Title
+  id: Title
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: Property.Title
+  fullName: RealEstate.API.Models.Property.Title
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Title
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 31
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the title of the property listing
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("title")]
+
+      [JsonPropertyName("title")]
+
+      [Required]
+
+      [StringLength(100)]
+
+      public string Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("title")>
+
+      <JsonPropertyName("title")>
+
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property Title As String
+  overload: RealEstate.API.Models.Property.Title*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: title
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: title
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: RealEstate.API.Models.Property.Description
+  commentId: P:RealEstate.API.Models.Property.Description
+  id: Description
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Property.Description
+  fullName: RealEstate.API.Models.Property.Description
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Description
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 40
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the detailed description of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("description")]
+
+      [JsonPropertyName("description")]
+
+      [Required]
+
+      [StringLength(1000)]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("description")>
+
+      <JsonPropertyName("description")>
+
+      <Required>
+
+      <StringLength(1000)>
+
+      Public Property Description As String
+  overload: RealEstate.API.Models.Property.Description*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1000
+- uid: RealEstate.API.Models.Property.Price
+  commentId: P:RealEstate.API.Models.Property.Price
+  id: Price
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: Property.Price
+  fullName: RealEstate.API.Models.Property.Price
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Price
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 49
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the price of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("price")]
+
+      [JsonPropertyName("price")]
+
+      [Required]
+
+      [Range(0, 1.7976931348623157E+308)]
+
+      public decimal Price { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: >-
+      <BsonElement("price")>
+
+      <JsonPropertyName("price")>
+
+      <Required>
+
+      <Range(0, 1.7976931348623157E+308)>
+
+      Public Property Price As Decimal
+  overload: RealEstate.API.Models.Property.Price*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: price
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: price
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+- uid: RealEstate.API.Models.Property.Location
+  commentId: P:RealEstate.API.Models.Property.Location
+  id: Location
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Property.Location
+  fullName: RealEstate.API.Models.Property.Location
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Location
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 58
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the location of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("location")]
+
+      [JsonPropertyName("location")]
+
+      [Required]
+
+      public string Location { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("location")>
+
+      <JsonPropertyName("location")>
+
+      <Required>
+
+      Public Property Location As String
+  overload: RealEstate.API.Models.Property.Location*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: location
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: location
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.Type
+  commentId: P:RealEstate.API.Models.Property.Type
+  id: Type
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Property.Type
+  fullName: RealEstate.API.Models.Property.Type
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Type
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 66
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the type of property (e.g., Apartment, House)
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("type")]
+
+      [JsonPropertyName("type")]
+
+      [Required]
+
+      public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("type")>
+
+      <JsonPropertyName("type")>
+
+      <Required>
+
+      Public Property Type As String
+  overload: RealEstate.API.Models.Property.Type*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.IsForRent
+  commentId: P:RealEstate.API.Models.Property.IsForRent
+  id: IsForRent
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: IsForRent
+  nameWithType: Property.IsForRent
+  fullName: RealEstate.API.Models.Property.IsForRent
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: IsForRent
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 74
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the status of the property (e.g., For Sale, For Rent)
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("isForRent")]
+
+      [JsonPropertyName("isForRent")]
+
+      [Required]
+
+      public bool IsForRent { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <BsonElement("isForRent")>
+
+      <JsonPropertyName("isForRent")>
+
+      <Required>
+
+      Public Property IsForRent As Boolean
+  overload: RealEstate.API.Models.Property.IsForRent*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isForRent
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isForRent
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.Bedrooms
+  commentId: P:RealEstate.API.Models.Property.Bedrooms
+  id: Bedrooms
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Bedrooms
+  nameWithType: Property.Bedrooms
+  fullName: RealEstate.API.Models.Property.Bedrooms
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Bedrooms
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 82
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the number of bedrooms in the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("bedrooms")]
+
+      [JsonPropertyName("bedrooms")]
+
+      [Required]
+
+      [Range(0, 20)]
+
+      public int Bedrooms { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <BsonElement("bedrooms")>
+
+      <JsonPropertyName("bedrooms")>
+
+      <Required>
+
+      <Range(0, 20)>
+
+      Public Property Bedrooms As Integer
+  overload: RealEstate.API.Models.Property.Bedrooms*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bedrooms
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bedrooms
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 20
+- uid: RealEstate.API.Models.Property.Bathrooms
+  commentId: P:RealEstate.API.Models.Property.Bathrooms
+  id: Bathrooms
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Bathrooms
+  nameWithType: Property.Bathrooms
+  fullName: RealEstate.API.Models.Property.Bathrooms
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Bathrooms
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 91
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the number of bathrooms in the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("bathrooms")]
+
+      [JsonPropertyName("bathrooms")]
+
+      [Required]
+
+      [Range(0, 20)]
+
+      public int Bathrooms { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <BsonElement("bathrooms")>
+
+      <JsonPropertyName("bathrooms")>
+
+      <Required>
+
+      <Range(0, 20)>
+
+      Public Property Bathrooms As Integer
+  overload: RealEstate.API.Models.Property.Bathrooms*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bathrooms
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bathrooms
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 20
+- uid: RealEstate.API.Models.Property.Size
+  commentId: P:RealEstate.API.Models.Property.Size
+  id: Size
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: Property.Size
+  fullName: RealEstate.API.Models.Property.Size
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Size
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 100
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the size of the property in square meters
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("size")]
+
+      [JsonPropertyName("size")]
+
+      [Required]
+
+      public double Size { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <BsonElement("size")>
+
+      <JsonPropertyName("size")>
+
+      <Required>
+
+      Public Property Size As Double
+  overload: RealEstate.API.Models.Property.Size*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: size
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: size
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.Features
+  commentId: P:RealEstate.API.Models.Property.Features
+  id: Features
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Features
+  nameWithType: Property.Features
+  fullName: RealEstate.API.Models.Property.Features
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Features
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 108
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the list of features/amenities of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("features")]
+
+      [JsonPropertyName("features")]
+
+      public List<string> Features { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <BsonElement("features")>
+
+      <JsonPropertyName("features")>
+
+      Public Property Features As List(Of String)
+  overload: RealEstate.API.Models.Property.Features*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: features
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: features
+- uid: RealEstate.API.Models.Property.ImageUrl
+  commentId: P:RealEstate.API.Models.Property.ImageUrl
+  id: ImageUrl
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: ImageUrl
+  nameWithType: Property.ImageUrl
+  fullName: RealEstate.API.Models.Property.ImageUrl
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ImageUrl
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 115
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the main image URL of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("imageUrl")]
+
+      [JsonPropertyName("imageUrl")]
+
+      public string ImageUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("imageUrl")>
+
+      <JsonPropertyName("imageUrl")>
+
+      Public Property ImageUrl As String
+  overload: RealEstate.API.Models.Property.ImageUrl*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: imageUrl
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: imageUrl
+- uid: RealEstate.API.Models.Property.ImageUrls
+  commentId: P:RealEstate.API.Models.Property.ImageUrls
+  id: ImageUrls
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: ImageUrls
+  nameWithType: Property.ImageUrls
+  fullName: RealEstate.API.Models.Property.ImageUrls
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ImageUrls
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 122
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets additional image URLs of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("imageUrls")]
+
+      [JsonPropertyName("imageUrls")]
+
+      [Required]
+
+      public List<string> ImageUrls { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <BsonElement("imageUrls")>
+
+      <JsonPropertyName("imageUrls")>
+
+      <Required>
+
+      Public Property ImageUrls As List(Of String)
+  overload: RealEstate.API.Models.Property.ImageUrls*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: imageUrls
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: imageUrls
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: RealEstate.API.Models.Property.CreatedAt
+  commentId: P:RealEstate.API.Models.Property.CreatedAt
+  id: CreatedAt
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: Property.CreatedAt
+  fullName: RealEstate.API.Models.Property.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: CreatedAt
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 130
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the date when the property was listed
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("createdAt")]
+
+      [JsonPropertyName("createdAt")]
+
+      [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+
+      public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <BsonElement("createdAt")>
+
+      <JsonPropertyName("createdAt")>
+
+      <BsonDateTimeOptions(Kind:=DateTimeKind.Utc)>
+
+      Public Property CreatedAt As Date
+  overload: RealEstate.API.Models.Property.CreatedAt*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: createdAt
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: createdAt
+  - type: MongoDB.Bson.Serialization.Attributes.BsonDateTimeOptionsAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonDateTimeOptionsAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Kind
+      type: System.DateTimeKind
+      value: 1
+- uid: RealEstate.API.Models.Property.UpdatedAt
+  commentId: P:RealEstate.API.Models.Property.UpdatedAt
+  id: UpdatedAt
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: UpdatedAt
+  nameWithType: Property.UpdatedAt
+  fullName: RealEstate.API.Models.Property.UpdatedAt
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: UpdatedAt
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 138
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the date when the property was last updated
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("updatedAt")]
+
+      [JsonPropertyName("updatedAt")]
+
+      [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+
+      public DateTime? UpdatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <BsonElement("updatedAt")>
+
+      <JsonPropertyName("updatedAt")>
+
+      <BsonDateTimeOptions(Kind:=DateTimeKind.Utc)>
+
+      Public Property UpdatedAt As Date?
+  overload: RealEstate.API.Models.Property.UpdatedAt*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: updatedAt
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: updatedAt
+  - type: MongoDB.Bson.Serialization.Attributes.BsonDateTimeOptionsAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonDateTimeOptionsAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Kind
+      type: System.DateTimeKind
+      value: 1
+- uid: RealEstate.API.Models.Property.Address
+  commentId: P:RealEstate.API.Models.Property.Address
+  id: Address
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: Property.Address
+  fullName: RealEstate.API.Models.Property.Address
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Address
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 146
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the address of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("address")]
+
+      [JsonPropertyName("address")]
+
+      [Required]
+
+      [StringLength(100)]
+
+      public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("address")>
+
+      <JsonPropertyName("address")>
+
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property Address As String
+  overload: RealEstate.API.Models.Property.Address*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: address
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: RealEstate.API.Models.Property.City
+  commentId: P:RealEstate.API.Models.Property.City
+  id: City
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: Property.City
+  fullName: RealEstate.API.Models.Property.City
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: City
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 155
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the city of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("city")]
+
+      [JsonPropertyName("city")]
+
+      [Required]
+
+      [StringLength(100)]
+
+      public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("city")>
+
+      <JsonPropertyName("city")>
+
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property City As String
+  overload: RealEstate.API.Models.Property.City*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: city
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: city
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: RealEstate.API.Models.Property.State
+  commentId: P:RealEstate.API.Models.Property.State
+  id: State
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: Property.State
+  fullName: RealEstate.API.Models.Property.State
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: State
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 164
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the state of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("state")]
+
+      [JsonPropertyName("state")]
+
+      [Required]
+
+      [StringLength(100)]
+
+      public string State { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("state")>
+
+      <JsonPropertyName("state")>
+
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property State As String
+  overload: RealEstate.API.Models.Property.State*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: state
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: state
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: RealEstate.API.Models.Property.ZipCode
+  commentId: P:RealEstate.API.Models.Property.ZipCode
+  id: ZipCode
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: ZipCode
+  nameWithType: Property.ZipCode
+  fullName: RealEstate.API.Models.Property.ZipCode
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: ZipCode
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 173
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the zip code of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("zipCode")]
+
+      [JsonPropertyName("zipCode")]
+
+      [Required]
+
+      [StringLength(100)]
+
+      public string ZipCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("zipCode")>
+
+      <JsonPropertyName("zipCode")>
+
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property ZipCode As String
+  overload: RealEstate.API.Models.Property.ZipCode*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: zipCode
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: zipCode
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: RealEstate.API.Models.Property.SquareMeters
+  commentId: P:RealEstate.API.Models.Property.SquareMeters
+  id: SquareMeters
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: SquareMeters
+  nameWithType: Property.SquareMeters
+  fullName: RealEstate.API.Models.Property.SquareMeters
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: SquareMeters
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 182
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the square meters of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("squareMeters")]
+
+      [JsonPropertyName("squareMeters")]
+
+      [Required]
+
+      [Range(0, 1.7976931348623157E+308)]
+
+      public double SquareMeters { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <BsonElement("squareMeters")>
+
+      <JsonPropertyName("squareMeters")>
+
+      <Required>
+
+      <Range(0, 1.7976931348623157E+308)>
+
+      Public Property SquareMeters As Double
+  overload: RealEstate.API.Models.Property.SquareMeters*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: squareMeters
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: squareMeters
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+- uid: RealEstate.API.Models.Property.PropertyType
+  commentId: P:RealEstate.API.Models.Property.PropertyType
+  id: PropertyType
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: PropertyType
+  nameWithType: Property.PropertyType
+  fullName: RealEstate.API.Models.Property.PropertyType
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: PropertyType
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 191
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets the property type of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("propertyType")]
+
+      [JsonPropertyName("propertyType")]
+
+      [Required]
+
+      [StringLength(50)]
+
+      public string PropertyType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("propertyType")>
+
+      <JsonPropertyName("propertyType")>
+
+      <Required>
+
+      <StringLength(50)>
+
+      Public Property PropertyType As String
+  overload: RealEstate.API.Models.Property.PropertyType*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: propertyType
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: propertyType
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 50
+- uid: RealEstate.API.Models.Property.Images
+  commentId: P:RealEstate.API.Models.Property.Images
+  id: Images
+  parent: RealEstate.API.Models.Property
+  langs:
+  - csharp
+  - vb
+  name: Images
+  nameWithType: Property.Images
+  fullName: RealEstate.API.Models.Property.Images
+  type: Property
+  source:
+    remote:
+      path: RealEstate.API/Models/Property.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Images
+    path: ../RealEstate.API/Models/Property.cs
+    startLine: 200
+  assemblies:
+  - RealEstate.API
+  namespace: RealEstate.API.Models
+  summary: Gets or sets additional images of the property
+  example: []
+  syntax:
+    content: >-
+      [BsonElement("images")]
+
+      [JsonPropertyName("images")]
+
+      public List<string> Images { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <BsonElement("images")>
+
+      <JsonPropertyName("images")>
+
+      Public Property Images As List(Of String)
+  overload: RealEstate.API.Models.Property.Images*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: images
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: images
+references:
+- uid: RealEstate.API.Models
+  commentId: N:RealEstate.API.Models
+  href: RealEstate.html
+  name: RealEstate.API.Models
+  nameWithType: RealEstate.API.Models
+  fullName: RealEstate.API.Models
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RealEstate.API.Models.Property.Id*
+  commentId: Overload:RealEstate.API.Models.Property.Id
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Id
+  name: Id
+  nameWithType: Property.Id
+  fullName: RealEstate.API.Models.Property.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RealEstate.API.Models.Property.UserId*
+  commentId: Overload:RealEstate.API.Models.Property.UserId
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_UserId
+  name: UserId
+  nameWithType: Property.UserId
+  fullName: RealEstate.API.Models.Property.UserId
+- uid: RealEstate.API.Models.Property.Title*
+  commentId: Overload:RealEstate.API.Models.Property.Title
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Title
+  name: Title
+  nameWithType: Property.Title
+  fullName: RealEstate.API.Models.Property.Title
+- uid: RealEstate.API.Models.Property.Description*
+  commentId: Overload:RealEstate.API.Models.Property.Description
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Description
+  name: Description
+  nameWithType: Property.Description
+  fullName: RealEstate.API.Models.Property.Description
+- uid: RealEstate.API.Models.Property.Price*
+  commentId: Overload:RealEstate.API.Models.Property.Price
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Price
+  name: Price
+  nameWithType: Property.Price
+  fullName: RealEstate.API.Models.Property.Price
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: RealEstate.API.Models.Property.Location*
+  commentId: Overload:RealEstate.API.Models.Property.Location
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Location
+  name: Location
+  nameWithType: Property.Location
+  fullName: RealEstate.API.Models.Property.Location
+- uid: RealEstate.API.Models.Property.Type*
+  commentId: Overload:RealEstate.API.Models.Property.Type
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Type
+  name: Type
+  nameWithType: Property.Type
+  fullName: RealEstate.API.Models.Property.Type
+- uid: RealEstate.API.Models.Property.IsForRent*
+  commentId: Overload:RealEstate.API.Models.Property.IsForRent
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_IsForRent
+  name: IsForRent
+  nameWithType: Property.IsForRent
+  fullName: RealEstate.API.Models.Property.IsForRent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: RealEstate.API.Models.Property.Bedrooms*
+  commentId: Overload:RealEstate.API.Models.Property.Bedrooms
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Bedrooms
+  name: Bedrooms
+  nameWithType: Property.Bedrooms
+  fullName: RealEstate.API.Models.Property.Bedrooms
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: RealEstate.API.Models.Property.Bathrooms*
+  commentId: Overload:RealEstate.API.Models.Property.Bathrooms
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Bathrooms
+  name: Bathrooms
+  nameWithType: Property.Bathrooms
+  fullName: RealEstate.API.Models.Property.Bathrooms
+- uid: RealEstate.API.Models.Property.Size*
+  commentId: Overload:RealEstate.API.Models.Property.Size
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Size
+  name: Size
+  nameWithType: Property.Size
+  fullName: RealEstate.API.Models.Property.Size
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: RealEstate.API.Models.Property.Features*
+  commentId: Overload:RealEstate.API.Models.Property.Features
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Features
+  name: Features
+  nameWithType: Property.Features
+  fullName: RealEstate.API.Models.Property.Features
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: RealEstate.API.Models.Property.ImageUrl*
+  commentId: Overload:RealEstate.API.Models.Property.ImageUrl
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_ImageUrl
+  name: ImageUrl
+  nameWithType: Property.ImageUrl
+  fullName: RealEstate.API.Models.Property.ImageUrl
+- uid: RealEstate.API.Models.Property.ImageUrls*
+  commentId: Overload:RealEstate.API.Models.Property.ImageUrls
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_ImageUrls
+  name: ImageUrls
+  nameWithType: Property.ImageUrls
+  fullName: RealEstate.API.Models.Property.ImageUrls
+- uid: RealEstate.API.Models.Property.CreatedAt*
+  commentId: Overload:RealEstate.API.Models.Property.CreatedAt
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_CreatedAt
+  name: CreatedAt
+  nameWithType: Property.CreatedAt
+  fullName: RealEstate.API.Models.Property.CreatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: RealEstate.API.Models.Property.UpdatedAt*
+  commentId: Overload:RealEstate.API.Models.Property.UpdatedAt
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_UpdatedAt
+  name: UpdatedAt
+  nameWithType: Property.UpdatedAt
+  fullName: RealEstate.API.Models.Property.UpdatedAt
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RealEstate.API.Models.Property.Address*
+  commentId: Overload:RealEstate.API.Models.Property.Address
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Address
+  name: Address
+  nameWithType: Property.Address
+  fullName: RealEstate.API.Models.Property.Address
+- uid: RealEstate.API.Models.Property.City*
+  commentId: Overload:RealEstate.API.Models.Property.City
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_City
+  name: City
+  nameWithType: Property.City
+  fullName: RealEstate.API.Models.Property.City
+- uid: RealEstate.API.Models.Property.State*
+  commentId: Overload:RealEstate.API.Models.Property.State
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_State
+  name: State
+  nameWithType: Property.State
+  fullName: RealEstate.API.Models.Property.State
+- uid: RealEstate.API.Models.Property.ZipCode*
+  commentId: Overload:RealEstate.API.Models.Property.ZipCode
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_ZipCode
+  name: ZipCode
+  nameWithType: Property.ZipCode
+  fullName: RealEstate.API.Models.Property.ZipCode
+- uid: RealEstate.API.Models.Property.SquareMeters*
+  commentId: Overload:RealEstate.API.Models.Property.SquareMeters
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_SquareMeters
+  name: SquareMeters
+  nameWithType: Property.SquareMeters
+  fullName: RealEstate.API.Models.Property.SquareMeters
+- uid: RealEstate.API.Models.Property.PropertyType*
+  commentId: Overload:RealEstate.API.Models.Property.PropertyType
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_PropertyType
+  name: PropertyType
+  nameWithType: Property.PropertyType
+  fullName: RealEstate.API.Models.Property.PropertyType
+- uid: RealEstate.API.Models.Property.Images*
+  commentId: Overload:RealEstate.API.Models.Property.Images
+  href: RealEstate.API.Models.Property.html#RealEstate_API_Models_Property_Images
+  name: Images
+  nameWithType: Property.Images
+  fullName: RealEstate.API.Models.Property.Images

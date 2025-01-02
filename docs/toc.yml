@@ -1,0 +1,14 @@
+- name: Home
+  href: index.md
+- name: Backend API
+  href: backend/
+  homepage: backend/index.md
+- name: Frontend Client
+  href: frontend/
+  homepage: frontend/index.md
+- name: Test Suite
+  href: tests/
+  homepage: tests/index.md
+- name: API Documentation
+  href: api/
+  homepage: api/index.md

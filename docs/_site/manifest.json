@@ -1,0 +1,536 @@
+{
+  "source_base_path": "C:/Users/Win10/OneDrive/Masaüstü/SWE/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.AuthController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.FavoriteController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.FavoriteController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.PropertiesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.PropertiesController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.PropertyController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.PropertyController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Data.Migrations.AddFavorites.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Data.Migrations.AddFavorites.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Data.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Data.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Data.RealEstateDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Data.RealEstateDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.Favorite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.Favorite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.LoginDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.LoginDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.Property.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.Property.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.UserDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.UserDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Services.IPropertyService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Services.IPropertyService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Services.PropertyService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Services.PropertyService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Settings.MongoDbSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Settings.MongoDbSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.API.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.API.Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.Controllers.AuthControllerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.Controllers.AuthControllerTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.Controllers.FavoriteControllerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.Controllers.FavoriteControllerTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.Controllers.PropertiesControllerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.Controllers.PropertiesControllerTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.Controllers.PropertyControllerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.Controllers.PropertyControllerTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.TestHelpers.MockMongoDb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.TestHelpers.MockMongoDb.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RealEstate.Tests.TestHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RealEstate.Tests.TestHelpers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "architecture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "backend/controllers.md",
+      "output": {
+        ".html": {
+          "relative_path": "backend/controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "backend/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "backend/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "backend/models.md",
+      "output": {
+        ".html": {
+          "relative_path": "backend/models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "backend/services.md",
+      "output": {
+        ".html": {
+          "relative_path": "backend/services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "backend/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "backend/toc.html"
+        },
+        ".json": {
+          "relative_path": "backend/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "frontend/components.md",
+      "output": {
+        ".html": {
+          "relative_path": "frontend/components.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "frontend/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "frontend/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "frontend/services.md",
+      "output": {
+        ".html": {
+          "relative_path": "frontend/services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "frontend/state.md",
+      "output": {
+        ".html": {
+          "relative_path": "frontend/state.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "frontend/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "frontend/toc.html"
+        },
+        ".json": {
+          "relative_path": "frontend/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "testing.md",
+      "output": {
+        ".html": {
+          "relative_path": "testing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tests/backend-tests.md",
+      "output": {
+        ".html": {
+          "relative_path": "tests/backend-tests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tests/coverage.md",
+      "output": {
+        ".html": {
+          "relative_path": "tests/coverage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tests/frontend-tests.md",
+      "output": {
+        ".html": {
+          "relative_path": "tests/frontend-tests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tests/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "tests/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tests/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tests/toc.html"
+        },
+        ".json": {
+          "relative_path": "tests/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

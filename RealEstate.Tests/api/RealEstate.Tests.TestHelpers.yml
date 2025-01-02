@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.Tests.TestHelpers
+  commentId: N:RealEstate.Tests.TestHelpers
+  id: RealEstate.Tests.TestHelpers
+  children:
+  - RealEstate.Tests.TestHelpers.MockMongoDb
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.Tests.TestHelpers
+  nameWithType: RealEstate.Tests.TestHelpers
+  fullName: RealEstate.Tests.TestHelpers
+  type: Namespace
+  assemblies:
+  - RealEstate.Tests
+references:
+- uid: RealEstate.Tests.TestHelpers.MockMongoDb
+  commentId: T:RealEstate.Tests.TestHelpers.MockMongoDb
+  href: RealEstate.Tests.TestHelpers.MockMongoDb.html
+  name: MockMongoDb
+  nameWithType: MockMongoDb
+  fullName: RealEstate.Tests.TestHelpers.MockMongoDb

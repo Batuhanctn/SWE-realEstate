@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Backend API Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Backend API Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="backend-api-documentation">Backend API Documentation</h1>
+
+<p>The RealEstate.API is built with ASP.NET Core and provides a RESTful API for the real estate application.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>User authentication and authorization</li>
+<li>Property management</li>
+<li>Favorite properties</li>
+<li>Search and filtering</li>
+<li>Image upload and management</li>
+</ul>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="authentication">Authentication</h3>
+<ul>
+<li>POST /api/auth/register</li>
+<li>POST /api/auth/login</li>
+</ul>
+<h3 id="properties">Properties</h3>
+<ul>
+<li>GET /api/properties</li>
+<li>POST /api/properties</li>
+<li>GET /api/properties/{id}</li>
+<li>PUT /api/properties/{id}</li>
+<li>DELETE /api/properties/{id}</li>
+</ul>
+<h3 id="favorites">Favorites</h3>
+<ul>
+<li>GET /api/favorites</li>
+<li>POST /api/favorites</li>
+<li>DELETE /api/favorites/{id}</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>The backend follows a clean architecture pattern:</p>
+<ul>
+<li>Controllers for handling HTTP requests</li>
+<li>Services for business logic</li>
+<li>Repositories for data access</li>
+<li>Models for data representation</li>
+</ul>
+<h2 id="technologies">Technologies</h2>
+<ul>
+<li>ASP.NET Core 8.0</li>
+<li>MongoDB</li>
+<li>JWT Authentication</li>
+<li>xUnit for testing</li>
+<li>Swagger/OpenAPI for API documentation</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/docs/backend/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

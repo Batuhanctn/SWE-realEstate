@@ -184,3 +184,4 @@ c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.API\bin\Debug\net8.0\_site\sea
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.API\bin\Debug\net8.0\_site\toc.json
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.API\bin\Debug\net8.0\RealEstate.API.xml
 c:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.API\obj\Debug\net8.0\RealEstate.API.xml
+C:\Users\Win10\OneDrive\Masaüstü\SWE\RealEstate.API\obj\Debug\net8.0\RealEstate.API.sourcelink.json

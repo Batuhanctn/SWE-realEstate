@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JGGHE3iRGcos+BbOiIBAyIQ/3mPkusVowJIFmi/MEJ0=",
+  "Hash": "qBA245BuSR6TOCTWpeF0TIfJb+TAjUZh5FHPIdjPUpA=",
   "Source": "RealEstate.API",
   "BasePath": "_content/RealEstate.API",
   "Mode": "Default",
@@ -129,6 +129,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\properties\\6776ad355a2c868f6d8fd66f\\6e94dee6-b469-4415-933e-576bee727124.png"
+    },
+    {
+      "Identity": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776b180687d9b4a20e1021a\\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png",
+      "SourceId": "RealEstate.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\",
+      "BasePath": "_content/RealEstate.API",
+      "RelativePath": "uploads/properties/6776b180687d9b4a20e1021a/3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\6776b180687d9b4a20e1021a\\3ad4f646-fb80-46ff-b26c-05a3e3e34fe3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776b1aa687d9b4a20e1021b\\47944dfc-ca85-49a1-b210-c178ab8380ad.png",
+      "SourceId": "RealEstate.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\",
+      "BasePath": "_content/RealEstate.API",
+      "RelativePath": "uploads/properties/6776b1aa687d9b4a20e1021b/47944dfc-ca85-49a1-b210-c178ab8380ad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\properties\\6776b1aa687d9b4a20e1021b\\47944dfc-ca85-49a1-b210-c178ab8380ad.png"
     }
   ]
 }

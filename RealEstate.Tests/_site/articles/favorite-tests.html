@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Favorite Property Tests </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Favorite Property Tests ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="favorite-property-tests">Favorite Property Tests</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The favorite property tests verify the functionality of managing user's favorite properties.</p>
+<h2 id="test-classes">Test Classes</h2>
+<h3 id="favoritecontrollertests">FavoriteControllerTests</h3>
+<p>Located in <code>Controllers/FavoriteControllerTests.cs</code>, this class contains tests for:</p>
+<h4 id="favorite-management">Favorite Management</h4>
+<ul>
+<li><code>GetFavorites_ReturnsOkResult_WithProperties</code>: Tests retrieving user's favorites</li>
+<li><code>AddToFavorites_WithValidRequest_ReturnsOkResult</code>: Verifies adding to favorites</li>
+<li><code>AddToFavorites_WithNullRequest_ReturnsBadRequest</code>: Tests invalid input handling</li>
+<li><code>RemoveFromFavorites_ExistingFavorite_ReturnsNoContent</code>: Tests removing from favorites</li>
+<li><code>CheckIsFavorite_ExistingFavorite_ReturnsTrue</code>: Verifies favorite status checking</li>
+</ul>
+<h2 id="test-setup">Test Setup</h2>
+<p>The tests use:</p>
+<ul>
+<li>Mock favorite collection</li>
+<li>Mock property collection</li>
+<li>Mock logger</li>
+<li>Test user authentication context</li>
+</ul>
+<h2 id="common-patterns">Common Patterns</h2>
+<ol>
+<li>Arrange: Set up test data and mock collections</li>
+<li>Act: Call the controller method</li>
+<li>Assert: Verify the response and database operations</li>
+</ol>
+<h2 id="example">Example</h2>
+<pre><code class="lang-csharp">[Fact]
+public async Task AddToFavorites_WithValidRequest_ReturnsOkResult()
+{
+    // Arrange
+    var request = new AddToFavoritesRequest
+    {
+        PropertyId = &quot;test-property-id&quot;
+    };
+
+    // Act
+    var result = await _controller.AddToFavorites(request);
+
+    // Assert
+    Assert.IsType&lt;OkResult&gt;(result);
+}
+</code></pre>
+<h2 id="test-data">Test Data</h2>
+<p>The tests use common test data including:</p>
+<ul>
+<li>Test user ID: &quot;test-user-id&quot;</li>
+<li>Test property IDs</li>
+<li>Mock favorite entries</li>
+</ul>
+<h2 id="error-cases">Error Cases</h2>
+<p>Tests cover various error scenarios:</p>
+<ul>
+<li>Invalid requests</li>
+<li>Non-existent properties</li>
+<li>Duplicate favorites</li>
+<li>Unauthorized access</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Batuhanctn/SWE-realEstate/blob/main/RealEstate.Tests/articles/favorite-tests.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

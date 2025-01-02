@@ -1,0 +1,6 @@
+- name: Authentication Tests
+  href: auth-tests.md
+- name: Property Tests
+  href: property-tests.md
+- name: Favorite Tests
+  href: favorite-tests.md

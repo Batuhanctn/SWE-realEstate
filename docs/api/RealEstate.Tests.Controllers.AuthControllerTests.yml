@@ -1,0 +1,708 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.Tests.Controllers.AuthControllerTests
+  commentId: T:RealEstate.Tests.Controllers.AuthControllerTests
+  id: AuthControllerTests
+  parent: RealEstate.Tests.Controllers
+  children:
+  - RealEstate.Tests.Controllers.AuthControllerTests.#ctor
+  - RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+  - RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken
+  - RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
+  - RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+  - RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+  - RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk
+  langs:
+  - csharp
+  - vb
+  name: AuthControllerTests
+  nameWithType: AuthControllerTests
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests
+  type: Class
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: AuthControllerTests
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 16
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Test suite for authentication controller functionality
+  remarks: >-
+    Contains unit tests for user authentication operations including login, registration,
+
+    and token validation processes
+  example: []
+  syntax:
+    content: public class AuthControllerTests
+    content.vb: Public Class AuthControllerTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.#ctor
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.#ctor
+  id: '#ctor'
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: AuthControllerTests()
+  nameWithType: AuthControllerTests.AuthControllerTests()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.AuthControllerTests()
+  type: Constructor
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: .ctor
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 61
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Initializes a new instance of the AuthControllerTests class
+  remarks: >-
+    Sets up all necessary mocks and dependencies for testing authentication functionality
+
+    including database, configuration, and controller instances
+  example: []
+  syntax:
+    content: public AuthControllerTests()
+    content.vb: Public Sub New()
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.#ctor*
+  nameWithType.vb: AuthControllerTests.New()
+  fullName.vb: RealEstate.Tests.Controllers.AuthControllerTests.New()
+  name.vb: New()
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk
+  id: Register_ValidUser_ReturnsOk
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Register_ValidUser_ReturnsOk()
+  nameWithType: AuthControllerTests.Register_ValidUser_ReturnsOk()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Register_ValidUser_ReturnsOk
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 87
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Register creates new user successfully
+  remarks: >-
+    Verifies that a valid user registration request results in a successful user creation
+
+    and returns an Ok response with a success message
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Register_ValidUser_ReturnsOk()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Register_ValidUser_ReturnsOk() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+  id: Register_ExistingEmail_ReturnsBadRequest
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Register_ExistingEmail_ReturnsBadRequest()
+  nameWithType: AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Register_ExistingEmail_ReturnsBadRequest
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 133
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Register returns Conflict for duplicate email
+  remarks: >-
+    Verifies that a registration request with an existing email address results in a
+
+    Conflict response with an error message indicating that the email is already in use
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Register_ExistingEmail_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Register_ExistingEmail_ReturnsBadRequest() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+  id: Register_InvalidModel_ReturnsBadRequest
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Register_InvalidModel_ReturnsBadRequest()
+  nameWithType: AuthControllerTests.Register_InvalidModel_ReturnsBadRequest()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Register_InvalidModel_ReturnsBadRequest
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 184
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Register validates required fields
+  remarks: >-
+    Verifies that a registration request with missing or invalid fields results in a
+
+    BadRequest response with an error message indicating the validation failure
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Register_InvalidModel_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Register_InvalidModel_ReturnsBadRequest() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken
+  id: Login_ValidCredentials_ReturnsToken
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Login_ValidCredentials_ReturnsToken()
+  nameWithType: AuthControllerTests.Login_ValidCredentials_ReturnsToken()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Login_ValidCredentials_ReturnsToken
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 206
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Login authenticates user successfully
+  remarks: >-
+    Verifies that a valid login request results in a successful user authentication
+
+    and returns an Ok response with a JWT token and user data
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Login_ValidCredentials_ReturnsToken()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Login_ValidCredentials_ReturnsToken() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+  id: Login_InvalidEmail_ReturnsBadRequest
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Login_InvalidEmail_ReturnsBadRequest()
+  nameWithType: AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Login_InvalidEmail_ReturnsBadRequest
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 286
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Login returns Unauthorized for invalid credentials
+  remarks: >-
+    Verifies that a login request with invalid or missing credentials results in a
+
+    BadRequest response with an error message indicating the authentication failure
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Login_InvalidEmail_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Login_InvalidEmail_ReturnsBadRequest() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
+  commentId: M:RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
+  id: Login_WrongPassword_ReturnsBadRequest
+  parent: RealEstate.Tests.Controllers.AuthControllerTests
+  langs:
+  - csharp
+  - vb
+  name: Login_WrongPassword_ReturnsBadRequest()
+  nameWithType: AuthControllerTests.Login_WrongPassword_ReturnsBadRequest()
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest()
+  type: Method
+  source:
+    remote:
+      path: RealEstate.Tests/Controllers/AuthControllerTests.cs
+      branch: main
+      repo: https://github.com/Batuhanctn/SWE-realEstate.git
+    id: Login_WrongPassword_ReturnsBadRequest
+    path: ../RealEstate.Tests/Controllers/AuthControllerTests.cs
+    startLine: 329
+  assemblies:
+  - RealEstate.Tests
+  namespace: RealEstate.Tests.Controllers
+  summary: Tests that Login returns Unauthorized for wrong password
+  remarks: >-
+    Verifies that a login request with an incorrect password results in a
+
+    BadRequest response with an error message indicating the authentication failure
+  example: []
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task Login_WrongPassword_ReturnsBadRequest()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function Login_WrongPassword_ReturnsBadRequest() As Task
+  overload: RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+references:
+- uid: RealEstate.Tests.Controllers
+  commentId: N:RealEstate.Tests.Controllers
+  href: RealEstate.html
+  name: RealEstate.Tests.Controllers
+  nameWithType: RealEstate.Tests.Controllers
+  fullName: RealEstate.Tests.Controllers
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.Tests
+    name: Tests
+    href: RealEstate.Tests.html
+  - name: .
+  - uid: RealEstate.Tests.Controllers
+    name: Controllers
+    href: RealEstate.Tests.Controllers.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.Tests
+    name: Tests
+    href: RealEstate.Tests.html
+  - name: .
+  - uid: RealEstate.Tests.Controllers
+    name: Controllers
+    href: RealEstate.Tests.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.#ctor*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.#ctor
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests__ctor
+  name: AuthControllerTests
+  nameWithType: AuthControllerTests.AuthControllerTests
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.AuthControllerTests
+  nameWithType.vb: AuthControllerTests.New
+  fullName.vb: RealEstate.Tests.Controllers.AuthControllerTests.New
+  name.vb: New
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Register_ValidUser_ReturnsOk
+  name: Register_ValidUser_ReturnsOk
+  nameWithType: AuthControllerTests.Register_ValidUser_ReturnsOk
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_ValidUser_ReturnsOk
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Register_ExistingEmail_ReturnsBadRequest
+  name: Register_ExistingEmail_ReturnsBadRequest
+  nameWithType: AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_ExistingEmail_ReturnsBadRequest
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Register_InvalidModel_ReturnsBadRequest
+  name: Register_InvalidModel_ReturnsBadRequest
+  nameWithType: AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Register_InvalidModel_ReturnsBadRequest
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Login_ValidCredentials_ReturnsToken
+  name: Login_ValidCredentials_ReturnsToken
+  nameWithType: AuthControllerTests.Login_ValidCredentials_ReturnsToken
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_ValidCredentials_ReturnsToken
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Login_InvalidEmail_ReturnsBadRequest
+  name: Login_InvalidEmail_ReturnsBadRequest
+  nameWithType: AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_InvalidEmail_ReturnsBadRequest
+- uid: RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest*
+  commentId: Overload:RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
+  href: RealEstate.Tests.Controllers.AuthControllerTests.html#RealEstate_Tests_Controllers_AuthControllerTests_Login_WrongPassword_ReturnsBadRequest
+  name: Login_WrongPassword_ReturnsBadRequest
+  nameWithType: AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
+  fullName: RealEstate.Tests.Controllers.AuthControllerTests.Login_WrongPassword_ReturnsBadRequest
