@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/ListProperty.tsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/ListProperty.tsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaUpload, FaHome } from 'react-icons/fa';
+import { createProperty } from '../services/propertyService';
+import { toast } from 'react-toastify';
+
+/**
+ * ListProperty component for creating new property listings
+ * Provides a form interface for users to input property details and upload images
+ * @returns {JSX.Element} The rendered ListProperty component
+ */
+export const ListProperty = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    price: '',
+    location: '',
+    type: 'apartment',
+    status: 'for-sale',
+    bedrooms: '',
+    bathrooms: '',
+    size: '',
+    features: [] as string[],
+    images: [] as File[],
+  });
+
+  const [previewImages, setPreviewImages] = useState&lt;string[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  /**
+   * Handles changes in form input fields
+   * @param {React.ChangeEvent&lt;HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>} e - The change event
+   */
+  const handleInputChange = (
+    e: React.ChangeEvent&lt;HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  /**
+   * Handles image file uploads
+   * @param {React.ChangeEvent&lt;HTMLInputElement>} e - The file input change event
+   */
+  const handleImageUpload = (e: React.ChangeEvent&lt;HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    setFormData((prev) => ({
+      ...prev,
+      images: [...prev.images, ...files],
+    }));
+
+    // Create preview URLs
+    const newPreviewUrls = files.map((file) => URL.createObjectURL(file));
+    setPreviewImages((prev) => [...prev, ...newPreviewUrls]);
+  };
+
+  /**
+   * Toggles property features selection
+   * @param {string} feature - The feature to toggle
+   */
+  const handleFeatureToggle = (feature: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      features: prev.features.includes(feature)
+        ? prev.features.filter((f) => f !== feature)
+        : [...prev.features, feature],
+    }));
+  };
+
+  /**
+   * Handles form submission to create a new property listing
+   * Validates form data and uploads images
+   * @param {React.FormEvent} e - The form submission event
+   */
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Prevent double submission
+    if (isSubmitting) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Convert form data to match API expectations
+      const propertyData = {
+        title: formData.title.trim(),
+        description: formData.description.trim(),
+        price: Number(formData.price),
+        location: formData.location.trim(),
+        address: formData.location.trim(), // Using location as address for now
+        city: 'Default City', // Required by backend
+        state: 'Default State', // Required by backend
+        zipCode: '00000', // Required by backend
+        type: formData.type.charAt(0).toUpperCase() + formData.type.slice(1),
+        propertyType: formData.type.charAt(0).toUpperCase() + formData.type.slice(1),
+        status: formData.status === 'for-sale' ? 'ForSale' : 'ForRent',
+        isForRent: formData.status === 'for-rent', // Required by backend
+        bedrooms: Number(formData.bedrooms),
+        bathrooms: Number(formData.bathrooms),
+        squareMeters: Number(formData.size),
+        size: Number(formData.size), // Required by backend as double
+        features: formData.features,
+        imageUrl: '', // Optional
+        imageUrls: [], // Will be populated after image upload
+        images: formData.images // For upload
+      };
+
+      // Validate required fields
+      if (!propertyData.title || !propertyData.description || !propertyData.location) {
+        toast.error('Please fill in all required fields');
+        return;
+      }
+
+      if (propertyData.price &lt;= 0 || propertyData.squareMeters &lt;= 0) {
+        toast.error('Price and size must be greater than 0');
+        return;
+      }
+      
+      console.log('Submitting property data:', propertyData);
+      const result = await createProperty(propertyData);
+      console.log('Created property:', result);
+      toast.success('Property listed successfully!');
+      navigate('/');
+    } catch (error: any) {
+      const errorMessage = error.response?.data?.message || 'Failed to list property. Please try again.';
+      toast.error(errorMessage);
+      console.error('Error listing property:', error);
+      if (error.response?.data) {
+        console.error('Server error details:', error.response.data);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const features = [
+    'Air Conditioning',
+    'Heating',
+    'Parking',
+    'Pool',
+    'Garden',
+    'Security System',
+    'Internet',
+    'Cable TV',
+  ];
+
+  return (
+    &lt;div className="bg-gray-50 min-h-screen py-12 pt-28">
+      &lt;div className="container mx-auto px-4 max-w-3xl">
+        &lt;div className="bg-white rounded-2xl shadow-xl p-8">
+          &lt;div className="flex items-center gap-4 mb-8">
+            &lt;FaHome className="text-4xl text-primary-500" />
+            &lt;div>
+              &lt;h1 className="text-2xl font-bold">List Your Property&lt;/h1>
+              &lt;p className="text-gray-400">Fill in the details below to list your property&lt;/p>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;form onSubmit={handleSubmit} className="space-y-8">
+            {/* Basic Information */}
+            &lt;div className="space-y-4">
+              &lt;h2 className="text-xl font-semibold">Basic Information&lt;/h2>
+              &lt;div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Title
+                  &lt;/label>
+                  &lt;input
+                    type="text"
+                    name="title"
+                    value={formData.title}
+                    onChange={handleInputChange}
+                    placeholder="e.g., Modern Apartment in City Center"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Price
+                  &lt;/label>
+                  &lt;input
+                    type="number"
+                    name="price"
+                    value={formData.price}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 500000"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+              &lt;/div>
+              &lt;div>
+                &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                  Description
+                &lt;/label>
+                &lt;textarea
+                  name="description"
+                  value={formData.description}
+                  onChange={handleInputChange}
+                  placeholder="Describe your property in detail..."
+                  rows={4}
+                  className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                  required
+                />
+              &lt;/div>
+            &lt;/div>
+
+            {/* Property Details */}
+            &lt;div className="space-y-4">
+              &lt;h2 className="text-xl font-semibold">Property Details&lt;/h2>
+              &lt;div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Type
+                  &lt;/label>
+                  &lt;select
+                    name="type"
+                    value={formData.type}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600"
+                  >
+                    &lt;option value="apartment">Apartment&lt;/option>
+                    &lt;option value="house">House&lt;/option>
+                    &lt;option value="villa">Villa&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Status
+                  &lt;/label>
+                  &lt;select
+                    name="status"
+                    value={formData.status}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600"
+                  >
+                    &lt;option value="for-sale">For Sale&lt;/option>
+                    &lt;option value="for-rent">For Rent&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Location
+                  &lt;/label>
+                  &lt;input
+                    type="text"
+                    name="location"
+                    value={formData.location}
+                    onChange={handleInputChange}
+                    placeholder="e.g., Downtown, New York"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Size (m²)
+                  &lt;/label>
+                  &lt;input
+                    type="number"
+                    name="size"
+                    value={formData.size}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 120"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Bedrooms
+                  &lt;/label>
+                  &lt;input
+                    type="number"
+                    name="bedrooms"
+                    value={formData.bedrooms}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 3"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+                &lt;div>
+                  &lt;label className="block text-sm font-medium text-gray-300 mb-1">
+                    Bathrooms
+                  &lt;/label>
+                  &lt;input
+                    type="number"
+                    name="bathrooms"
+                    value={formData.bathrooms}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 2"
+                    className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-600 placeholder-gray-400"
+                    required
+                  />
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            {/* Features */}
+            &lt;div className="space-y-4">
+              &lt;h2 className="text-xl font-semibold">Features&lt;/h2>
+              &lt;div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {features.map((feature) => (
+                  &lt;label
+                    key={feature}
+                    className="flex items-center space-x-2 cursor-pointer"
+                  >
+                    &lt;input
+                      type="checkbox"
+                      checked={formData.features.includes(feature)}
+                      onChange={() => handleFeatureToggle(feature)}
+                      className="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500"
+                    />
+                    &lt;span className="text-sm text-gray-600">{feature}&lt;/span>
+                  &lt;/label>
+                ))}
+              &lt;/div>
+            &lt;/div>
+
+            {/* Image Upload */}
+            &lt;div className="space-y-4">
+              &lt;h2 className="text-xl font-semibold">Property Images&lt;/h2>
+              &lt;div className="border-2 border-dashed border-gray-300 rounded-lg p-8">
+                &lt;div className="text-center">
+                  &lt;FaUpload className="mx-auto text-4xl text-gray-400 mb-4" />
+                  &lt;div className="space-y-2">
+                    &lt;label
+                      htmlFor="images"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors cursor-pointer inline-block"
+                    >
+                      Choose Files
+                    &lt;/label>
+                    &lt;input
+                      id="images"
+                      type="file"
+                      multiple
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="hidden"
+                    />
+                    &lt;p className="text-sm text-gray-400">
+                      Upload up to 10 images (PNG, JPG)
+                    &lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                {previewImages.length > 0 &amp;&amp; (
+                  &lt;div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {previewImages.map((url, index) => (
+                      &lt;div
+                        key={index}
+                        className="relative aspect-square rounded-lg overflow-hidden"
+                      >
+                        &lt;img
+                          src={url}
+                          alt={`Preview ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                        &lt;button
+                          type="button"
+                          onClick={() => {
+                            setPreviewImages((prev) =>
+                              prev.filter((_, i) => i !== index)
+                            );
+                            setFormData((prev) => ({
+                              ...prev,
+                              images: prev.images.filter((_, i) => i !== index),
+                            }));
+                          }}
+                          className="absolute top-2 right-2 p-1 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors"
+                        >
+                          ×
+                        &lt;/button>
+                      &lt;/div>
+                    ))}
+                  &lt;/div>
+                )}
+              &lt;/div>
+            &lt;/div>
+
+            {/* Submit Button */}
+            &lt;div className="flex justify-end">
+              &lt;button
+                type="submit"
+                disabled={isSubmitting}
+                className={`px-8 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors
+                  ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                {isSubmitting ? 'Listing Property...' : 'List Property'}
+              &lt;/button>
+            &lt;/div>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Interfaces</h3><ul><li><a href="Property.html">Property</a></li><li><a href="User.html">User</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ListProperty">ListProperty</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#PropertyDetails">PropertyDetails</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#addToFavorites">addToFavorites</a></li><li><a href="global.html#checkIsFavorite">checkIsFavorite</a></li><li><a href="global.html#createProperty">createProperty</a></li><li><a href="global.html#deleteProperty">deleteProperty</a></li><li><a href="global.html#getFavorites">getFavorites</a></li><li><a href="global.html#getProperties">getProperties</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getUserProperties">getUserProperties</a></li><li><a href="global.html#removeFromFavorites">removeFromFavorites</a></li><li><a href="global.html#searchProperties">searchProperties</a></li><li><a href="global.html#updateProperty">updateProperty</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jan 02 2025 17:09:51 GMT+0300 (GMT+03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Services
+  commentId: N:RealEstate.API.Services
+  id: RealEstate.API.Services
+  children:
+  - RealEstate.API.Services.IPropertyService
+  - RealEstate.API.Services.PropertyService
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Services
+  nameWithType: RealEstate.API.Services
+  fullName: RealEstate.API.Services
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Services.IPropertyService
+  commentId: T:RealEstate.API.Services.IPropertyService
+  parent: RealEstate.API.Services
+  href: RealEstate.API.Services.IPropertyService.html
+  name: IPropertyService
+  nameWithType: IPropertyService
+  fullName: RealEstate.API.Services.IPropertyService
+- uid: RealEstate.API.Services.PropertyService
+  commentId: T:RealEstate.API.Services.PropertyService
+  href: RealEstate.API.Services.PropertyService.html
+  name: PropertyService
+  nameWithType: PropertyService
+  fullName: RealEstate.API.Services.PropertyService
+- uid: RealEstate.API.Services
+  commentId: N:RealEstate.API.Services
+  href: RealEstate.html
+  name: RealEstate.API.Services
+  nameWithType: RealEstate.API.Services
+  fullName: RealEstate.API.Services
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Services
+    name: Services
+    href: RealEstate.API.Services.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Services
+    name: Services
+    href: RealEstate.API.Services.html
+memberLayout: SeparatePages

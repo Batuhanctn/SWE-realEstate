@@ -1,0 +1,10 @@
+global using Xunit;
+global using Moq;
+global using System.Security.Claims;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using RealEstate.API.Controllers;
+global using RealEstate.API.Models;
+global using System.IO;
+global using RealEstate.Tests.TestHelpers;
+global using Microsoft.Extensions.Configuration;

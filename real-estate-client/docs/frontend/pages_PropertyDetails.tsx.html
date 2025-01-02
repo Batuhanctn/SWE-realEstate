@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/PropertyDetails.tsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/PropertyDetails.tsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { FaHome, FaBed, FaBath, FaRuler, FaMapMarkerAlt, FaPhone, FaEnvelope, FaWhatsapp, FaHeart } from 'react-icons/fa';
+import { Property } from '../types/property';
+import { getProperty } from '../services/propertyService';
+import { addToFavorites, removeFromFavorites, checkIsFavorite } from '../services/favoriteService';
+
+/**
+ * PropertyDetails component displays detailed information about a specific property
+ * Allows users to view property details and manage favorites
+ * @returns {JSX.Element} The rendered PropertyDetails component
+ */
+export const PropertyDetails = () => {
+  const { id } = useParams&lt;{ id: string }>();
+  const navigate = useNavigate();
+  const [property, setProperty] = useState&lt;Property | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState&lt;string | null>(null);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [selectedImage, setSelectedImage] = useState&lt;string>('');
+
+  useEffect(() => {
+    /**
+     * Fetches property details and favorite status from the API
+     * @returns {Promise&lt;void>}
+     */
+    const fetchProperty = async () => {
+      try {
+        if (!id) return;
+        const data = await getProperty(id);
+        setProperty(data);
+        setSelectedImage(data.imageUrl);
+        
+        // Check if property is in favorites
+        const token = localStorage.getItem('token');
+        if (token) {
+          const favoriteStatus = await checkIsFavorite(id);
+          setIsFavorite(favoriteStatus);
+        }
+      } catch (err) {
+        setError('Failed to fetch property details');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProperty();
+  }, [id]);
+
+  /**
+   * Handles adding/removing property from favorites
+   * @returns {Promise&lt;void>} A promise that resolves when the favorite status is updated
+   */
+  const handleFavoriteClick = async () => {
+    if (!property) return;
+    
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+      return;
+    }
+
+    try {
+      if (isFavorite) {
+        await removeFromFavorites(property.Id);
+      } else {
+        await addToFavorites(property.Id);
+      }
+      setIsFavorite(!isFavorite);
+    } catch (error) {
+      console.error('Error updating favorite status:', error);
+    }
+  };
+
+  if (loading) {
+    return (
+      &lt;div className="min-h-screen flex items-center justify-center">
+        &lt;div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600">&lt;/div>
+      &lt;/div>
+    );
+  }
+
+  if (error || !property) {
+    return (
+      &lt;div className="min-h-screen flex items-center justify-center">
+        &lt;div className="text-center">
+          &lt;h2 className="text-2xl font-bold text-gray-900 mb-2">Error Loading Property&lt;/h2>
+          &lt;p className="text-gray-600">{error || 'Property not found'}&lt;/p>
+          &lt;button
+            onClick={() => navigate(-1)}
+            className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
+          >
+            Go Back
+          &lt;/button>
+        &lt;/div>
+      &lt;/div>
+    );
+  }
+
+  return (
+    &lt;div className="min-h-screen bg-gray-50 py-12">
+      &lt;div className="container mx-auto px-4 max-w-7xl">
+        {/* Property Header */}
+        &lt;div className="mb-8">
+          &lt;div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            &lt;div>
+              &lt;h1 className="text-3xl font-bold text-gray-900 mb-2">{property.title}&lt;/h1>
+              &lt;div className="flex items-center text-gray-600">
+                &lt;FaMapMarkerAlt className="mr-2" />
+                &lt;span>{property.location}&lt;/span>
+              &lt;/div>
+            &lt;/div>
+            &lt;div className="flex items-center gap-4">
+              &lt;span className="text-3xl font-bold text-primary-600">
+                ${property.price.toLocaleString()}
+              &lt;/span>
+              &lt;button
+                onClick={handleFavoriteClick}
+                className={`p-3 rounded-full ${
+                  isFavorite 
+                    ? 'bg-red-50 text-red-500' 
+                    : 'bg-gray-100 text-gray-400 hover:text-red-500 hover:bg-red-50'
+                } transition-colors`}
+              >
+                &lt;FaHeart className="text-xl" />
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+
+        {/* Image Gallery */}
+        &lt;div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          &lt;div className="md:col-span-2">
+            &lt;img
+              src={selectedImage}
+              alt={property.title}
+              className="w-full h-[500px] object-cover rounded-lg"
+            />
+          &lt;/div>
+          &lt;div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+            {property.imageUrls?.slice(0, 4).map((image, index) => (
+              &lt;img
+                key={index}
+                src={image}
+                alt={`${property.title} ${index + 1}`}
+                className="w-full h-[120px] object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setSelectedImage(image)}
+              />
+            ))}
+          &lt;/div>
+        &lt;/div>
+
+        {/* Property Details */}
+        &lt;div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Main Content */}
+          &lt;div className="md:col-span-2 space-y-8">
+            {/* Overview */}
+            &lt;div className="bg-white rounded-xl p-6 shadow-sm">
+              &lt;h2 className="text-2xl font-semibold mb-6">Overview&lt;/h2>
+              &lt;div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                &lt;div className="flex items-center gap-3">
+                  &lt;FaBed className="text-2xl text-primary-600" />
+                  &lt;div>
+                    &lt;p className="text-sm text-gray-500">Bedrooms&lt;/p>
+                    &lt;p className="font-semibold">{property.bedrooms}&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div className="flex items-center gap-3">
+                  &lt;FaBath className="text-2xl text-primary-600" />
+                  &lt;div>
+                    &lt;p className="text-sm text-gray-500">Bathrooms&lt;/p>
+                    &lt;p className="font-semibold">{property.bathrooms}&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div className="flex items-center gap-3">
+                  &lt;FaRuler className="text-2xl text-primary-600" />
+                  &lt;div>
+                    &lt;p className="text-sm text-gray-500">Area&lt;/p>
+                    &lt;p className="font-semibold">{property.squareMeters}m²&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div className="flex items-center gap-3">
+                  &lt;FaHome className="text-2xl text-primary-600" />
+                  &lt;div>
+                    &lt;p className="text-sm text-gray-500">Type&lt;/p>
+                    &lt;p className="font-semibold">{property.propertyType}&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            {/* Description */}
+            &lt;div className="bg-white rounded-xl p-6 shadow-sm">
+              &lt;h2 className="text-2xl font-semibold mb-4">Description&lt;/h2>
+              &lt;p className="text-gray-600 leading-relaxed">{property.description}&lt;/p>
+            &lt;/div>
+
+            {/* Features */}
+            &lt;div className="bg-white rounded-xl p-6 shadow-sm">
+              &lt;h2 className="text-2xl font-semibold mb-6">Features&lt;/h2>
+              &lt;div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {property.features?.map((feature, index) => (
+                  &lt;div key={index} className="flex items-center gap-2">
+                    &lt;div className="w-2 h-2 rounded-full bg-primary-600">&lt;/div>
+                    &lt;span className="text-gray-600">{feature}&lt;/span>
+                  &lt;/div>
+                ))}
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+
+          {/* Contact Section */}
+          &lt;div className="md:col-span-1">
+            &lt;div className="bg-white rounded-xl p-6 shadow-sm sticky top-4">
+              &lt;h2 className="text-xl font-semibold mb-6">Contact Agent&lt;/h2>
+              &lt;div className="space-y-6">
+                &lt;button className="w-full px-4 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center justify-center gap-2">
+                  &lt;FaPhone />
+                  Call Agent
+                &lt;/button>
+                &lt;button className="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center justify-center gap-2">
+                  &lt;FaWhatsapp />
+                  WhatsApp
+                &lt;/button>
+                &lt;button className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2">
+                  &lt;FaEnvelope />
+                  Email Agent
+                &lt;/button>
+
+                &lt;div className="border-t pt-6">
+                  &lt;h3 className="font-semibold mb-4">Schedule a Tour&lt;/h3>
+                  &lt;input
+                    type="date"
+                    className="w-full px-4 py-2 border rounded-lg mb-4"
+                    min={new Date().toISOString().split('T')[0]}
+                  />
+                  &lt;button className="w-full px-4 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700">
+                    Request Tour
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Interfaces</h3><ul><li><a href="Property.html">Property</a></li><li><a href="User.html">User</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ListProperty">ListProperty</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#PropertyDetails">PropertyDetails</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#addToFavorites">addToFavorites</a></li><li><a href="global.html#checkIsFavorite">checkIsFavorite</a></li><li><a href="global.html#createProperty">createProperty</a></li><li><a href="global.html#deleteProperty">deleteProperty</a></li><li><a href="global.html#getFavorites">getFavorites</a></li><li><a href="global.html#getProperties">getProperties</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getUserProperties">getUserProperties</a></li><li><a href="global.html#removeFromFavorites">removeFromFavorites</a></li><li><a href="global.html#searchProperties">searchProperties</a></li><li><a href="global.html#updateProperty">updateProperty</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jan 02 2025 17:09:51 GMT+0300 (GMT+03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

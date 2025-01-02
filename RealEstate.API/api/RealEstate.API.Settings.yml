@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Settings
+  commentId: N:RealEstate.API.Settings
+  id: RealEstate.API.Settings
+  children:
+  - RealEstate.API.Settings.MongoDbSettings
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Settings
+  nameWithType: RealEstate.API.Settings
+  fullName: RealEstate.API.Settings
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Settings.MongoDbSettings
+  commentId: T:RealEstate.API.Settings.MongoDbSettings
+  parent: RealEstate.API.Settings
+  href: RealEstate.API.Settings.MongoDbSettings.html
+  name: MongoDbSettings
+  nameWithType: MongoDbSettings
+  fullName: RealEstate.API.Settings.MongoDbSettings
+- uid: RealEstate.API.Settings
+  commentId: N:RealEstate.API.Settings
+  href: RealEstate.html
+  name: RealEstate.API.Settings
+  nameWithType: RealEstate.API.Settings
+  fullName: RealEstate.API.Settings
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Settings
+    name: Settings
+    href: RealEstate.API.Settings.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Settings
+    name: Settings
+    href: RealEstate.API.Settings.html
+memberLayout: SeparatePages

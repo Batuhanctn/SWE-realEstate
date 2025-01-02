@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Data
+  commentId: N:RealEstate.API.Data
+  id: RealEstate.API.Data
+  children:
+  - RealEstate.API.Data.RealEstateDbContext
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Data
+  nameWithType: RealEstate.API.Data
+  fullName: RealEstate.API.Data
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Data.RealEstateDbContext
+  commentId: T:RealEstate.API.Data.RealEstateDbContext
+  parent: RealEstate.API.Data
+  href: RealEstate.API.Data.RealEstateDbContext.html
+  name: RealEstateDbContext
+  nameWithType: RealEstateDbContext
+  fullName: RealEstate.API.Data.RealEstateDbContext
+- uid: RealEstate.API.Data
+  commentId: N:RealEstate.API.Data
+  href: RealEstate.html
+  name: RealEstate.API.Data
+  nameWithType: RealEstate.API.Data
+  fullName: RealEstate.API.Data
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Data
+    name: Data
+    href: RealEstate.API.Data.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Data
+    name: Data
+    href: RealEstate.API.Data.html
+memberLayout: SeparatePages

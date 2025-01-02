@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\677164e4a8349ccf63ef9290\\ea6776f5-b660-48f5-8ad0-413d9e1fac09.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\677164e4a8349ccf63ef9290\\ea6776f5-b660-48f5-8ad0-413d9e1fac09.png"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6771659ca8349ccf63ef9291\\dce7879b-ea51-4ebb-8f6b-3f16e8de4d9e.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6771659ca8349ccf63ef9291\\dce7879b-ea51-4ebb-8f6b-3f16e8de4d9e.png"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\67758fd8f577801a491801cb\\83332a6e-ede1-4936-99fc-cd218c547f57.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\properties\\67758fd8f577801a491801cb\\83332a6e-ede1-4936-99fc-cd218c547f57.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6775911ccf2fb8fd5a318ec6\\554b199e-9535-4bfc-bcca-fab646dd97fd.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6775911ccf2fb8fd5a318ec6\\554b199e-9535-4bfc-bcca-fab646dd97fd.png"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776ad125a2c868f6d8fd66e\\42a77503-7e01-4ab1-bbac-70434eb559ab.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6776ad125a2c868f6d8fd66e\\42a77503-7e01-4ab1-bbac-70434eb559ab.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Win10\\OneDrive\\Masaüstü\\SWE\\RealEstate.API\\wwwroot\\uploads\\properties\\6776ad355a2c868f6d8fd66f\\6e94dee6-b469-4415-933e-576bee727124.png",
+      "PackagePath": "staticwebassets\\uploads\\properties\\6776ad355a2c868f6d8fd66f\\6e94dee6-b469-4415-933e-576bee727124.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RealEstate.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RealEstate.API.props",
+      "PackagePath": "build\\RealEstate.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RealEstate.API.props",
+      "PackagePath": "buildMultiTargeting\\RealEstate.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RealEstate.API.props",
+      "PackagePath": "buildTransitive\\RealEstate.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

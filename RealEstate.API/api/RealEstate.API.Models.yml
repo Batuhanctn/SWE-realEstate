@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Models
+  commentId: N:RealEstate.API.Models
+  id: RealEstate.API.Models
+  children:
+  - RealEstate.API.Models.Favorite
+  - RealEstate.API.Models.LoginDto
+  - RealEstate.API.Models.Property
+  - RealEstate.API.Models.User
+  - RealEstate.API.Models.UserDto
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Models
+  nameWithType: RealEstate.API.Models
+  fullName: RealEstate.API.Models
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Models.Favorite
+  commentId: T:RealEstate.API.Models.Favorite
+  href: RealEstate.API.Models.Favorite.html
+  name: Favorite
+  nameWithType: Favorite
+  fullName: RealEstate.API.Models.Favorite
+- uid: RealEstate.API.Models.Property
+  commentId: T:RealEstate.API.Models.Property
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.Property.html
+  name: Property
+  nameWithType: Property
+  fullName: RealEstate.API.Models.Property
+- uid: RealEstate.API.Models.User
+  commentId: T:RealEstate.API.Models.User
+  href: RealEstate.API.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RealEstate.API.Models.User
+- uid: RealEstate.API.Models.UserDto
+  commentId: T:RealEstate.API.Models.UserDto
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.UserDto.html
+  name: UserDto
+  nameWithType: UserDto
+  fullName: RealEstate.API.Models.UserDto
+- uid: RealEstate.API.Models.LoginDto
+  commentId: T:RealEstate.API.Models.LoginDto
+  parent: RealEstate.API.Models
+  href: RealEstate.API.Models.LoginDto.html
+  name: LoginDto
+  nameWithType: LoginDto
+  fullName: RealEstate.API.Models.LoginDto
+- uid: RealEstate.API.Models
+  commentId: N:RealEstate.API.Models
+  href: RealEstate.html
+  name: RealEstate.API.Models
+  nameWithType: RealEstate.API.Models
+  fullName: RealEstate.API.Models
+  spec.csharp:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+  spec.vb:
+  - uid: RealEstate
+    name: RealEstate
+    href: RealEstate.html
+  - name: .
+  - uid: RealEstate.API
+    name: API
+    href: RealEstate.API.html
+  - name: .
+  - uid: RealEstate.API.Models
+    name: Models
+    href: RealEstate.API.Models.html
+memberLayout: SeparatePages

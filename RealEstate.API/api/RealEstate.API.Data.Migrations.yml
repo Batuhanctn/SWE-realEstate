@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: RealEstate.API.Data.Migrations
+  commentId: N:RealEstate.API.Data.Migrations
+  id: RealEstate.API.Data.Migrations
+  children:
+  - RealEstate.API.Data.Migrations.AddFavorites
+  langs:
+  - csharp
+  - vb
+  name: RealEstate.API.Data.Migrations
+  nameWithType: RealEstate.API.Data.Migrations
+  fullName: RealEstate.API.Data.Migrations
+  type: Namespace
+  assemblies:
+  - RealEstate.API
+references:
+- uid: RealEstate.API.Data.Migrations.AddFavorites
+  commentId: T:RealEstate.API.Data.Migrations.AddFavorites
+  href: RealEstate.API.Data.Migrations.AddFavorites.html
+  name: AddFavorites
+  nameWithType: AddFavorites
+  fullName: RealEstate.API.Data.Migrations.AddFavorites
+memberLayout: SeparatePages

@@ -1,0 +1,72 @@
+### YamlMime:TableOfContent
+items:
+- uid: RealEstate.API.Controllers
+  name: RealEstate.API.Controllers
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Controllers.AuthController
+    name: AuthController
+    type: Class
+  - uid: RealEstate.API.Controllers.FavoriteController
+    name: FavoriteController
+    type: Class
+  - uid: RealEstate.API.Controllers.FavoriteController.AddFavoriteRequest
+    name: FavoriteController.AddFavoriteRequest
+    type: Class
+  - uid: RealEstate.API.Controllers.PropertiesController
+    name: PropertiesController
+    type: Class
+  - uid: RealEstate.API.Controllers.PropertyController
+    name: PropertyController
+    type: Class
+- uid: RealEstate.API.Data
+  name: RealEstate.API.Data
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Data.RealEstateDbContext
+    name: RealEstateDbContext
+    type: Class
+- uid: RealEstate.API.Data.Migrations
+  name: RealEstate.API.Data.Migrations
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Data.Migrations.AddFavorites
+    name: AddFavorites
+    type: Class
+- uid: RealEstate.API.Models
+  name: RealEstate.API.Models
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Models.Favorite
+    name: Favorite
+    type: Class
+  - uid: RealEstate.API.Models.LoginDto
+    name: LoginDto
+    type: Class
+  - uid: RealEstate.API.Models.Property
+    name: Property
+    type: Class
+  - uid: RealEstate.API.Models.User
+    name: User
+    type: Class
+  - uid: RealEstate.API.Models.UserDto
+    name: UserDto
+    type: Class
+- uid: RealEstate.API.Services
+  name: RealEstate.API.Services
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Services.IPropertyService
+    name: IPropertyService
+    type: Interface
+  - uid: RealEstate.API.Services.PropertyService
+    name: PropertyService
+    type: Class
+- uid: RealEstate.API.Settings
+  name: RealEstate.API.Settings
+  type: Namespace
+  items:
+  - uid: RealEstate.API.Settings.MongoDbSettings
+    name: MongoDbSettings
+    type: Class
+memberLayout: SeparatePages

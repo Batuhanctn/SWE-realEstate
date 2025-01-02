@@ -1,0 +1,24 @@
+{
+    "plugins": ["better-docs/typescript"],
+    "source": {
+        "include": ["src"],
+        "includePattern": "\\.(jsx|js|ts|tsx)$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "templates": {
+        "better-docs": {
+            "name": "Real Estate Client Documentation"
+        }
+    },
+    "opts": {
+        "destination": "docs/frontend",
+        "recurse": true,
+        "readme": "README.md"
+    },
+    "tags": {
+        "allowUnknownTags": ["component", "interface"]
+    },
+    "typescript": {
+        "moduleRoot": "src"
+    }
+}

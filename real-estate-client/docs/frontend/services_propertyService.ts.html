@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: services/propertyService.ts</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: services/propertyService.ts</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import axios from 'axios';
+import { Property } from '../types/property';
+
+const API_URL = 'http://localhost:5000/api';
+
+/**
+ * Retrieves all properties from the API
+ * @returns {Promise&lt;Property[]>} A promise that resolves to an array of Property objects
+ * @throws {Error} If the API request fails
+ */
+export const getProperties = async (): Promise&lt;Property[]> => {
+  try {
+    const response = await axios.get(`${API_URL}/properties`);
+    console.log('Properties retrieved successfully:', response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+
+/**
+ * Retrieves a specific property by ID
+ * @param {string} Id - The ID of the property to retrieve
+ * @returns {Promise&lt;Property>} A promise that resolves to a Property object
+ * @throws {Error} If the API request fails or authentication is invalid
+ */
+export const getProperty = async (Id: string): Promise&lt;Property> => {
+  const token = localStorage.getItem('token');
+  try {
+    const response = await axios.get(`${API_URL}/properties/${Id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log('Property retrieved successfully:', response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+
+/**
+ * Retrieves all properties belonging to the authenticated user
+ * @returns {Promise&lt;Property[]>} A promise that resolves to an array of Property objects
+ * @throws {Error} If the API request fails or authentication is invalid
+ */
+export const getUserProperties = async (): Promise&lt;Property[]> => {
+  const token = localStorage.getItem('token');
+  try {
+    const response = await axios.get(`${API_URL}/properties/user`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log('User properties retrieved successfully:', response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+
+/**
+ * Searches for properties based on a query string
+ * @param {string} query - The search query
+ * @returns {Promise&lt;Property[]>} A promise that resolves to an array of matching Property objects
+ * @throws {Error} If the API request fails
+ */
+export const searchProperties = async (query: string): Promise&lt;Property[]> => {
+  try {
+    console.log('Searching properties with query:', query);
+    const response = await axios.get(`${API_URL}/properties/search`, {
+      params: { query },
+    });
+    console.log('Properties retrieved successfully:', response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+
+/**
+ * Creates a new property listing
+ * @param {any} propertyData - The property data to create
+ * @returns {Promise&lt;Property>} A promise that resolves to the created Property object
+ * @throws {Error} If the API request fails or authentication is invalid
+ */
+export const createProperty = async (propertyData: any): Promise&lt;Property> => {
+  const token = localStorage.getItem('token');
+  
+  try {
+    // First, create the property without images
+    const { images, ...propertyDetails } = propertyData;
+    
+    // Convert the data to match the API's expectations
+    const requestData = {
+      ...propertyDetails,
+      // Ensure required fields are present
+      location: propertyDetails.location || propertyDetails.address || '',
+      address: propertyDetails.address || propertyDetails.location || '',
+      city: propertyDetails.city || propertyData.location || '',
+      state: propertyDetails.state || 'Default State',
+      zipCode: propertyDetails.zipCode || '00000',
+      type: propertyDetails.propertyType || 'Apartment',
+      // Add any other required defaults
+      imageUrl: '',
+      imageUrls: [],
+      images: [],
+      features: propertyDetails.features || [],
+      isForRent: propertyDetails.isForRent || false,
+      size: propertyDetails.squareMeters || 0,
+      userId: ''  // This will be set by the backend based on the token
+    };
+    
+    console.log('Submitting property data:', requestData);
+    
+    const response = await axios.post(`${API_URL}/properties`, requestData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+    });
+
+    console.log('Property created successfully:', response.data);
+
+    // If there are images, upload them separately
+    if (images &amp;&amp; images.length > 0) {
+      const propertyId = response.data.Id;
+      const formData = new FormData();
+      images.forEach((image: File) => {
+        formData.append('images', image);
+      });
+
+      console.log('Uploading images for property:', propertyId);
+      
+      const imageResponse = await axios.post(`${API_URL}/properties/${propertyId}/images`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      
+      console.log('Images uploaded successfully:', imageResponse.data);
+    }
+
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error('Error creating property:');
+      console.error('Status:', error.response?.status);
+      console.error('Status Text:', error.response?.statusText);
+      console.error('Error Data:', error.response?.data);
+      console.error('Request Data:', error.config?.data);
+      console.error('Headers:', error.config?.headers);
+      
+      if (error.response?.data?.errors) {
+        console.error('Validation Errors:', error.response.data.errors);
+      }
+    }
+    throw error;
+  }
+};
+
+/**
+ * Updates an existing property
+ * @param {string} Id - The ID of the property to update
+ * @param {Partial&lt;Property>} propertyData - The property data to update
+ * @returns {Promise&lt;Property>} A promise that resolves to the updated Property object
+ * @throws {Error} If the API request fails or authentication is invalid
+ */
+export const updateProperty = async (Id: string, propertyData: Partial&lt;Property>): Promise&lt;Property> => {
+  const token = localStorage.getItem('token');
+  try {
+    console.log('Updating property with Id:', Id, 'and data:', propertyData);
+    const response = await axios.put(`${API_URL}/properties/${Id}`, propertyData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log('Property updated successfully:', response.data);
+    return response.data;
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+
+/**
+ * Deletes a property
+ * @param {string} Id - The ID of the property to delete
+ * @returns {Promise&lt;void>} A promise that resolves when the property is deleted
+ * @throws {Error} If the API request fails or authentication is invalid
+ */
+export const deleteProperty = async (Id: string): Promise&lt;void> => {
+  const token = localStorage.getItem('token');
+  try {
+    console.log('Deleting property with Id:', Id);
+    await axios.delete(`${API_URL}/properties/${Id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log('Property deleted successfully');
+  } catch (error: any) {
+    console.error('Error details:', {
+      status: error.response?.status,
+      data: error.response?.data,
+      headers: error.response?.headers,
+    });
+    throw error;
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Interfaces</h3><ul><li><a href="Property.html">Property</a></li><li><a href="User.html">User</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ListProperty">ListProperty</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#PropertyDetails">PropertyDetails</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#addToFavorites">addToFavorites</a></li><li><a href="global.html#checkIsFavorite">checkIsFavorite</a></li><li><a href="global.html#createProperty">createProperty</a></li><li><a href="global.html#deleteProperty">deleteProperty</a></li><li><a href="global.html#getFavorites">getFavorites</a></li><li><a href="global.html#getProperties">getProperties</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getUserProperties">getUserProperties</a></li><li><a href="global.html#removeFromFavorites">removeFromFavorites</a></li><li><a href="global.html#searchProperties">searchProperties</a></li><li><a href="global.html#updateProperty">updateProperty</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jan 02 2025 17:09:51 GMT+0300 (GMT+03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

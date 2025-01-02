@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class PropertyService </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class PropertyService ">
+    
+    <meta name="description" content="Service class for handling property-related operations Implements IPropertyService interface">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="RealEstate.API.Services.PropertyService">
+
+
+
+  <h1 id="RealEstate_API_Services_PropertyService" data-uid="RealEstate.API.Services.PropertyService" class="text-break">Class PropertyService</h1>
+  <div class="markdown level0 summary"><p>Service class for handling property-related operations
+Implements IPropertyService interface</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">PropertyService</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="RealEstate.API.Services.IPropertyService.html">IPropertyService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="RealEstate.html">RealEstate</a>.<a class="xref" href="RealEstate.API.html">API</a>.<a class="xref" href="RealEstate.API.Services.html">Services</a></h6>
+  <h6><strong>Assembly</strong>: RealEstate.API.dll</h6>
+  <h5 id="RealEstate_API_Services_PropertyService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PropertyService : IPropertyService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="RealEstate_API_Services_PropertyService__ctor_" data-uid="RealEstate.API.Services.PropertyService.#ctor*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService__ctor_MongoDB_Driver_IMongoDatabase_Microsoft_Extensions_Logging_ILogger_RealEstate_API_Services_PropertyService__" data-uid="RealEstate.API.Services.PropertyService.#ctor(MongoDB.Driver.IMongoDatabase,Microsoft.Extensions.Logging.ILogger{RealEstate.API.Services.PropertyService})">PropertyService(IMongoDatabase, ILogger&lt;PropertyService&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the PropertyService class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertyService(IMongoDatabase database, ILogger&lt;PropertyService&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IMongoDatabase</span></td>
+        <td><span class="parametername">database</span></td>
+        <td><p>The database context for accessing property data</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="RealEstate.API.Services.PropertyService.html">PropertyService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger instance for logging operations</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="RealEstate_API_Services_PropertyService_CreateAsync_" data-uid="RealEstate.API.Services.PropertyService.CreateAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_CreateAsync_RealEstate_API_Models_Property_" data-uid="RealEstate.API.Services.PropertyService.CreateAsync(RealEstate.API.Models.Property)">CreateAsync(Property)</h4>
+  <div class="markdown level1 summary"><p>Creates a new property in the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CreateAsync(Property newProperty)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="RealEstate.API.Models.Property.html">Property</a></td>
+        <td><span class="parametername">newProperty</span></td>
+        <td><p>The property information to create</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the asynchronous operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetAsync_" data-uid="RealEstate.API.Services.PropertyService.GetAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetAsync" data-uid="RealEstate.API.Services.PropertyService.GetAsync">GetAsync()</h4>
+  <div class="markdown level1 summary"><p>Retrieves all properties from the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; GetAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of all properties</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetAsync_" data-uid="RealEstate.API.Services.PropertyService.GetAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetAsync_System_String_" data-uid="RealEstate.API.Services.PropertyService.GetAsync(System.String)">GetAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a specific property by its ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Property?&gt; GetAsync(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the property to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;</td>
+        <td><p>The requested property if found, null otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetByPriceRangeAsync_" data-uid="RealEstate.API.Services.PropertyService.GetByPriceRangeAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetByPriceRangeAsync_System_Decimal_System_Decimal_" data-uid="RealEstate.API.Services.PropertyService.GetByPriceRangeAsync(System.Decimal,System.Decimal)">GetByPriceRangeAsync(decimal, decimal)</h4>
+  <div class="markdown level1 summary"><p>Retrieves properties within a specified price range</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; GetByPriceRangeAsync(decimal minPrice, decimal maxPrice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></td>
+        <td><span class="parametername">minPrice</span></td>
+        <td><p>The minimum price of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></td>
+        <td><span class="parametername">maxPrice</span></td>
+        <td><p>The maximum price of the properties to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of properties within the specified price range</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetByTypeAsync_" data-uid="RealEstate.API.Services.PropertyService.GetByTypeAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetByTypeAsync_System_String_" data-uid="RealEstate.API.Services.PropertyService.GetByTypeAsync(System.String)">GetByTypeAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Retrieves properties by their type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; GetByTypeAsync(string type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of properties to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of properties matching the type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetFilteredPropertiesAsync_" data-uid="RealEstate.API.Services.PropertyService.GetFilteredPropertiesAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetFilteredPropertiesAsync_System_String_System_String_System_Nullable_System_Decimal__System_Nullable_System_Decimal__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Double__" data-uid="RealEstate.API.Services.PropertyService.GetFilteredPropertiesAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Double})">GetFilteredPropertiesAsync(string?, string?, decimal?, decimal?, int?, int?, double?, double?)</h4>
+  <div class="markdown level1 summary"><p>Retrieves properties by their city, property type, price range, bedrooms, bathrooms, and square meters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; GetFilteredPropertiesAsync(string? city = null, string? propertyType = null, decimal? minPrice = null, decimal? maxPrice = null, int? bedrooms = null, int? bathrooms = null, double? minSquareMeters = null, double? maxSquareMeters = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">city</span></td>
+        <td><p>The city of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">propertyType</span></td>
+        <td><p>The type of properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</td>
+        <td><span class="parametername">minPrice</span></td>
+        <td><p>The minimum price of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</td>
+        <td><span class="parametername">maxPrice</span></td>
+        <td><p>The maximum price of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">bedrooms</span></td>
+        <td><p>The number of bedrooms of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">bathrooms</span></td>
+        <td><p>The number of bathrooms of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">minSquareMeters</span></td>
+        <td><p>The minimum square meters of the properties to retrieve</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</td>
+        <td><span class="parametername">maxSquareMeters</span></td>
+        <td><p>The maximum square meters of the properties to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of properties matching the specified criteria</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_GetPropertiesByUserIdAsync_" data-uid="RealEstate.API.Services.PropertyService.GetPropertiesByUserIdAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_GetPropertiesByUserIdAsync_System_String_" data-uid="RealEstate.API.Services.PropertyService.GetPropertiesByUserIdAsync(System.String)">GetPropertiesByUserIdAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Retrieves properties by their user ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; GetPropertiesByUserIdAsync(string userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user ID of the properties to retrieve</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of properties matching the user ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_RemoveAsync_" data-uid="RealEstate.API.Services.PropertyService.RemoveAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_RemoveAsync_System_String_" data-uid="RealEstate.API.Services.PropertyService.RemoveAsync(System.String)">RemoveAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Removes a property from the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RemoveAsync(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the property to remove</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the asynchronous operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_SearchAsync_" data-uid="RealEstate.API.Services.PropertyService.SearchAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_SearchAsync_System_String_" data-uid="RealEstate.API.Services.PropertyService.SearchAsync(System.String)">SearchAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Searches for properties by location</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;Property&gt;&gt; SearchAsync(string location)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">location</span></td>
+        <td><p>The location to search for</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RealEstate.API.Models.Property.html">Property</a>&gt;&gt;</td>
+        <td><p>A list of properties matching the location</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="RealEstate_API_Services_PropertyService_UpdateAsync_" data-uid="RealEstate.API.Services.PropertyService.UpdateAsync*"></a>
+  <h4 id="RealEstate_API_Services_PropertyService_UpdateAsync_System_String_RealEstate_API_Models_Property_" data-uid="RealEstate.API.Services.PropertyService.UpdateAsync(System.String,RealEstate.API.Models.Property)">UpdateAsync(string, Property)</h4>
+  <div class="markdown level1 summary"><p>Updates an existing property in the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task UpdateAsync(string id, Property updatedProperty)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the property to update</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="RealEstate.API.Models.Property.html">Property</a></td>
+        <td><span class="parametername">updatedProperty</span></td>
+        <td><p>The updated property information</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the asynchronous operation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="RealEstate.API.Services.IPropertyService.html">IPropertyService</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

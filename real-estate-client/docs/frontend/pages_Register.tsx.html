@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/Register.tsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/Register.tsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaEnvelope, FaLock, FaUser, FaPhone, FaUserPlus } from 'react-icons/fa';
+
+/**
+ * Register component for user registration
+ * @returns {JSX.Element} The rendered Register component
+ */
+export const Register = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+  });
+  const [error, setError] = useState('');
+
+  /**
+   * Handles input field changes
+   * @param {React.ChangeEvent&lt;HTMLInputElement>} e - The change event
+   */
+  const handleChange = (e: React.ChangeEvent&lt;HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  /**
+   * Handles form submission for user registration
+   * @param {React.FormEvent} e - The form event
+   */
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    try {
+      const requestBody = {
+        email: formData.email,
+        password: formData.password,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phoneNumber: formData.phoneNumber,
+      };
+      
+      console.log('Sending registration request:', requestBody);
+      
+      const response = await fetch('http://localhost:5000/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      const data = await response.json();
+      console.log('Registration response:', data);
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to register');
+      }
+
+      // Show success message
+      alert('Registration successful! Please log in.');
+      
+      // Redirect to login page
+      navigate('/login');
+    } catch (err) {
+      console.error('Registration error:', err);
+      setError(err instanceof Error ? err.message : 'An error occurred during registration');
+    }
+  };
+
+  return (
+    &lt;div className="min-h-screen bg-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      &lt;div className="max-w-md w-full space-y-8">
+        &lt;div className="text-center">
+          &lt;h2 className="text-4xl font-bold text-white">Create Account&lt;/h2>
+          &lt;p className="mt-2 text-gray-400">
+            Join our community of property owners and seekers
+          &lt;/p>
+        &lt;/div>
+
+        &lt;div className="bg-gray-800 rounded-2xl shadow-xl p-8">
+          &lt;form className="space-y-6" onSubmit={handleSubmit}>
+            {error &amp;&amp; (
+              &lt;div className="bg-red-500/10 border border-red-500 text-red-500 rounded-lg p-4 text-sm">
+                {error}
+              &lt;/div>
+            )}
+
+            &lt;div className="grid grid-cols-2 gap-4">
+              &lt;div>
+                &lt;label
+                  htmlFor="firstName"
+                  className="block text-sm font-medium text-gray-300"
+                >
+                  First Name
+                &lt;/label>
+                &lt;div className="mt-1 relative">
+                  &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    &lt;FaUser className="text-gray-500" />
+                  &lt;/div>
+                  &lt;input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    required
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                    placeholder="John"
+                  />
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div>
+                &lt;label
+                  htmlFor="lastName"
+                  className="block text-sm font-medium text-gray-300"
+                >
+                  Last Name
+                &lt;/label>
+                &lt;div className="mt-1 relative">
+                  &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    &lt;FaUser className="text-gray-500" />
+                  &lt;/div>
+                  &lt;input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    required
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                    placeholder="Doe"
+                  />
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Email
+              &lt;/label>
+              &lt;div className="mt-1 relative">
+                &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  &lt;FaEnvelope className="text-gray-500" />
+                &lt;/div>
+                &lt;input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                  placeholder="john.doe@example.com"
+                />
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label
+                htmlFor="phoneNumber"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Phone Number
+              &lt;/label>
+              &lt;div className="mt-1 relative">
+                &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  &lt;FaPhone className="text-gray-500" />
+                &lt;/div>
+                &lt;input
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="tel"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                  placeholder="+1 234 567 8900"
+                />
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Password
+              &lt;/label>
+              &lt;div className="mt-1 relative">
+                &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  &lt;FaLock className="text-gray-500" />
+                &lt;/div>
+                &lt;input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                  placeholder="Enter your password"
+                  autoComplete="new-password"
+                />
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Confirm Password
+              &lt;/label>
+              &lt;div className="mt-1 relative">
+                &lt;div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  &lt;FaLock className="text-gray-500" />
+                &lt;/div>
+                &lt;input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  required
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                  placeholder="Confirm your password"
+                  autoComplete="new-password"
+                />
+              &lt;/div>
+            &lt;/div>
+
+            &lt;button
+              type="submit"
+              className="w-full flex justify-center items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+            >
+              &lt;FaUserPlus />
+              Create Account
+            &lt;/button>
+
+            &lt;div className="text-center text-sm text-gray-400">
+              Already have an account?{' '}
+              &lt;Link
+                to="/login"
+                className="font-medium text-primary-500 hover:text-primary-400"
+              >
+                Sign in
+              &lt;/Link>
+            &lt;/div>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Interfaces</h3><ul><li><a href="Property.html">Property</a></li><li><a href="User.html">User</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ListProperty">ListProperty</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Profile">Profile</a></li><li><a href="global.html#PropertyDetails">PropertyDetails</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#addToFavorites">addToFavorites</a></li><li><a href="global.html#checkIsFavorite">checkIsFavorite</a></li><li><a href="global.html#createProperty">createProperty</a></li><li><a href="global.html#deleteProperty">deleteProperty</a></li><li><a href="global.html#getFavorites">getFavorites</a></li><li><a href="global.html#getProperties">getProperties</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getUserProperties">getUserProperties</a></li><li><a href="global.html#removeFromFavorites">removeFromFavorites</a></li><li><a href="global.html#searchProperties">searchProperties</a></li><li><a href="global.html#updateProperty">updateProperty</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jan 02 2025 17:09:51 GMT+0300 (GMT+03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
